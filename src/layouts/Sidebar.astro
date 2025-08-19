@@ -1,0 +1,272 @@
+---
+// Sidebar component for Astro
+export interface Props {
+  isOpenSidebar?: boolean;
+}
+
+const { isOpenSidebar = true } = Astro.props;
+
+// Get current path for active state detection
+const currentPath = Astro.url.pathname;
+
+// Menu data structure
+const menus = [
+  {
+    menu: "Dashboard",
+    link: "/head-village/dashboard",
+    icon: "/icons/menu-dashboard.svg",
+  },
+  {
+    menu: "Kepala Rumah",
+    link: "/head-village/head-house",
+    icon: "/icons/menu-kepala-rumah.svg",
+  },
+  {
+    menu: "Bantuan Sosial",
+    icon: "/icons/menu-bansos.svg",
+    isExpanded: false,
+    subMenu: [
+      {
+        menu: "List Bansos",
+        link: "/social-donate/list-social-donate",
+      },
+      {
+        menu: "Pengajuan Bansos",
+        link: "/social-donate/applicant-social-donate",
+      },
+    ],
+  },
+  {
+    menu: "Jadwal Desa",
+    icon: "/icons/menu-jadwal.svg",
+    isExpanded: true,
+    subMenu: [
+      {
+        menu: "Pembangunan",
+        link: "/village-schedule/village-development-schedule",
+      },
+      {
+        menu: "Event Desa",
+        link: "/village-schedule/village-event-schedule",
+      },
+    ],
+  },
+  {
+    menu: "Profil Desa",
+    link: "/village-profile",
+    icon: "/icons/menu-profile.svg",
+  },
+  {
+    menu: "Head Family Role Page",
+    link: "/head-family",
+    icon: "/icons/menu-profile.svg",
+  },
+];
+
+// Helper function to check if menu is active
+function isMenuActive(menuLink: string): boolean {
+  if (menuLink === "/") {
+    return currentPath === "/";
+  }
+  const pathSegments = currentPath.split("/");
+  const menuSegments = menuLink.split("/");
+  return pathSegments[1] === menuSegments[1];
+}
+
+// Helper function to check if submenu is active
+function isSubMenuActive(subMenuLink: string): boolean {
+  return currentPath === subMenuLink;
+}
+---
+
+<div
+  class={`${
+    isOpenSidebar
+      ? "translate-x-0 lg:translate-0"
+      : "translate-x-full lg:translate-0"
+  } bg-black/15 transition-all fixed z-20 h-dvh w-[100vw] lg:w-[300px]`}
+>
+  <div class="bg-white z-10 p-6 lg:py-[30px] h-full overflow-y-auto no-scrollbar scroll ml-auto w-[100vw] lg:w-[300px] gap-6 flex flex-col">
+    <div class="top">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <img src="/icons/logo.svg" alt="" />
+          <h1 class="text-2xl font-bold leading-normal text-black">
+            DesaKita.
+          </h1>
+        </div>
+        <button
+          id="toggle-sidebar"
+          class="w-11 rounded-2xl border border-bg-color p-1.5"
+        >
+          <img src="/icons/menu.svg" alt="" />
+        </button>
+      </div>
+    </div>
+
+    <div class="main-menu flex flex-col gap-2">
+      <h2 class="text-sm font-medium leading-normal text-secondary-text-color">
+        Main Menu
+      </h2>
+
+      {menus.map((menu, index) => {
+        const isActive = menu.link ? isMenuActive(menu.link) : false;
+        const hasSubMenu = menu.subMenu && menu.subMenu.length > 0;
+        
+        return (
+          <div
+            class={`menu group hover:bg-foreshadow rounded-2xl cursor-pointer transition-all text-base text-secondary-text-color font-normal leading-normal ${
+              isActive ? "bg-foreshadow" : ""
+            }`}
+            data-menu-item={menu.menu}
+            data-has-submenu={hasSubMenu}
+            data-menu-link={menu.link || ""}
+            data-menu-expanded={menu.isExpanded || false}
+          >
+            <div
+              class={`flex justify-between items-center p-4 ${
+                hasSubMenu && menu.isExpanded ? "pb-2" : ""
+              }`}
+            >
+              <div class="gap-2 flex items-center">
+                <img src={menu.icon} alt="" />
+                <h3
+                  class={`${
+                    isActive ? "text-dark-green font-medium" : ""
+                  } group-hover:text-dark-green group-hover:font-medium`}
+                >
+                  {menu.menu}
+                </h3>
+              </div>
+              {hasSubMenu && (
+                <img
+                  src="/icons/dropdown-menu-sidebar.svg"
+                  alt=""
+                  class="transition-all"
+                  data-menu-toggle={menu.menu}
+                />
+              )}
+            </div>
+            {hasSubMenu && (
+              <div
+                class="sub-menu overflow-hidden transition-all ml-7 relative before:absolute before:top-0 before:left-0 before:w-0.5 before:h-[70%] before:bg-[#F2F9F6]"
+                data-submenu={menu.menu}
+                style={`max-height: ${menu.isExpanded ? '400px' : '0px'}`}
+              >
+                {menu.subMenu.map((subMenu, subIndex) => {
+                  const isSubActive = isSubMenuActive(subMenu.link);
+                  
+                  return (
+                    <a
+                      href={subMenu.link}
+                      class="inline-block w-full"
+                    >
+                      <div class="relative">
+                        <img
+                          src="/icons/line-sub-menu.svg"
+                          class="absolute left-0 top-1"
+                          alt=""
+                        />
+                        <p
+                          class={`${
+                            isSubActive
+                              ? "bg-foreshadow font-medium text-dark-green"
+                              : "bg-transparent font-normal text-secondary-text-color"
+                          } py-4 ml-8 pl-4 rounded-2xl`}
+                        >
+                          {subMenu.menu}
+                        </p>
+                      </div>
+                    </a>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</div>
+
+<script>
+  // Client-side JavaScript for interactive functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    // Toggle sidebar
+    const toggleButton = document.getElementById('toggle-sidebar');
+    if (toggleButton) {
+      toggleButton.addEventListener('click', function() {
+        // Dispatch custom event to parent component
+        window.dispatchEvent(new CustomEvent('toggleSidebar'));
+      });
+    }
+
+    // Handle menu clicks for navigation and submenu toggle
+    const menuItems = document.querySelectorAll('.menu');
+    menuItems.forEach(item => {
+      item.addEventListener('click', function(e: Event) {
+        const target = e.target as HTMLElement;
+        const currentTarget = e.currentTarget as HTMLElement;
+        
+        // Don't trigger if clicking on submenu items
+        if (target.closest('.sub-menu')) {
+          return;
+        }
+        
+        const hasSubMenu = currentTarget.getAttribute('data-has-submenu') === 'true';
+        const menuLink = currentTarget.getAttribute('data-menu-link');
+        const menuName = currentTarget.getAttribute('data-menu-item');
+        
+        if (hasSubMenu) {
+          // Toggle submenu if it has submenu
+          const submenu = document.querySelector(`[data-submenu="${menuName}"]`) as HTMLElement;
+          const toggle = currentTarget.querySelector(`[data-menu-toggle="${menuName}"]`) as HTMLElement;
+          
+          if (submenu && toggle) {
+            const isExpanded = submenu.style.maxHeight && submenu.style.maxHeight !== '0px';
+            submenu.style.maxHeight = isExpanded ? '0px' : '400px';
+            
+            // Rotate arrow icon
+            toggle.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(180deg)';
+            
+            // Update data attribute
+            currentTarget.setAttribute('data-menu-expanded', (!isExpanded).toString());
+          }
+        } else if (menuLink) {
+          // Navigate if no submenu
+          window.location.href = menuLink;
+        }
+      });
+    });
+
+    // Initialize submenu states based on current path
+    const currentPath = window.location.pathname;
+    const submenus = document.querySelectorAll('.sub-menu');
+    
+    submenus.forEach(submenu => {
+      const submenuElement = submenu as HTMLElement;
+      const links = submenuElement.querySelectorAll('a');
+      let hasActiveChild = false;
+      
+      links.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+          hasActiveChild = true;
+        }
+      });
+      
+      if (hasActiveChild) {
+        submenuElement.style.maxHeight = '400px';
+        const menuName = submenuElement.getAttribute('data-submenu');
+        const toggle = document.querySelector(`[data-menu-toggle="${menuName}"]`) as HTMLElement;
+        const menuItem = document.querySelector(`[data-menu-item="${menuName}"]`) as HTMLElement;
+        
+        if (toggle) {
+          toggle.style.transform = 'rotate(180deg)';
+        }
+        if (menuItem) {
+          menuItem.setAttribute('data-menu-expanded', 'true');
+        }
+      }
+    });
+  });
+</script>

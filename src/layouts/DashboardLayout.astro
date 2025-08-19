@@ -1,0 +1,29 @@
+---
+import Layout from './Layout.astro';
+import Sidebar from './Sidebar.astro';
+import Header from './Header.astro';
+import SidebarHeadFamily from './SidebarHeadFamily.astro';
+
+interface Props {
+  role?: "head-family" | "head-village";
+}
+
+const { role = "head-village" } = Astro.props;
+---
+
+<Layout>
+  <div>
+    {role === "head-village" ? (
+      <Sidebar />
+    ) : (
+      <SidebarHeadFamily />
+    )}
+
+    <div class="flex flex-col min-h-dvh">
+      <Header />
+      <div class="p-4 md:p-6 lg:w-[calc(100%-300px)] lg:ml-auto flex-1 mt-22 lg:mt-28">
+        <slot />
+      </div>
+    </div>
+  </div>
+</Layout>
