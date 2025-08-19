@@ -10,7 +10,9 @@ export default defineConfig({
   integrations: [react()],
   compressHTML: false,
   base: '/',
-
+  build: {
+    format: "preserve", // default "directory"
+  },
   vite: {
     plugins: [tailwindcss()],
   },
