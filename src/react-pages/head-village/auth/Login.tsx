@@ -80,7 +80,7 @@ export default function Login() {
         </div>
 
         <div className="w-full">
-          <a href="/head-village/dashboard/index.html">
+          <a href="/head-village/dashboard/dashboard.html">
             <Button variant="green" customClass="w-full justify-center">
               Masuk
             </Button>

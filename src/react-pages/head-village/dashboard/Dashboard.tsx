@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import Button from "../../../components/Button";
 import TitlePage from "../../../components/TitlePage";
 import DashboardStatus from "../../../components/DashboardStatus";
-import CitizenStatistic from "../../../components/CitizenStatistic";
 import CardItemGeneral from "../../../components/CardItemGeneral";
 
 const stats = [
@@ -483,7 +482,9 @@ export default function Dashboard() {
 
             <hr />
 
-            <CitizenStatistic />
+            <div className="w-full flex justify-center h-[288px] relative">
+              <canvas id="citizen-chart"></canvas>
+            </div>
 
             <div className="flex flex-col gap-3 lg:gap-4">
               {citizens.map((citizen, index) => (

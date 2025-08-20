@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import TitlePage from "../../../../components/TitlePage";
 import Button from "../../../../components/Button";
 import Inputs from "../../../../components/Inputs";
@@ -143,16 +142,16 @@ export default function ApplicantSocialDonate() {
                           >
                             Tolak
                           </Button>
-                          <Link
+                          <a
                             className="lg:w-[35%]"
-                            to={
-                              "/social-donate/applicant-social-donate/manage-applicant-social-donate"
+                            href={
+                              "/head-village/social-donate/applicant-social-donate/manage-applicant-social-donate"
                             }
                           >
                             <Button variant="green" customClass="w-full">
                               Setuju
                             </Button>
-                          </Link>
+                          </a>
                         </div>
                       </div>
                     </div>

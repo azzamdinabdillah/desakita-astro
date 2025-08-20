@@ -15,8 +15,13 @@ import '../styles/global.css'
       href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap"
       rel="stylesheet"
     />
+
+	<link rel="stylesheet" href="/src/css/output.css" is:inline>
 	</head>
 	<body>
 		<slot />
+
+		<script src="/src/js/replace-path.js" is:inline></script>
+		<script src="/src/js/sidebar.js" is:inline></script>
 	</body>
 </html>
