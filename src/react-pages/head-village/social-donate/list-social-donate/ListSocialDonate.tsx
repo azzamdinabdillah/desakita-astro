@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import TitlePage from "../../../../components/TitlePage";
 import Button from "../../../../components/Button";
 import Inputs from "../../../../components/Inputs";
@@ -11,12 +10,12 @@ export default function ListSocialDonate() {
       <TitlePage
         title="List Bantuan Sosial"
         leftElement={
-          <Link to={"/social-donate/list-social-donate/create-social-donate"}>
+          <a href={"/head-village/social-donate/list-social-donate/create-social-donate"}>
             <Button variant="green">
               <img className="w-5 lg:w-6" src="/icons/add-square.svg" alt="" />
               Add New
             </Button>
-          </Link>
+          </a>
         }
       />
 
@@ -88,13 +87,13 @@ export default function ListSocialDonate() {
                         }
                       />
 
-                      <Link
-                        to={
-                          "/social-donate/list-social-donate/manage-social-donate"
+                      <a
+                        href={
+                          "/head-village/social-donate/list-social-donate/manage-social-donate"
                         }
                       >
                         <Button variant="black">Manage</Button>
-                      </Link>
+                      </a>
                     </div>
 
                     <hr />

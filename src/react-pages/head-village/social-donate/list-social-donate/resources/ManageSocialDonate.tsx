@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "../../../../../components/Button";
 import Modal from "../../../../../components/Modal";
 import TitlePage from "../../../../../components/TitlePage";
-import WrapperElement from "../../../../../layouts/WrapperElement";
+import WrapperElement from "@components/WrapperElement";
 import Title from "../../../../../components/Title";
 import DashboardStatus from "../../../../../components/DashboardStatus";
 import DetailsList from "../../../../../components/DetailsList";
@@ -42,10 +42,12 @@ export default function ManageSocialDonate() {
               Hapus Data
               <img className="w-5 lg:w-6" src="/icons/trash.svg" alt="" />
             </Button>
-            <Button onClick={() => setIsOpenModal(true)} variant="black">
-              Ubah Data
-              <img className="w-5 lg:w-6" src="/icons/edit.svg" alt="" />
-            </Button>
+            <a href="/head-village/social-donate/list-social-donate/create-social-donate">
+              <Button variant="black">
+                Ubah Data
+                <img className="w-5 lg:w-6" src="/icons/edit.svg" alt="" />
+              </Button>
+            </a>
           </div>
         }
       />
@@ -123,16 +125,14 @@ export default function ManageSocialDonate() {
                 </>
               }
               bottomRight={
-                <>
-                  <p className="flex items-center gap-1 text-black">
-                    Udin Louvre
-                    <UserImage
-                      customClass="hidden lg:inline"
-                      widthHeight="w-[32px]"
-                      image="/images/user-1.png"
-                    />
-                  </p>
-                </>
+                <div className="flex items-center gap-1 text-black">
+                  Udin Louvre
+                  <UserImage
+                    customClass="hidden lg:inline"
+                    widthHeight="w-[32px]"
+                    image="/images/user-1.png"
+                  />
+                </div>
               }
               date="Tue, 25 Dec 2024"
               title="Rp120.000.000"

@@ -1,8 +1,7 @@
 import { useState } from "react";
 import TitlePage from "../../../components/TitlePage";
 import Button from "../../../components/Button";
-import WrapperElement from "../../../layouts/WrapperElement";
-import { Link } from "react-router";
+import WrapperElement from "@components/WrapperElement";
 import Title from "../../../components/Title";
 
 export default function VillageProfile() {
@@ -52,12 +51,12 @@ export default function VillageProfile() {
       <TitlePage
         title="Profil Desa"
         leftElement={
-          <Link to={"/village-profile/create-village-profile"}>
+          <a href={"/head-village/village-profile/create-village-profile"}>
             <Button variant="black">
               Edit Data
               <img className="w-4 lg:w-6" src="/icons/edit.svg" alt="" />
             </Button>
-          </Link>
+          </a>
         }
       />
 
@@ -248,12 +247,12 @@ export function VillageProfileEmpty() {
       <TitlePage
         title="Profil Desa"
         leftElement={
-          <Link to={"/village-profile/create-village-profile"}>
+          <a href={"/head-village/village-profile/create-village-profile"}>
             <Button variant="green">
               Create Profile
               <img className="w-4 lg:w-6" src="/icons/add-square.svg" alt="" />
             </Button>
-          </Link>
+          </a>
         }
       />
       <div className="h-full gap-6 flex flex-col items-center mt-20 lg:mt-40">

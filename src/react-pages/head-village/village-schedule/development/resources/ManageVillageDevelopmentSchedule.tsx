@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "../../../../../components/Button";
 import Modal from "../../../../../components/Modal";
 import TitlePage from "../../../../../components/TitlePage";
-import WrapperElement from "../../../../../layouts/WrapperElement";
+import WrapperElement from "@components/WrapperElement";
 import Title from "../../../../../components/Title";
 import DashboardStatus from "../../../../../components/DashboardStatus";
 import DetailsList from "../../../../../components/DetailsList";
@@ -42,10 +42,12 @@ export default function ManageVillageDevelopmentSchedule() {
               Hapus Data
               <img className="w-5 lg:w-6" src="/icons/trash.svg" alt="" />
             </Button>
-            <Button onClick={() => setIsOpenModal(true)} variant="black">
-              Edit Data
-              <img className="w-5 lg:w-6" src="/icons/edit.svg" alt="" />
-            </Button>
+            <a href="/head-village/village-schedule/village-development-schedule/create-village-development-schedule">
+              <Button variant="black">
+                Edit Data
+                <img className="w-5 lg:w-6" src="/icons/edit.svg" alt="" />
+              </Button>
+            </a>
           </div>
         }
       />

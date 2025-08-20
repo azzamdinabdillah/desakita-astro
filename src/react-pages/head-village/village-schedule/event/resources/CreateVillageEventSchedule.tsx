@@ -1,7 +1,7 @@
 import { forwardRef, useState } from "react";
 import Label from "../../../../../components/Label";
 import TitlePage from "../../../../../components/TitlePage";
-import WrapperElement from "../../../../../layouts/WrapperElement";
+import WrapperElement from "@components/WrapperElement";
 import Button from "../../../../../components/Button";
 import Inputs from "../../../../../components/Inputs";
 import DatePicker from "react-datepicker";

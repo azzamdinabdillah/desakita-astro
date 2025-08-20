@@ -44,10 +44,10 @@ export default function RecentActivity({
       <hr />
 
       <div className="flex justify-between items-center flex-wrap gap-3">
-        <p className="text-14 font-medium text-secondary-text-color flex gap-1 items-center">
+        <div className="text-14 font-medium text-secondary-text-color flex gap-1 items-center">
           {bottomLeft}
-        </p>
-        <p className="text-16 font-medium text-soft-red">{bottomRight}</p>
+        </div>
+        <div className="text-16 font-medium text-soft-red">{bottomRight}</div>
       </div>
     </div>
   );

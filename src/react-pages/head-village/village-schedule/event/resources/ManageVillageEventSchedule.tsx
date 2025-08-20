@@ -1,6 +1,6 @@
 import Button from "../../../../../components/Button";
 import TitlePage from "../../../../../components/TitlePage";
-import WrapperElement from "../../../../../layouts/WrapperElement";
+import WrapperElement from "@components/WrapperElement";
 import Title from "../../../../../components/Title";
 import DetailsList from "../../../../../components/DetailsList";
 import UserImage from "../../../../../components/UserImage";
@@ -11,10 +11,12 @@ export default function ManageApplicantSocialDonate() {
     <div className="flex flex-col gap-6">
       <TitlePage
         leftElement={
-          <Button variant="black">
-            Edit Data
-            <img src="/icons/edit.svg" alt="" />
-          </Button>
+          <a href="/head-village/village-schedule/village-event-schedule/create-village-event-schedule">
+            <Button variant="black">
+              Edit Data
+              <img className="w-5 lg:w-6" src="/icons/edit.svg" alt="" />
+            </Button>
+          </a>
         }
         title="Detail Event Desa"
         subTitle={

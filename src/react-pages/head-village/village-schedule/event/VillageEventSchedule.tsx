@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import TitlePage from "../../../../components/TitlePage";
 import Button from "../../../../components/Button";
 import Inputs from "../../../../components/Inputs";
@@ -11,16 +10,16 @@ export default function VillageEventSchedule() {
       <TitlePage
         title="Events Desa"
         leftElement={
-          <Link
-            to={
-              "/village-schedule/village-event-schedule/create-village-event-schedule"
+          <a
+            href={
+              "/head-village/village-schedule/village-event-schedule/create-village-event-schedule"
             }
           >
             <Button variant="green">
               <img className="w-5 lg:w-6" src="/icons/add-square.svg" alt="" />
               Add New
             </Button>
-          </Link>
+          </a>
         }
       />
 
@@ -93,13 +92,13 @@ export default function VillageEventSchedule() {
                         }
                       />
 
-                      <Link
-                        to={
-                          "/village-schedule/village-event-schedule/manage-village-event-schedule"
+                      <a
+                        href={
+                          "/head-village/village-schedule/village-event-schedule/manage-village-event-schedule"
                         }
                       >
                         <Button variant="black">Manage</Button>
-                      </Link>
+                      </a>
                     </div>
 
                     <hr />
