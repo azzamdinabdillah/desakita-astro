@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "../../../../components/Button";
 import Modal from "../../../../components/Modal";
 import TitlePage from "../../../../components/TitlePage";
-import WrapperElement from "../../../../layouts/WrapperElement";
+import WrapperElement from "@components/WrapperElement";
 import Title from "../../../../components/Title";
 import DashboardStatus from "../../../../components/DashboardStatus";
 import DetailsList from "../../../../components/DetailsList";

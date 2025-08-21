@@ -1,5 +1,5 @@
 import TitlePage from "../../../../components/TitlePage";
-import WrapperElement from "../../../../layouts/WrapperElement";
+import WrapperElement from "@components/WrapperElement";
 import Title from "../../../../components/Title";
 import DetailsList from "../../../../components/DetailsList";
 import CardItemGeneral from "../../../../components/CardItemGeneral";
@@ -120,7 +120,7 @@ export default function DetailsVillageEventSchedule() {
 
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-1.5">
-              <img src="/icons/receipt-2.svg" alt="" className="w-5 lg:w-6"/>
+              <img src="/icons/receipt-2.svg" alt="" className="w-5 lg:w-6" />
               <p className="text-14 text-secondary-text-color font-medium">
                 PPN 12%
               </p>
@@ -133,7 +133,11 @@ export default function DetailsVillageEventSchedule() {
 
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-1.5">
-              <img src="/icons/profile-2user.svg" alt="" className="w-5 lg:w-6"/>
+              <img
+                src="/icons/profile-2user.svg"
+                alt=""
+                className="w-5 lg:w-6"
+              />
               <p className="text-14 text-secondary-text-color font-medium">
                 Quantity
               </p>
@@ -146,7 +150,7 @@ export default function DetailsVillageEventSchedule() {
 
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-1.5">
-              <img src="/icons/money-plain.svg" alt="" className="w-5 lg:w-6"/>
+              <img src="/icons/money-plain.svg" alt="" className="w-5 lg:w-6" />
               <p className="text-14 text-secondary-text-color font-medium">
                 Harga Total
               </p>

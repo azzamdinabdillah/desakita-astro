@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import TitlePage from "../../../../components/TitlePage";
 import Button from "../../../../components/Button";
 import Inputs from "../../../../components/Inputs";
@@ -90,13 +89,13 @@ export default function ApplicantSocialDonate() {
                           }
                         />
 
-                        <Link
-                          to={
+                        <a
+                          href={
                             "/head-family/social-donate/applicant-social-donate/details-applicant-social-donate"
                           }
                         >
                           <Button variant="black">Lihat Detail</Button>
-                        </Link>
+                        </a>
                       </div>
 
                       <hr />

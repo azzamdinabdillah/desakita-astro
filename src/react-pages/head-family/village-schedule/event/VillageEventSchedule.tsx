@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import TitlePage from "../../../../components/TitlePage";
 import Button from "../../../../components/Button";
 import Inputs from "../../../../components/Inputs";
@@ -96,13 +95,13 @@ export default function VillageEventSchedule() {
                               }
                             />
 
-                            <Link
-                              to={
-                                "/head-family/village-schedule/village-eventmony-schedule/details-village-event-schedule"
+                            <a
+                              href={
+                                "/head-family/village-schedule/village-event-schedule/details-village-event-schedule"
                               }
                             >
                               <Button variant="black">Lihat Detail</Button>
-                            </Link>
+                            </a>
                           </div>
 
                           <hr />
@@ -176,13 +175,13 @@ export default function VillageEventSchedule() {
                               }
                             />
 
-                            <Link
-                              to={
+                            <a
+                              href={
                                 "/head-family/village-schedule/village-eventmony-schedule/details-village-event-schedule"
                               }
                             >
                               <Button variant="black">Lihat Detail</Button>
-                            </Link>
+                            </a>
                           </div>
 
                           <hr />

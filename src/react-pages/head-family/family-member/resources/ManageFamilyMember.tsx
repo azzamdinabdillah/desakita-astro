@@ -1,6 +1,6 @@
 import TitlePage from "../../../../components/TitlePage";
 import Button from "../../../../components/Button";
-import WrapperElement from "../../../../layouts/WrapperElement";
+import WrapperElement from "@components/WrapperElement";
 import DashboardStatus from "../../../../components/DashboardStatus";
 import DetailsList from "../../../../components/DetailsList";
 import Title from "../../../../components/Title";
