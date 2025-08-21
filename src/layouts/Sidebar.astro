@@ -58,7 +58,7 @@ const menus = [
   },
   {
     menu: "Head Family Role Page",
-    link: "/head-family",
+    link: "/head-family/dashboard/dashboard.html",
     icon: "/icons/menu-profile.svg",
   },
 ];
@@ -188,3 +188,86 @@ function isSubMenuActive(subMenuLink: string): boolean {
     </div>
   </div>
 </div>
+
+
+<script>
+  // Client-side JavaScript for interactive functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    // Toggle sidebar
+    const toggleButton = document.getElementById('toggle-sidebar');
+    if (toggleButton) {
+      toggleButton.addEventListener('click', function() {
+        // Dispatch custom event to parent component
+        window.dispatchEvent(new CustomEvent('toggleSidebar'));
+      });
+    }
+
+    // Handle menu clicks for navigation and submenu toggle
+    const menuItems = document.querySelectorAll('.menu');
+    menuItems.forEach(item => {
+      item.addEventListener('click', function(e: Event) {
+        const target = e.target as HTMLElement;
+        const currentTarget = e.currentTarget as HTMLElement;
+        
+        // Don't trigger if clicking on submenu items
+        if (target.closest('.sub-menu')) {
+          return;
+        }
+        
+        const hasSubMenu = currentTarget.getAttribute('data-has-submenu') === 'true';
+        const menuLink = currentTarget.getAttribute('data-menu-link');
+        const menuName = currentTarget.getAttribute('data-menu-item');
+        
+        if (hasSubMenu) {
+          // Toggle submenu if it has submenu
+          const submenu = document.querySelector(`[data-submenu="${menuName}"]`) as HTMLElement;
+          const toggle = currentTarget.querySelector(`[data-menu-toggle="${menuName}"]`) as HTMLElement;
+          
+          if (submenu && toggle) {
+            const isExpanded = submenu.style.maxHeight && submenu.style.maxHeight !== '0px';
+            submenu.style.maxHeight = isExpanded ? '0px' : '400px';
+            
+            // Rotate arrow icon
+            toggle.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(180deg)';
+            
+            // Update data attribute
+            currentTarget.setAttribute('data-menu-expanded', (!isExpanded).toString());
+          }
+        } else if (menuLink) {
+          // Navigate if no submenu
+          window.location.href = menuLink;
+        }
+      });
+    });
+
+    // Initialize submenu states based on current path
+    const currentPath = window.location.pathname;
+    const submenus = document.querySelectorAll('.sub-menu');
+    
+    submenus.forEach(submenu => {
+      const submenuElement = submenu as HTMLElement;
+      const links = submenuElement.querySelectorAll('a');
+      let hasActiveChild = false;
+      
+      links.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+          hasActiveChild = true;
+        }
+      });
+      
+      if (hasActiveChild) {
+        submenuElement.style.maxHeight = '400px';
+        const menuName = submenuElement.getAttribute('data-submenu');
+        const toggle = document.querySelector(`[data-menu-toggle="${menuName}"]`) as HTMLElement;
+        const menuItem = document.querySelector(`[data-menu-item="${menuName}"]`) as HTMLElement;
+        
+        if (toggle) {
+          toggle.style.transform = 'rotate(180deg)';
+        }
+        if (menuItem) {
+          menuItem.setAttribute('data-menu-expanded', 'true');
+        }
+      }
+    });
+  });
+</script>
