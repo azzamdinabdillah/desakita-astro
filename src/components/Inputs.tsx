@@ -41,7 +41,7 @@ export default function Inputs({
 }: InputComponentIF) {
   const inputClass = `${
     icons ? "pl-11 lg:pl-12" : ""
-  } w-full text-black appearance-none font-medium focus:border-1.5 focus:border-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal ${customClass}`;
+  } w-full text-black appearance-none font-medium focus:shadow-[0_0_0_2px] focus:shadow-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal ${customClass}`;
 
   return (
     <div className="relative w-full">

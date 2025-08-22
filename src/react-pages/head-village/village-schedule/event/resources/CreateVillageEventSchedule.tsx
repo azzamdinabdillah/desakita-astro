@@ -178,20 +178,22 @@ export default function CreateVillageEventSchedule() {
               Tanggal event dilakukan
             </Label>
             <div className="col-span-3">
-              <DatePicker
-                className="w-full flex-grow"
-                selected={startDate}
-                maxDate={new Date()}
-                showYearDropdown
-                scrollableYearDropdown
-                showMonthDropdown
-                yearDropdownItemNumber={100}
-                onChange={(date: Date | null) =>
-                  setStartDate(date ?? new Date())
-                }
-                placeholderText="Masukan tanggal lahir"
-                customInput={<CustomInputDate className="w-full" />}
-              />
+              <div className="react-datepicker-wrapper">
+                <div className="react-datepicker__input-container">
+                  <div className="relative w-full">
+                    <div className="absolute left-4 top-1/2 -translate-y-1/2 w-5 lg:w-6">
+                      <img src="/icons/calendar-2-2.svg" alt="icons" />
+                    </div>
+                    <input
+                      id="head-time-event"
+                      type="date"
+                      className="pl-11 lg:pl-12 w-full text-black appearance-none font-medium focus:border-1.5 focus:border-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal w-full w-full flex-grow"
+                      placeholder="Masukan tanggal lahir"
+                      defaultValue=""
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 

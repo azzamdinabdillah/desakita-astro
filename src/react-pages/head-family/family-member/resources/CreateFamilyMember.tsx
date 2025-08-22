@@ -203,28 +203,25 @@ export default function CreateFamilyMember() {
             </Label>
             <div className="col-span-3">
               <div className="flex flex-col md:flex-row gap-4 md:gap-6">
-                <DatePicker
-                  className="w-full flex-grow"
-                  selected={startDate}
-                  maxDate={new Date()}
-                  showYearDropdown
-                  scrollableYearDropdown
-                  showMonthDropdown
-                  yearDropdownItemNumber={100}
-                  onChange={(date: Date | null) =>
-                    setStartDate(date ?? new Date())
-                  }
-                  placeholderText="Masukan tanggal lahir"
-                  customInput={<CustomInputDate className="w-full" />}
-                />
-
+                <div className="react-datepicker-wrapper">
+                  <div className="react-datepicker__input-container">
+                    <div className="relative w-full">
+                      <div className="absolute left-4 top-1/2 -translate-y-1/2 w-5 lg:w-6">
+                        <img src="/icons/calendar-2-2.svg" alt="icons" />
+                      </div>
+                      <input
+                        id="date-birth-family-member"
+                        type="date"
+                        className="pl-11 lg:pl-12 w-full text-black appearance-none font-medium focus:border-1.5 focus:border-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal w-full w-full flex-grow"
+                        placeholder="Masukan tanggal lahir"
+                        defaultValue=""
+                      />
+                    </div>
+                  </div>
+                </div>
                 <div className="md:max-w-[180px] w-full p-3 md:p-4 flex justify-center items-center text-16 font-medium text-dark-green rounded-2xl border border-foreshadow bg-foreshadow">
-                  Umur:{" "}
-                  {new Date().getFullYear() -
-                    (startDate?.getFullYear()
-                      ? startDate?.getFullYear()
-                      : new Date().getFullYear())}{" "}
-                  tahun
+                  Umur:&nbsp;
+                  <span data-age-display="">0</span>&nbsp;tahun
                 </div>
               </div>
             </div>

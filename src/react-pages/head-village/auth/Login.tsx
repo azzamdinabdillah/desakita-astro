@@ -29,6 +29,7 @@ export default function Login() {
             Kepala Desa
             <img src="/icons/crown.svg" alt="" className="w-5 lg:w-6 " />
             <input
+              checked={true}
               type="radio"
               id="village-leader"
               name="village-role"
@@ -61,7 +62,7 @@ export default function Login() {
             <Label labelFor="email">Email Address</Label>
             <Inputs
               id="email"
-              placeholder="Ketik nama desa"
+              placeholder="Masukan email"
               isIconLeft={true}
               icons="/icons/user.svg"
               type="email"
@@ -71,7 +72,7 @@ export default function Login() {
             <Label labelFor="password">Password</Label>
             <Inputs
               id="password"
-              placeholder="Ketik nama desa"
+              placeholder="Masukan password"
               isIconLeft={true}
               icons="/icons/key.svg"
               type="password"

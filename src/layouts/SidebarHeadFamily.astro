@@ -56,6 +56,11 @@ const menus = [
     link: "/head-village/dashboard/dashboard.html",
     icon: "/icons/menu-profile.svg",
   },
+  {
+    menu: "Logout",
+    link: "/index.html",
+    icon: "/icons/menu-profile.svg",
+  },
 ];
 
 // Helper function to check if menu is active
@@ -90,12 +95,12 @@ function isSubMenuActive(subMenuLink: string): boolean {
             DesaKita.
           </h1>
         </div>
-        <button
+        <!-- <button
           id="toggle-sidebar"
           class="w-11 rounded-2xl border border-bg-color p-1.5"
         >
           <img src="/icons/menu.svg" alt="" />
-        </button>
+        </button> -->
       </div>
     </div>
 
@@ -119,9 +124,7 @@ function isSubMenuActive(subMenuLink: string): boolean {
             data-menu-expanded={menu.isExpanded || false}
           >
             <div
-              class={`flex justify-between items-center p-4 ${
-                hasSubMenu && menu.isExpanded ? "pb-2" : ""
-              }`}
+              class={`flex justify-between items-center p-4`}
             >
               <div class="gap-2 flex items-center">
                 <img src={menu.icon} alt="" />

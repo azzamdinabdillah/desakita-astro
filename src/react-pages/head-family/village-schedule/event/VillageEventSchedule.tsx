@@ -186,7 +186,7 @@ export default function VillageEventSchedule() {
 
                             <a
                               href={
-                                "/head-family/village-schedule/village-eventmony-schedule/details-village-event-schedule"
+                                "/head-family/village-schedule/village-event-schedule/details-village-event-schedule"
                               }
                             >
                               <Button variant="black">Lihat Detail</Button>

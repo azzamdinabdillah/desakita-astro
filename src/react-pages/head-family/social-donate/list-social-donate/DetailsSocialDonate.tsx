@@ -158,7 +158,7 @@ export default function DetailsSocialDonate() {
               />
 
               <div
-                className={`flex flex-col cursor-pointer gap-4 border border-bg-color p-3 rounded-2xl overflow-hidden transition-all ${
+                className={`accordion-container flex flex-col cursor-pointer gap-4 border border-bg-color p-3 rounded-2xl overflow-hidden transition-all ${
                   expandBank ? "max-h-96" : "max-h-13"
                 }`}
               >
@@ -176,7 +176,7 @@ export default function DetailsSocialDonate() {
                   <img
                     src="/icons/arrow-down-gray.svg"
                     alt=""
-                    className={`transition-all ${
+                    className={`arrow-icon transition-all ${
                       expandBank ? "rotate-180" : ""
                     }`}
                   />
