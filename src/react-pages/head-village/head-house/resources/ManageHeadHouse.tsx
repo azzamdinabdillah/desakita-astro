@@ -181,6 +181,208 @@ export default function ManageHeadHouse() {
           <WrapperElement>
             <Title subTitle="Aktivitas Terbaru" />
 
+            <div className="" data-rttabs="true">
+              <div className="flex flex-wrap gap-3 items-center" role="tablist">
+                {["Bansos", "Events", "Applicants"].map((tab, index) => (
+                  <div
+                    role="tab"
+                    data-rttab="true"
+                    aria-selected={index === 0 ? "true" : "false"}
+                    tabIndex={index === 0 ? 0 : -1}
+                    key={index}
+                    className={`text-16 lg:flex-grow cursor-pointer hover:bg-black hover:text-white transition-all text-secondary-text-color font-medium py-2.5 px-5 flex justify-center items-center lg:py-2.5 lg:px-4.5 rounded-full border border-bg-color ${index === 0 ? "bg-black text-white" : ""}`}
+                  >
+                    {tab}
+                  </div>
+                ))}
+              </div>
+
+              <div role="tabpanel" className="gap-4 flex flex-col lg:gap-6 mt-4 lg:mt-6 react-tabs__tab-panel--selected">
+                <RecentActivity
+                  bottomLeft="Nominal Pengajuan:"
+                  bottomRight="Rp2.500.000"
+                  image="/icons/money.svg"
+                  date="Tue, 25 Dec 2024"
+                  mainTitle="Bantuan Untuk Rakyat Kurang Mampu"
+                  title="Rp120.000.000"
+                  subTitle="Nominal Pengajuan"
+                  right={
+                    <DashboardStatus type={"Menunggu"} title={"Menunggu"} />
+                  }
+                />
+                <RecentActivity
+                  bottomLeft="Nominal Pengajuan:"
+                  bottomRight="Beras 2kg"
+                  image="/icons/bag-2.svg"
+                  date="Tue, 31 Dec 2024"
+                  mainTitle="Bantuan Pangan Sehari-hari"
+                  title="Beras 200 Ton"
+                  subTitle="Bahan Pokok"
+                  right={
+                    <DashboardStatus type={"Diterima"} title={"Diterima"} />
+                  }
+                />
+                <RecentActivity
+                  bottomLeft="Nominal Pengajuan:"
+                  bottomRight="Susu 200ml"
+                  image="/icons/bag-2.svg"
+                  date="Tue, 12 Dec 2024"
+                  mainTitle="Bantuan Untuk anak kurang gizi"
+                  title="Susu 200 Liter"
+                  subTitle="Bahan Pokok"
+                  right={<DashboardStatus type={"Ditolak"} title={"Ditolak"} />}
+                />
+              </div>
+              <div role="tabpanel" className="gap-4 flex-col lg:gap-6 hidden mt-4 lg:mt-6">
+                <RecentActivity
+                  bottomLeft="Harga Event:"
+                  bottomRight="Rp49.000"
+                  image="/images/event-2.png"
+                  date="Wed, 1 Jan 2025"
+                  title="Belajar HTML Dasar Bersama"
+                  subTitle={
+                    <div className="gap-1 flex items-center">
+                      <img
+                        src="/icons/profile-2user-red.svg"
+                        alt=""
+                        className="w-3.5 lg:w-4.5"
+                      />
+                      <p className="text-[#FA7139] text-14 font-medium">
+                        <span className="font-semibold">9210</span> total
+                        partisipasi
+                      </p>
+                    </div>
+                  }
+                />
+                <RecentActivity
+                  bottomLeft="Harga Event:"
+                  bottomRight="Rp49.000"
+                  image="/images/event-2.png"
+                  date="Fri, 3 Jan 2025"
+                  title="Dari Desa ke dunia digital: workshop"
+                  subTitle={
+                    <div className="gap-1 flex items-center">
+                      <img
+                        src="/icons/profile-2user-red.svg"
+                        alt=""
+                        className="w-3.5 lg:w-4.5"
+                      />
+                      <p className="text-[#FA7139] text-14 font-medium">
+                        <span className="font-semibold">9210</span> total
+                        partisipasi
+                      </p>
+                    </div>
+                  }
+                />
+                <RecentActivity
+                  bottomLeft="Harga Event:"
+                  bottomRight="Rp49.000"
+                  image="/images/event-2.png"
+                  date="Sun, 21 Dec 2024"
+                  title="Mengenal AI: Menjelajah dunia Kecerdasan"
+                  subTitle={
+                    <div className="gap-1 flex items-center">
+                      <img
+                        src="/icons/profile-2user-red.svg"
+                        alt=""
+                        className="w-3.5 lg:w-4.5"
+                      />
+                      <p className="text-[#FA7139] text-14 font-medium">
+                        <span className="font-semibold">9210</span> total
+                        partisipasi
+                      </p>
+                    </div>
+                  }
+                />
+              </div>
+              <div role="tabpanel" className="hidden mt-4 lg:mt-6">
+                <div className="flex flex-col gap-4 lg:gap-6 w-full">
+                  <div className="gap-4 flex-col flex rounded-2xl border border-bg-color p-3 lg:p-4">
+                    <div className="top flex justify-between items-center">
+                      <img
+                        src="/images/image.png"
+                        alt="image applicant"
+                        className="w-[80px] h-[60px] object-cover rounded-2xl"
+                      />
+                      <DashboardStatus title="Menunggu" type="Menunggu" />
+                    </div>
+                    <div>
+                      <h2 className="text-16 font-semibold text-black">
+                        Pembangunan Jalanan Utama
+                      </h2>
+                      <p className="text-16 font-medium text-secondary-text-color">
+                        Penanggung jawab:{" "}
+                        <span className="font-semibold text-dark-green">
+                          Uzumaki Asep
+                        </span>
+                      </p>
+                    </div>
+
+                    <hr />
+
+                    <DetailsList
+                      titleColor="text-dark-green"
+                      icon="/icons/calendar-2-bg.svg"
+                      title="3 Jan 2025"
+                      value="Tanggal Pelaksanaan"
+                    />
+
+                    <hr />
+
+                    <DetailsList
+                      titleColor="text-dark-green"
+                      icon="/icons/calendar-2-bg.svg"
+                      title="24 Hari"
+                      value="Waktu Pelaksanaan"
+                    />
+                  </div>
+
+                  <div className="gap-4 flex-col flex rounded-2xl border border-bg-color p-3 lg:p-4">
+                    <div className="top flex justify-between items-center">
+                      <img
+                        src="/images/image.png"
+                        alt="image applicant"
+                        className="w-[80px] h-[60px] object-cover rounded-2xl"
+                      />
+                      <DashboardStatus title="Ditolak" type="Ditolak" />
+                    </div>
+                    <div>
+                      <h2 className="text-16 font-semibold text-black">
+                        Pembangunan Jalanan Utama
+                      </h2>
+                      <p className="text-16 font-medium text-secondary-text-color">
+                        Penanggung jawab:{" "}
+                        <span className="font-semibold text-dark-green">
+                          Uzumaki Asep
+                        </span>
+                      </p>
+                    </div>
+
+                    <hr />
+
+                    <DetailsList
+                      titleColor="text-dark-green"
+                      icon="/icons/calendar-2-bg.svg"
+                      title="3 Jan 2025"
+                      value="Tanggal Pelaksanaan"
+                    />
+
+                    <hr />
+
+                    <DetailsList
+                      titleColor="text-dark-green"
+                      icon="/icons/calendar-2-bg.svg"
+                      title="24 Hari"
+                      value="Waktu Pelaksanaan"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </WrapperElement>
+          {/* <WrapperElement>
+            <Title subTitle="Aktivitas Terbaru" />
+
             <Tabs className="">
               <TabList className="flex flex-wrap gap-3 items-center">
                 {["Bansos", "Events", "Applicants"].map((tab, index) => (
@@ -376,7 +578,7 @@ export default function ManageHeadHouse() {
                 </div>
               </TabPanel>
             </Tabs>
-          </WrapperElement>
+          </WrapperElement> */}
         </div>
       </div>
     </div>

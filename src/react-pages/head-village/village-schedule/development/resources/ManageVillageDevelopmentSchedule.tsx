@@ -153,7 +153,7 @@ export default function ManageVillageDevelopmentSchedule() {
           </div>
         </WrapperElement>
 
-        <Tabs>
+        <div data-rttabs="true">
           <WrapperElement>
             <div className="flex flex-col lg:flex-row gap-4 justify-between items-start lg:items-center">
               <Title
@@ -162,23 +162,28 @@ export default function ManageVillageDevelopmentSchedule() {
               />
 
               <div className="lg:flex-grow">
-                <TabList className="flex flex-wrap gap-3 items-center lg:justify-end">
+                <div className="flex flex-wrap gap-3 items-center lg:justify-end" role="tablist">
                   {["Semua", "Menunggu", "Diterima", "Ditolak"].map(
                     (tab, index) => (
-                      <Tab
+                      <div
+                        role="tab"
+                        data-rttab="true"
+                        aria-selected={index === 0 ? "true" : "false"}
+                        tabIndex={index === 0 ? 0 : -1}
                         key={index}
-                        selectedClassName="bg-black text-white"
-                        className="text-16 lg:flex-grow cursor-pointer w-max lg:max-w-[136px] lg:w-full hover:bg-black hover:text-white transition-all text-secondary-text-color font-medium py-2.5 px-5 flex justify-center items-center lg:py-2.5 lg:px-4.5 rounded-full border border-bg-color"
+                        className={`text-16 lg:flex-grow cursor-pointer hover:bg-black hover:text-white transition-all text-secondary-text-color font-medium py-2.5 px-5 flex justify-center items-center lg:py-2.5 lg:px-4.5 rounded-full border border-bg-color ${
+                          index === 0 ? "bg-black text-white" : ""
+                        }`}
                       >
                         {tab}
-                      </Tab>
+                      </div>
                     )
                   )}
-                </TabList>
+                </div>
               </div>
             </div>
 
-            <TabPanel className="tabpanel gap-4 flex flex-col lg:gap-6">
+            <div role="tabpanel" className="tabpanel gap-4 flex flex-col lg:gap-6 react-tabs__tab-panel--selected">
               <div className="flex gap-4 lg:gap-6 flex-col w-full rounded-2xl border border-bg-color p-3 lg:p-4">
                 <div className="flex justify-between items-center">
                   <div className="flex text-14 font-medium text-secondary-text-color items-center gap-1">
@@ -377,10 +382,10 @@ export default function ManageVillageDevelopmentSchedule() {
               </div>
 
               <Button variant="green">Lihat Semua</Button>
-            </TabPanel>
+            </div>
 
-            <TabPanel className="tabpanel gap-4 flex flex-col lg:gap-6">
-              {Array.from({ length: 3 }, (_, index) => (
+            <div role="tabpanel" className="tabpanel gap-4 flex-col lg:gap-6 hidden">
+              {Array.from({ length: 4 }, (_, index) => (
                 <div
                   className="flex gap-4 lg:gap-6 flex-col w-full rounded-2xl border border-bg-color p-3 lg:p-4"
                   key={index}
@@ -455,10 +460,10 @@ export default function ManageVillageDevelopmentSchedule() {
               ))}
 
               <Button variant="green">Lihat Semua</Button>
-            </TabPanel>
+            </div>
 
-            <TabPanel className="tabpanel gap-4 flex flex-col lg:gap-6">
-              {Array.from({ length: 3 }, (_, index) => (
+            <div role="tabpanel" className="tabpanel gap-4 flex-col lg:gap-6 hidden">
+              {Array.from({ length: 2 }, (_, index) => (
                 <div
                   className="flex gap-4 lg:gap-6 flex-col w-full rounded-2xl border border-bg-color p-3 lg:p-4"
                   key={index}
@@ -528,10 +533,10 @@ export default function ManageVillageDevelopmentSchedule() {
               ))}
 
               <Button variant="green">Lihat Semua</Button>
-            </TabPanel>
+            </div>
 
-            <TabPanel className="tabpanel gap-4 flex flex-col lg:gap-6">
-              {Array.from({ length: 3 }, (_, index) => (
+            <div role="tabpanel" className="tabpanel gap-4 flex-col lg:gap-6 hidden">
+              {Array.from({ length: 1 }, (_, index) => (
                 <div
                   className="flex gap-4 lg:gap-6 flex-col w-full rounded-2xl border border-bg-color p-3 lg:p-4"
                   key={index}
@@ -601,9 +606,9 @@ export default function ManageVillageDevelopmentSchedule() {
               ))}
 
               <Button variant="green">Lihat Semua</Button>
-            </TabPanel>
+            </div>
           </WrapperElement>
-        </Tabs>
+        </div>
       </div>
     </div>
   );

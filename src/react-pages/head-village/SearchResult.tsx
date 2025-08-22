@@ -10,10 +10,10 @@ import DashboardStatus from "../../components/DashboardStatus";
 export default function SearchResult() {
   return (
     <div>
-      <Tabs className="flex flex-col gap-6 lg:gap-7.5">
+      <div className="flex flex-col gap-6 lg:gap-7.5" data-rttabs="true">
         <div className="top flex flex-col gap-4 lg:gap-6">
           <Title title="Search Result: Malik" />
-          <TabList className="flex gap-1 p-1 items-center bg-white rounded-xl overflow-x-auto">
+          <div className="flex gap-1 p-1 items-center bg-white rounded-xl overflow-x-auto" role="tablist">
             {[
               "Kepala Rumah",
               "List Bansos",
@@ -21,15 +21,20 @@ export default function SearchResult() {
               "Pembangunan",
               "Event Desa",
             ].map((tab, index) => (
-              <Tab
+              <div
+                role="tab"
+                data-rttab="true"
+                aria-selected={index === 0 ? "true" : "false"}
+                tabIndex={index === 0 ? 0 : -1}
                 key={index}
-                selectedClassName="!bg-dark-green text-white"
-                className="text-16 cursor-pointer hover:bg-dark-green hover:text-white transition-all w-max whitespace-nowrap lg:w-full border-none outline-none lg:min-w-[187px] flex justify-center items-center lg:flex-grow text-secondary-text-color font-medium px-5 py-3.5 lg:px-3 lg:py-3.5 bg-foreshadow rounded-xl"
+                className={`text-16 lg:flex-grow cursor-pointer hover:bg-black hover:text-white transition-all text-secondary-text-color font-medium py-2.5 px-5 flex justify-center items-center lg:py-2.5 lg:px-4.5 rounded-full border border-bg-color ${
+                  index === 0 ? "bg-black text-white" : ""
+                }`}
               >
                 {tab}
-              </Tab>
+              </div>
             ))}
-          </TabList>
+          </div>
         </div>
 
         <div className="flex flex-col gap-4 lg:gap-[10px]">
@@ -37,7 +42,7 @@ export default function SearchResult() {
             Result based on your search (30)
           </h2>
 
-          <TabPanel className="tabpanel">
+          <div className="tabpanel react-tabs__tab-panel--selected flex flex-col">
             <div className="overflow-x-auto w-full">
               <table className="border-separate border-spacing-y-[14px] table-auto w-full">
                 {Array.from({ length: 5 }, (_, index) => (
@@ -119,9 +124,9 @@ export default function SearchResult() {
               ))}
               <img src="/icons/pagination-right.svg" alt="" />
             </div>
-          </TabPanel>
+          </div>
 
-          <TabPanel className="tabpanel">
+          <div className="tabpanel hidden flex-col">
             <div className="overflow-x-auto w-full">
               <table className="border-separate border-spacing-y-[14px] table-auto w-full">
                 {Array.from({ length: 5 }).map((_, index) => (
@@ -211,9 +216,9 @@ export default function SearchResult() {
               ))}
               <img src="/icons/pagination-right.svg" alt="" />
             </div>
-          </TabPanel>
+          </div>
 
-          <TabPanel className="tabpanel">
+          <div className="tabpanel hidden flex-col">
             <div className="overflow-x-auto w-full">
               <table className="border-separate border-spacing-y-[14px] table-auto w-full">
                 {Array.from({ length: 5 }).map((_, index) => (
@@ -340,9 +345,9 @@ export default function SearchResult() {
               ))}
               <img src="/icons/pagination-right.svg" alt="" />
             </div>
-          </TabPanel>
+          </div>
 
-          <TabPanel className="tabpanel">
+          <div className="tabpanel hidden flex-col">
             <div className="overflow-x-auto w-full">
               <table className="border-separate border-spacing-y-[14px] table-auto w-full">
                 {Array.from({ length: 5 }).map((_, index) => (
@@ -435,9 +440,9 @@ export default function SearchResult() {
               ))}
               <img src="/icons/pagination-right.svg" alt="" />
             </div>
-          </TabPanel>
+          </div>
 
-          <TabPanel className="tabpanel">
+          <div className="tabpanel hidden flex-col">
             <div className="overflow-x-auto w-full">
               <table className="border-separate border-spacing-y-[14px] table-auto w-full">
                 {Array.from({ length: 5 }).map((_, index) => (
@@ -528,9 +533,9 @@ export default function SearchResult() {
               ))}
               <img src="/icons/pagination-right.svg" alt="" />
             </div>
-          </TabPanel>
+          </div>
         </div>
-      </Tabs>
+      </div>
     </div>
   );
 }

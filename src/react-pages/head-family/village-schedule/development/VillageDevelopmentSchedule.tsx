@@ -11,18 +11,26 @@ export default function VillageDevelopmentSchedule() {
     <div className="flex flex-col gap-6">
       <TitlePage title="Pembangunan Desa" />
 
-      <Tabs className="flex flex-col gap-4 lg:gap-6">
-        <TabList className="flex gap-1 p-1 items-center bg-foreshadow overflow-x-auto w-full">
+      <div className="flex flex-col gap-4 lg:gap-6" data-rttabs="true">
+        <div
+          className="flex gap-1 p-1 items-center bg-foreshadow overflow-x-auto w-full"
+          role="tablist"
+        >
           {["Semua Pembangunan", "Pengajuan Saya"].map((tab, index) => (
-            <Tab
+            <div
+              role="tab"
+              data-rttab="true"
+              aria-selected={index === 0 ? "true" : "false"}
+              tabIndex={index === 0 ? 0 : -1}
               key={index}
-              selectedClassName="!bg-dark-green text-white"
-              className="text-16 cursor-pointer hover:bg-dark-green hover:text-white transition-all w-max whitespace-nowrap md:w-full border-none outline-none flex justify-center items-center lg:flex-grow text-secondary-text-color font-medium px-5 py-3.5 lg:px-3 lg:py-3.5 bg-foreshadow rounded-full"
+              className={`text-16 lg:flex-grow cursor-pointer hover:bg-black hover:text-white transition-all text-secondary-text-color font-medium py-2.5 px-5 flex justify-center items-center lg:py-2.5 lg:px-4.5 rounded-full border border-bg-color ${
+                index === 0 ? "bg-black text-white" : ""
+              }`}
             >
               {tab}
-            </Tab>
+            </div>
           ))}
-        </TabList>
+        </div>
         <div className="w-full">
           <div className="top flex flex-wrap justify-between items-center gap-3">
             <div className="md:max-w-[370px] w-full">
@@ -64,7 +72,10 @@ export default function VillageDevelopmentSchedule() {
             </div>
           </div>
           <div className="overflow-x-auto w-full">
-            <TabPanel>
+            <div
+              role="tabpanel"
+              className="react-tabs__tab-panel--selected flex flex-col"
+            >
               <table className="border-separate border-spacing-y-[14px] table-auto w-full">
                 <tbody>
                   {Array.from({ length: 3 }).map((_, index) => (
@@ -142,9 +153,9 @@ export default function VillageDevelopmentSchedule() {
               </table>
 
               <Pagination />
-            </TabPanel>
+            </div>
 
-            <TabPanel>
+            <div role="tabpanel" className="hidden flex-col">
               <table className="border-separate border-spacing-y-[14px] table-auto w-full">
                 <tbody>
                   {Array.from({ length: 3 }).map((_, index) => (
@@ -221,10 +232,10 @@ export default function VillageDevelopmentSchedule() {
                 </tbody>
               </table>
               <Pagination />
-            </TabPanel>
+            </div>
           </div>
         </div>
-      </Tabs>
+      </div>
     </div>
   );
 }

@@ -23,7 +23,7 @@ export default function Modal({
 }) {
   return (
     <div
-      className={`fixed inset-0 z-50 bg-black/70 flex items-center justify-center transition-opacity ${
+      className={`modal fixed inset-0 z-50 bg-black/70 flex items-center justify-center transition-opacity ${
         isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >

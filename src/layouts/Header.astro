@@ -66,20 +66,3 @@ const { isOpenSidebar = false } = Astro.props;
     class="w-14 lg:w-16 rounded-2xl border border-bg-color p-1.5 lg:p-2.5 lg:hidden cursor-pointer"
   />
 </div>
-
-<script>
-  // Sidebar toggle functionality
-  document.addEventListener('DOMContentLoaded', function() {
-    const sidebarToggle = document.getElementById('sidebar-toggle');
-    
-    if (sidebarToggle) {
-      sidebarToggle.addEventListener('click', function() {
-        // Dispatch a custom event to communicate with parent components
-        const event = new CustomEvent('toggleSidebar', {
-          detail: { action: 'toggle' }
-        });
-        document.dispatchEvent(event);
-      });
-    }
-  });
-</script>
