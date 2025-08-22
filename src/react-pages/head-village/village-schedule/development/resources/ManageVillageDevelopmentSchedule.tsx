@@ -15,6 +15,7 @@ export default function ManageVillageDevelopmentSchedule() {
   return (
     <div className="flex flex-col gap-6">
       <Modal
+        id="modal-delete"
         confirmButtonElement={
           <Button variant="pink" customClass="flex-grow">
             <img src="/icons/trash.svg" alt="" />
@@ -38,7 +39,11 @@ export default function ManageVillageDevelopmentSchedule() {
         }
         leftElement={
           <div className="flex gap-3">
-            <Button onClick={() => setIsOpenModal(true)} variant="pink">
+            <Button
+              dataOpenModal="modal-delete"
+              onClick={() => setIsOpenModal(true)}
+              variant="pink"
+            >
               Hapus Data
               <img className="w-5 lg:w-6" src="/icons/trash.svg" alt="" />
             </Button>
@@ -162,7 +167,10 @@ export default function ManageVillageDevelopmentSchedule() {
               />
 
               <div className="lg:flex-grow">
-                <div className="flex flex-wrap gap-3 items-center lg:justify-end" role="tablist">
+                <div
+                  className="flex flex-wrap gap-3 items-center lg:justify-end"
+                  role="tablist"
+                >
                   {["Semua", "Menunggu", "Diterima", "Ditolak"].map(
                     (tab, index) => (
                       <div
@@ -183,7 +191,10 @@ export default function ManageVillageDevelopmentSchedule() {
               </div>
             </div>
 
-            <div role="tabpanel" className="tabpanel gap-4 flex flex-col lg:gap-6 react-tabs__tab-panel--selected">
+            <div
+              role="tabpanel"
+              className="tabpanel gap-4 flex flex-col lg:gap-6 react-tabs__tab-panel--selected"
+            >
               <div className="flex gap-4 lg:gap-6 flex-col w-full rounded-2xl border border-bg-color p-3 lg:p-4">
                 <div className="flex justify-between items-center">
                   <div className="flex text-14 font-medium text-secondary-text-color items-center gap-1">
@@ -384,7 +395,10 @@ export default function ManageVillageDevelopmentSchedule() {
               <Button variant="green">Lihat Semua</Button>
             </div>
 
-            <div role="tabpanel" className="tabpanel gap-4 flex-col lg:gap-6 hidden">
+            <div
+              role="tabpanel"
+              className="tabpanel gap-4 flex-col lg:gap-6 hidden"
+            >
               {Array.from({ length: 4 }, (_, index) => (
                 <div
                   className="flex gap-4 lg:gap-6 flex-col w-full rounded-2xl border border-bg-color p-3 lg:p-4"
@@ -462,7 +476,10 @@ export default function ManageVillageDevelopmentSchedule() {
               <Button variant="green">Lihat Semua</Button>
             </div>
 
-            <div role="tabpanel" className="tabpanel gap-4 flex-col lg:gap-6 hidden">
+            <div
+              role="tabpanel"
+              className="tabpanel gap-4 flex-col lg:gap-6 hidden"
+            >
               {Array.from({ length: 2 }, (_, index) => (
                 <div
                   className="flex gap-4 lg:gap-6 flex-col w-full rounded-2xl border border-bg-color p-3 lg:p-4"
@@ -535,7 +552,10 @@ export default function ManageVillageDevelopmentSchedule() {
               <Button variant="green">Lihat Semua</Button>
             </div>
 
-            <div role="tabpanel" className="tabpanel gap-4 flex-col lg:gap-6 hidden">
+            <div
+              role="tabpanel"
+              className="tabpanel gap-4 flex-col lg:gap-6 hidden"
+            >
               {Array.from({ length: 1 }, (_, index) => (
                 <div
                   className="flex gap-4 lg:gap-6 flex-col w-full rounded-2xl border border-bg-color p-3 lg:p-4"

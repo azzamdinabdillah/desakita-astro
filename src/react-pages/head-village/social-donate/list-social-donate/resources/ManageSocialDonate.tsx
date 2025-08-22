@@ -15,8 +15,13 @@ export default function ManageSocialDonate() {
   return (
     <div className="flex flex-col gap-6">
       <Modal
+        id="modal-delete"
         confirmButtonElement={
-          <Button variant="pink" customClass="flex-grow">
+          <Button
+            variant="pink"
+            customClass="flex-grow"
+            dataCloseModal="modal-delete"
+          >
             <img src="/icons/trash.svg" alt="" />
             Iya Hapus
           </Button>
@@ -38,7 +43,11 @@ export default function ManageSocialDonate() {
         }
         leftElement={
           <div className="flex gap-3">
-            <Button onClick={() => setIsOpenModal(true)} variant="pink">
+            <Button
+              dataOpenModal="modal-delete"
+              onClick={() => setIsOpenModal(true)}
+              variant="pink"
+            >
               Hapus Data
               <img className="w-5 lg:w-6" src="/icons/trash.svg" alt="" />
             </Button>

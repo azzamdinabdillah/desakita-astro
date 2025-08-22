@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import Button from "./Button";
 
 export default function Modal({
+  id,
   isOpen,
   setIsOpen,
   message,
@@ -11,6 +12,7 @@ export default function Modal({
   maxWidth = "lg:max-w-[335px]",
   subHeader,
 }: {
+  id?: string;
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
   message?: string;
@@ -23,6 +25,7 @@ export default function Modal({
 }) {
   return (
     <div
+      id={id}
       className={`modal fixed inset-0 z-50 bg-black/70 flex items-center justify-center transition-opacity ${
         isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
@@ -39,6 +42,7 @@ export default function Modal({
             className="cursor-pointer hover:scale-110 transition-all"
             src="/icons/close-modal.svg"
             alt=""
+            dataCloseModal={id}
             onClick={() => setIsOpen(false)}
           />
         </div>
@@ -58,6 +62,7 @@ export default function Modal({
 
               <div className="flex gap-3">
                 <Button
+                  dataCloseModal={id}
                   variant="borderTextBlack"
                   onClick={() => setIsOpen(false)}
                 >

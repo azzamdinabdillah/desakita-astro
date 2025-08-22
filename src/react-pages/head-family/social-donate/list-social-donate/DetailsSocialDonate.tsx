@@ -31,8 +31,13 @@ export default function DetailsSocialDonate() {
   return (
     <div className="flex flex-col gap-6">
       <Modal
+        id="modal-delete"
         confirmButtonElement={
-          <Button variant="pink" customClass="flex-grow">
+          <Button
+            variant="pink"
+            customClass="flex-grow"
+            dataCloseModal="modal-delete"
+          >
             <img src="/icons/trash.svg" alt="" />
             Iya Hapus
           </Button>
@@ -43,7 +48,7 @@ export default function DetailsSocialDonate() {
         setIsOpen={setIsOpenModal}
       />
       <TitlePage
-        title="Manage Kepala Rumah"
+        title="Manage Bantuan Sosial"
         subTitle={
           <div className="flex items-center gap-1">
             Bantuan sosial
@@ -52,18 +57,20 @@ export default function DetailsSocialDonate() {
             </span>
           </div>
         }
-        leftElement={
-          <div className="flex gap-3">
-            <Button onClick={() => setIsOpenModal(true)} variant="pink">
-              Hapus Data
-              <img className="w-5 md:w-6" src="/icons/trash.svg" alt="" />
-            </Button>
-            <Button onClick={() => setIsOpenModal(true)} variant="black">
-              Ubah Data
-              <img className="w-5 md:w-6" src="/icons/edit.svg" alt="" />
-            </Button>
-          </div>
-        }
+        // leftElement={
+        //   <div className="flex gap-3">
+        //     <Button dataOpenModal="modal-delete" onClick={() => setIsOpenModal(true)} variant="pink">
+        //       Hapus Data
+        //       <img className="w-5 md:w-6" src="/icons/trash.svg" alt="" />
+        //     </Button>
+        //     <a href="/head-family/social-donate/list-social-donate/create-social-donate">
+        //     <Button variant="black">
+        //       Ubah Data
+        //       <img className="w-5 md:w-6" src="/icons/edit.svg" alt="" />
+        //     </Button>
+        //     </a>
+        //   </div>
+        // }
       />
 
       <div className="grid grid-cols-1 md:grid-cols-10 gap-4 items-start">

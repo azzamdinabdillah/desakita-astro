@@ -44,6 +44,7 @@ export default function ManageHeadHouse() {
   return (
     <div className="flex flex-col gap-6">
       <Modal
+        id="modal-delete"
         confirmButtonElement={
           <Button variant="pink" customClass="flex-grow">
             <img src="/icons/trash.svg" alt="" />
@@ -66,7 +67,11 @@ export default function ManageHeadHouse() {
           </div>
         }
         leftElement={
-          <Button onClick={() => setIsOpenModal(true)} variant="pink">
+          <Button
+            dataOpenModal="modal-delete"
+            onClick={() => setIsOpenModal(true)}
+            variant="pink"
+          >
             Hapus Data
             <img className="w-5 lg:w-6" src="/icons/trash.svg" alt="" />
           </Button>
@@ -190,14 +195,19 @@ export default function ManageHeadHouse() {
                     aria-selected={index === 0 ? "true" : "false"}
                     tabIndex={index === 0 ? 0 : -1}
                     key={index}
-                    className={`text-16 lg:flex-grow cursor-pointer hover:bg-black hover:text-white transition-all text-secondary-text-color font-medium py-2.5 px-5 flex justify-center items-center lg:py-2.5 lg:px-4.5 rounded-full border border-bg-color ${index === 0 ? "bg-black text-white" : ""}`}
+                    className={`text-16 lg:flex-grow cursor-pointer hover:bg-black hover:text-white transition-all text-secondary-text-color font-medium py-2.5 px-5 flex justify-center items-center lg:py-2.5 lg:px-4.5 rounded-full border border-bg-color ${
+                      index === 0 ? "bg-black text-white" : ""
+                    }`}
                   >
                     {tab}
                   </div>
                 ))}
               </div>
 
-              <div role="tabpanel" className="gap-4 flex flex-col lg:gap-6 mt-4 lg:mt-6 react-tabs__tab-panel--selected">
+              <div
+                role="tabpanel"
+                className="gap-4 flex flex-col lg:gap-6 mt-4 lg:mt-6 react-tabs__tab-panel--selected"
+              >
                 <RecentActivity
                   bottomLeft="Nominal Pengajuan:"
                   bottomRight="Rp2.500.000"
@@ -233,7 +243,10 @@ export default function ManageHeadHouse() {
                   right={<DashboardStatus type={"Ditolak"} title={"Ditolak"} />}
                 />
               </div>
-              <div role="tabpanel" className="gap-4 flex-col lg:gap-6 hidden mt-4 lg:mt-6">
+              <div
+                role="tabpanel"
+                className="gap-4 flex-col lg:gap-6 hidden mt-4 lg:mt-6"
+              >
                 <RecentActivity
                   bottomLeft="Harga Event:"
                   bottomRight="Rp49.000"

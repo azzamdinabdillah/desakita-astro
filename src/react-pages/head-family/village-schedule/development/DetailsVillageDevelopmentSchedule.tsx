@@ -40,6 +40,7 @@ export default function DetailsVillageDevelopmentSchedule() {
   return (
     <div className="flex flex-col gap-6">
       <Modal
+        id="modal-choose-applicant"
         subHeader="Pilih salah satu anggota keluarga"
         maxWidth="lg:max-w-[760px] w-full"
         body={
@@ -276,6 +277,7 @@ export default function DetailsVillageDevelopmentSchedule() {
               value="Pilih Anggota Keluarga"
               right={
                 <img
+                  data-open-modal="modal-choose-applicant"
                   onClick={() => setOpenModalChooseApplicant(true)}
                   src="/icons/arrow-square-right.svg"
                   alt=""
@@ -290,6 +292,7 @@ export default function DetailsVillageDevelopmentSchedule() {
               right={
                 <img
                   onClick={() => setOpenModalChooseApplicant(true)}
+                  data-open-modal="modal-choose-applicant"
                   src="/icons/arrow-square-right.svg"
                   alt=""
                 />

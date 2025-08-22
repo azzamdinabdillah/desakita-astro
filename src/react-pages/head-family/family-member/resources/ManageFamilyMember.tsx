@@ -42,6 +42,7 @@ export default function ManageFamilyMember() {
   return (
     <div className="flex flex-col gap-6">
       <Modal
+        id="modal-delete"
         confirmButtonElement={
           <Button variant="pink" customClass="flex-grow">
             <img src="/icons/trash.svg" alt="" />
@@ -64,7 +65,11 @@ export default function ManageFamilyMember() {
           </div>
         }
         leftElement={
-          <Button onClick={() => setIsOpenModal(true)} variant="pink">
+          <Button
+            dataOpenModal="modal-delete"
+            onClick={() => setIsOpenModal(true)}
+            variant="pink"
+          >
             Hapus Data
             <img className="w-5 lg:w-6" src="/icons/trash.svg" alt="" />
           </Button>
