@@ -39,33 +39,33 @@ export default function DetailsSocialDonate() {
             dataCloseModal="modal-delete"
           >
             <img src="/icons/trash.svg" alt="" />
-            Iya Hapus
+            Yes, Delete
           </Button>
         }
-        message="Tindakan ini permanen dan tidak bisa dibatalkan!"
-        header="Hapus Bantuan Sosial?"
+        message="This action is permanent and cannot be undone!"
+        header="Delete Social Donate?"
         isOpen={isOpenModal}
         setIsOpen={setIsOpenModal}
       />
       <TitlePage
-        title="Manage Bantuan Sosial"
+        title="Manage Social Donate"
         subTitle={
           <div className="flex items-center gap-1">
-            Bantuan sosial
+            Social Donate
             <span className="text-dark-green font-medium">
-              / Manage bantuan sosial
+              / Manage Social Donate
             </span>
           </div>
         }
         // leftElement={
         //   <div className="flex gap-3">
         //     <Button dataOpenModal="modal-delete" onClick={() => setIsOpenModal(true)} variant="pink">
-        //       Hapus Data
+        //       Delete Data
         //       <img className="w-5 md:w-6" src="/icons/trash.svg" alt="" />
         //     </Button>
         //     <a href="/head-family/social-donate/list-social-donate/create-social-donate">
         //     <Button variant="black">
-        //       Ubah Data
+        //       Edit Data
         //       <img className="w-5 md:w-6" src="/icons/edit.svg" alt="" />
         //     </Button>
         //     </a>
@@ -75,7 +75,7 @@ export default function DetailsSocialDonate() {
 
       <div className="grid grid-cols-1 md:grid-cols-10 gap-4 items-start">
         <WrapperElement customClass="md:col-span-5 lg:col-span-6">
-          <Title subTitle="Informasi Bantuan Sosial" />
+          <Title subTitle="Social Donate Information" />
 
           <div className="flex justify-between items-center">
             <img
@@ -83,17 +83,17 @@ export default function DetailsSocialDonate() {
               alt=""
               className="w-[100px] h-[80px] md:w-[120px] md:h-[100px] rounded-2xl object-cover"
             />
-            <DashboardStatus title="Tersedia" type="softGreen" />
+            <DashboardStatus title="Available" type="softGreen" />
           </div>
 
           <div className="flex flex-col gap-1.5">
             <h2 className="text-black font-semibold text-20 leading-6">
-              Bantuan Untuk Rakyat Kurang Mampu
+              Social Donate for Underprivileged Citizens
             </h2>
             <div className="gap-1 flex items-center">
               <img src="/icons/profile.svg" alt="" />
               <p className="font-medium text-14 text-secondary-text-color">
-                PT Shaynakit Meningkatkan Bangsa
+                PT Shaynakit Elevates the Nation
               </p>
             </div>
           </div>
@@ -103,8 +103,8 @@ export default function DetailsSocialDonate() {
           <DetailsList
             icon="/icons/money.svg"
             titleColor="text-dark-green"
-            title="Rp120.000.000"
-            value="Uang Tunai"
+            title="Rp120,000,000"
+            value="Cash"
           />
 
           <hr />
@@ -113,8 +113,8 @@ export default function DetailsSocialDonate() {
             <DetailsList
               titleColor="text-soft-red"
               icon="/icons/send-square-2.svg"
-              title="Rp110.000.000"
-              value="Sisa Bansos"
+              title="Rp110,000,000"
+              value="Remaining Social Donate"
             />
           </div>
 
@@ -123,23 +123,18 @@ export default function DetailsSocialDonate() {
           <DetailsList
             icon="/icons/profile-2user-blue-bg.svg"
             titleColor="text-blue"
-            title="15.600 Warga"
-            value="Total Pengajuan"
+            title="15,600 Residents"
+            value="Total Applications"
           />
 
           <hr />
 
           <div className="flex gap-3 flex-col">
             <h3 className="font-medium text-secondary-text-color text-14">
-              Tentang Bantuan
+              About Social Donate
             </h3>
             <p className="text-16 text-black font-medium leading-6 md:leading-[32px]">
-              Program Bantuan Sosial ini hadir untuk memberikan dukungan nyata
-              bagi masyarakat yang membutuhkan. Kami berkomitmen membantu
-              memenuhi kebutuhan dasar seperti pangan, kesehatan, dan
-              pendidikan, demi meningkatkan kualitas hidup. Dengan semangat
-              gotong royong, kami mengajak semua pihak untuk bersama-sama
-              menciptakan perubahan positif.
+              This Social Donate program is here to provide real support for those in need. We are committed to helping fulfill basic needs such as food, health, and education, in order to improve quality of life. With the spirit of collaboration, we invite everyone to work together to create positive change.
             </p>
           </div>
         </WrapperElement>
@@ -147,13 +142,13 @@ export default function DetailsSocialDonate() {
         <div className="md:col-span-5 lg:col-span-4 flex gap-3.5 flex-col">
           <WrapperElement customClass="">
             <Title
-              subTitle="Detail Akun Bank"
+              subTitle="Bank Account Details"
               customClassSubTitle="!text-black"
             />
 
             <div className="flex flex-col gap-4">
               <Title
-                subTitle="Kamu Pake Bank Apa?"
+                subTitle="Which Bank Do You Use?"
                 subTitleSizeVariant="small"
               />
 
@@ -169,7 +164,7 @@ export default function DetailsSocialDonate() {
                   <div className="flex gap-2 items-center">
                     <img src="/icons/bank.svg" alt="" />
                     <p className="text-16 font-medium text-secondary-text-color">
-                      Pilih salah satu bank
+                      Select one bank
                     </p>
                   </div>
 
@@ -223,14 +218,14 @@ export default function DetailsSocialDonate() {
                 customClass="!text-xs md:!text-sm !font-medium"
                 labelFor="bank-account-number"
               >
-                Nomor Rekening Bank
+                Bank Account Number
               </Label>
               <Inputs
                 type="text"
                 id="bank-account-number"
                 isIconLeft={true}
                 icons="/icons/card.svg"
-                placeholder="Masukan Nomor Rekening"
+                placeholder="Enter Bank Account Number"
               />
             </div>
 
@@ -239,21 +234,21 @@ export default function DetailsSocialDonate() {
                 customClass="!text-xs md:!text-sm !font-medium"
                 labelFor="name"
               >
-                Nama Pemilik Rekening
+                Account Holder Name
               </Label>
               <Inputs
                 type="text"
                 id="name"
                 isIconLeft={true}
                 icons="/icons/user-square.svg"
-                placeholder="Nama Lengkap"
+                placeholder="Full Name"
               />
             </div>
           </WrapperElement>
 
           <WrapperElement>
             <Title
-              subTitle="Ajukan Bantuan Sosial"
+              subTitle="Submit Social Donate"
               customClassSubTitle="!text-black"
             />
 
@@ -262,7 +257,7 @@ export default function DetailsSocialDonate() {
                 customClass="!text-xs md:!text-sm !font-medium"
                 labelFor="nominal"
               >
-                Nominal Pengajuan
+                Application Amount
               </Label>
               <Inputs
                 type="number"
@@ -278,17 +273,17 @@ export default function DetailsSocialDonate() {
                 customClass="!text-xs md:!text-sm !font-medium"
                 labelFor="description"
               >
-                Deskripsi Bantuan Sosial
+                Social Donate Description
               </Label>
               <Inputs
                 type="textarea"
                 id="description"
                 rows={5}
-                placeholder="Jelaskan lebih detail tentang bantuan"
+                placeholder="Describe the social donate in more detail"
               />
             </div>
 
-            <Button variant="black">Ajukan Bantuan</Button>
+            <Button variant="black">Submit Social Donate</Button>
           </WrapperElement>
         </div>
       </div>

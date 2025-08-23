@@ -9,14 +9,14 @@ import Pagination from "../../../../components/Pagination";
 export default function VillageDevelopmentSchedule() {
   return (
     <div className="flex flex-col gap-6">
-      <TitlePage title="Pembangunan Desa" />
+      <TitlePage title="Village Development" />
 
       <div className="flex flex-col gap-4 lg:gap-6" data-rttabs="true">
         <div
           className="flex gap-1 p-1 items-center bg-foreshadow overflow-x-auto w-full"
           role="tablist"
         >
-          {["Semua Pembangunan", "Pengajuan Saya"].map((tab, index) => (
+          {["All Developments", "My Submissions"].map((tab, index) => (
             <div
               role="tab"
               data-rttab="true"
@@ -38,7 +38,7 @@ export default function VillageDevelopmentSchedule() {
                 type="text"
                 isIconLeft={true}
                 icons="/icons/box-search.svg"
-                placeholder="Cari nama pembangunan desa"
+                placeholder="Search for village development name"
                 customClass="bg-white"
               />
             </div>
@@ -86,7 +86,7 @@ export default function VillageDevelopmentSchedule() {
                             <CardItemGeneral
                               imgSize="w-[70px] lg:w-[100px] h-[60px] lg:h-[80px]"
                               image="/images/event-3.png"
-                              title="Pembangunan Jalanan Utama"
+                              title="Main Road Development"
                               subTitleMaxWidth="max-w-[100%]"
                               titleMaxWidth="max-w-[100%]"
                               subTitle={
@@ -97,7 +97,7 @@ export default function VillageDevelopmentSchedule() {
                                     className="w-3.5 lg:w-4.5"
                                   />
                                   <p className="text-secondary-text-color text-14 font-medium w-full flex-grow">
-                                    Penanggung Jawab :{" "}
+                                    Person in Charge:{" "}
                                     <span className="text-dark-green">
                                       Uciha Asep
                                     </span>
@@ -111,7 +111,7 @@ export default function VillageDevelopmentSchedule() {
                                 "/head-family/village-schedule/village-development-schedule/details-village-development-schedule"
                               }
                             >
-                              <Button variant="black">Lihat Detail</Button>
+                              <Button variant="black">View Details</Button>
                             </a>
                           </div>
 
@@ -122,8 +122,8 @@ export default function VillageDevelopmentSchedule() {
                               <DetailsList
                                 titleColor="text-soft-red"
                                 icon="/icons/wallet-3.svg"
-                                title="Rp499.000"
-                                value="Dana Pembangunan"
+                                title="Rp499,000"
+                                value="Development Fund"
                               />
                             </div>
 
@@ -131,8 +131,8 @@ export default function VillageDevelopmentSchedule() {
                               <DetailsList
                                 titleColor="text-blue"
                                 icon="/icons/profile-2user-blue-bg.svg"
-                                title="9.250 Warga"
-                                value="Total Pelamar"
+                                title="9,250 Residents"
+                                value="Total Applicants"
                               />
                             </div>
 
@@ -141,7 +141,7 @@ export default function VillageDevelopmentSchedule() {
                                 titleColor="text-dark-green"
                                 icon="/icons/calendar-2-bg-square.svg"
                                 title="Mon, 24 Feb 2025"
-                                value="Tanggal Pelaksanaan"
+                                value="Implementation Date"
                               />
                             </div>
                           </div>
@@ -166,7 +166,7 @@ export default function VillageDevelopmentSchedule() {
                             <CardItemGeneral
                               imgSize="w-[70px] lg:w-[100px] h-[60px] lg:h-[80px]"
                               image="/images/event-4.png"
-                              title="Pembangunan Puskesmas Desa"
+                              title="Village Health Center Development"
                               subTitleMaxWidth="max-w-[100%]"
                               titleMaxWidth="max-w-[100%]"
                               subTitle={
@@ -177,7 +177,7 @@ export default function VillageDevelopmentSchedule() {
                                     className="w-3.5 lg:w-4.5"
                                   />
                                   <p className="text-secondary-text-color text-14 font-medium w-full flex-grow">
-                                    Penanggung Jawab :{" "}
+                                    Person in Charge:{" "}
                                     <span className="text-dark-green">
                                       Uciha Asep
                                     </span>
@@ -191,7 +191,7 @@ export default function VillageDevelopmentSchedule() {
                                 "/head-family/village-schedule/village-development-schedule/details-village-development-schedule"
                               }
                             >
-                              <Button variant="black">Lihat Detail</Button>
+                              <Button variant="black">View Details</Button>
                             </a>
                           </div>
 
@@ -202,8 +202,8 @@ export default function VillageDevelopmentSchedule() {
                               <DetailsList
                                 titleColor="text-soft-red"
                                 icon="/icons/wallet-3.svg"
-                                title="Rp499.000"
-                                value="Dana Pembangunan"
+                                title="Rp499,000"
+                                value="Development Fund"
                               />
                             </div>
 
@@ -211,8 +211,8 @@ export default function VillageDevelopmentSchedule() {
                               <DetailsList
                                 titleColor="text-blue"
                                 icon="/icons/profile-2user-blue-bg.svg"
-                                title="9.250 Warga"
-                                value="Total Pelamar"
+                                title="9,250 Residents"
+                                value="Total Applicants"
                               />
                             </div>
 
@@ -221,7 +221,7 @@ export default function VillageDevelopmentSchedule() {
                                 titleColor="text-dark-green"
                                 icon="/icons/calendar-2-bg-square.svg"
                                 title="Mon, 24 Feb 2025"
-                                value="Tanggal Pelaksanaan"
+                                value="Implementation Date"
                               />
                             </div>
                           </div>

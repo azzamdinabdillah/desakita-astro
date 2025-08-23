@@ -7,7 +7,7 @@ import DetailsList from "../../../../components/DetailsList";
 export default function ListSocialDonate() {
   return (
     <div className="flex flex-col gap-6">
-      <TitlePage title="List Bantuan Sosial" />
+      <TitlePage title="List of Social Donate" />
 
       <div className="flex flex-col">
         <div className="top flex flex-wrap justify-between items-center gap-3">
@@ -16,7 +16,7 @@ export default function ListSocialDonate() {
               type="text"
               isIconLeft={true}
               icons="/icons/receipt-search.svg"
-              placeholder="Cari nama bantuan social"
+              placeholder="Search for social donate name"
               customClass="bg-white"
             />
           </div>
@@ -61,7 +61,7 @@ export default function ListSocialDonate() {
                         <CardItemGeneral
                           imgSize="w-[70px] lg:w-[100px] h-[60px] lg:h-[80px]"
                           image="/images/bansos-1.png"
-                          title="Bantuan Untuk Rakyat Kurang Mampu"
+                          title="Social Donate for Underprivileged Citizens"
                           subTitleMaxWidth="max-w-[100%]"
                           titleMaxWidth="max-w-[100%]"
                           subTitle={
@@ -72,7 +72,7 @@ export default function ListSocialDonate() {
                                 className="w-3.5 lg:w-4.5"
                               />
                               <p className="text-secondary-text-color text-14 font-medium w-full flex-grow">
-                                PT Shaynakit Meningkatkan Bangsa
+                                PT Shaynakit Elevates the Nation
                               </p>
                             </div>
                           }
@@ -83,7 +83,7 @@ export default function ListSocialDonate() {
                             "/head-family/social-donate/list-social-donate/details-social-donate"
                           }
                         >
-                          <Button variant="black">Lihat Detail</Button>
+                          <Button variant="black">View Details</Button>
                         </a>
                       </div>
 
@@ -94,8 +94,8 @@ export default function ListSocialDonate() {
                           <DetailsList
                             titleColor="text-dark-green"
                             icon="/icons/money.svg"
-                            title="Rp120.000.000"
-                            value="Uang Tunai"
+                            title="Rp120,000,000"
+                            value="Cash Social Donate"
                           />
                         </div>
 
@@ -103,8 +103,8 @@ export default function ListSocialDonate() {
                           <DetailsList
                             titleColor="text-soft-red"
                             icon="/icons/send-square-2.svg"
-                            title="Rp110.000.000"
-                            value="Bansos Tersisa"
+                            title="Rp110,000,000"
+                            value="Remaining Social Donate"
                           />
                         </div>
 
@@ -112,8 +112,8 @@ export default function ListSocialDonate() {
                           <DetailsList
                             titleColor="text-blue"
                             icon="/icons/profile-2user-blue-bg.svg"
-                            title="15.600 Warga"
-                            value="Total Pengajuan"
+                            title="15,600 Residents"
+                            value="Total Applications"
                           />
                         </div>
                       </div>

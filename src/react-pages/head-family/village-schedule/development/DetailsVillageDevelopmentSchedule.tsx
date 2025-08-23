@@ -41,20 +41,20 @@ export default function DetailsVillageDevelopmentSchedule() {
     <div className="flex flex-col gap-6">
       <Modal
         id="modal-choose-applicant"
-        subHeader="Pilih salah satu anggota keluarga"
+        subHeader="Select one family member"
         maxWidth="lg:max-w-[760px] w-full"
         body={
           <>
             <div className="flex gap-4 flex-col">
               <div className="flex flex-col gap-3">
-                <Title subTitle="Suami (You)" />
+                <Title subTitle="Husband (You)" />
 
                 <label
                   className="label-radio input-radio-active-border rounded-2xl overflow-hidden"
                   onClick={() =>
                     handleSetApplicant({
                       name: "Azam Din Abdillah",
-                      job: "Mahasiswa",
+                      job: "Student",
                       image: "/images/user-3.png",
                     })
                   }
@@ -63,7 +63,7 @@ export default function DetailsVillageDevelopmentSchedule() {
                   <PeopleCardComplete
                     image="/images/user-3.png"
                     name="Azam Din Abdillah"
-                    job="Mahasiswa"
+                    job="Student"
                     nik="2005100592201005"
                     age={42}
                     right={
@@ -79,14 +79,14 @@ export default function DetailsVillageDevelopmentSchedule() {
               </div>
 
               <div className="flex flex-col gap-3">
-                <Title subTitle="Istri (1)" />
+                <Title subTitle="Wife (1)" />
 
                 <label
                   className="label-radio input-radio-active-border rounded-2xl overflow-hidden"
                   onClick={() =>
                     handleSetApplicant({
                       name: "Azam Din Abdillah",
-                      job: "Mahasiswa",
+                      job: "Student",
                       image: "/images/user-3.png",
                     })
                   }
@@ -95,7 +95,7 @@ export default function DetailsVillageDevelopmentSchedule() {
                   <PeopleCardComplete
                     image="/images/user-3.png"
                     name="Azam Din Abdillah"
-                    job="Mahasiswa"
+                    job="Student"
                     nik="2005100592201005"
                     age={42}
                     right={
@@ -111,7 +111,7 @@ export default function DetailsVillageDevelopmentSchedule() {
               </div>
 
               <div className="flex flex-col gap-3">
-                <Title subTitle="Anak (3)" />
+                <Title subTitle="Children (3)" />
 
                 {Array.from({ length: 3 }, (_, index) => (
                   <label
@@ -119,16 +119,17 @@ export default function DetailsVillageDevelopmentSchedule() {
                     onClick={() =>
                       handleSetApplicant({
                         name: "Azam Din Abdillah",
-                        job: "Mahasiswa",
+                        job: "Student",
                         image: "/images/user-3.png",
                       })
                     }
                     htmlFor={`select-${index}`}
+                    key={index}
                   >
                     <PeopleCardComplete
                       image="/images/user-3.png"
                       name="Azam Din Abdillah"
-                      job="Mahasiswa"
+                      job="Student"
                       nik="2005100592201005"
                       age={42}
                       right={
@@ -146,17 +147,17 @@ export default function DetailsVillageDevelopmentSchedule() {
             </div>
           </>
         }
-        header="Pilih Pelamar Applicant"
+        header="Select Applicant"
         isOpen={openModalChooseApplicant}
         setIsOpen={setOpenModalChooseApplicant}
       />
       <TitlePage
-        title="Detail Pembangunan Desa"
+        title="Village Development Details"
         subTitle={
           <div className="flex items-center gap-1 flex-wrap">
-            Pembangunan Desa
+            Village Development
             <span className="text-dark-green font-medium">
-              / detail Pembangunan desa
+              / Village Development Details
             </span>
           </div>
         }
@@ -165,7 +166,7 @@ export default function DetailsVillageDevelopmentSchedule() {
       <div className="grid grid-cols-1 gap-4 items-start md:grid-cols-10">
         <WrapperElement customClass="md:col-span-5 lg:col-span-6">
           <Title
-            subTitle="Informasi Bantuan Sosial"
+            subTitle="Social Assistance Information"
             subTitleSizeVariant="small"
           />
 
@@ -175,16 +176,16 @@ export default function DetailsVillageDevelopmentSchedule() {
               alt=""
               className="w-[100px] h-[80px] lg:w-[120px] lg:h-[100px] rounded-2xl object-cover"
             />
-            <DashboardStatus title="Tersedia" type="green" />
+            <DashboardStatus title="Available" type="green" />
           </div>
 
           <div className="flex flex-col gap-1.5">
             <h2 className="text-black font-semibold text-20 leading-6">
-              Pembangunan Jalanan Utama
+              Main Road Development
             </h2>
             <div className="gap-1 flex items-center">
               <p className="font-medium text-14 text-secondary-text-color">
-                Penanggung jawab : <span>Uzumaki Asep</span>
+                Person in Charge: <span>Uzumaki Asep</span>
               </p>
             </div>
           </div>
@@ -196,10 +197,10 @@ export default function DetailsVillageDevelopmentSchedule() {
               titleColor="text-soft-red"
               icon="/icons/wallet-3.svg"
               title="Rp499.000"
-              value="Dana Pembangunan"
+              value="Development Fund"
             />
 
-            <DashboardStatus title="Tersedia" type="green" />
+            <DashboardStatus title="Available" type="green" />
           </div>
 
           <hr />
@@ -208,7 +209,7 @@ export default function DetailsVillageDevelopmentSchedule() {
             titleColor="text-dark-green"
             icon="/icons/calendar-2-bg-square.svg"
             title="Mon, 24 Feb 2025"
-            value="Tanggal Pelaksanaan"
+            value="Implementation Date"
           />
 
           <hr />
@@ -217,7 +218,7 @@ export default function DetailsVillageDevelopmentSchedule() {
             titleColor="text-aksen"
             icon="/icons/clock-bg.svg"
             title="12:30 WIB"
-            value="Jam Pelaksanaan"
+            value="Implementation Time"
           />
 
           <hr />
@@ -225,47 +226,43 @@ export default function DetailsVillageDevelopmentSchedule() {
           <DetailsList
             titleColor="text-blue"
             icon="/icons/profile-2user-blue-bg.svg"
-            title="9.250 Warga"
-            value="Total Partisipasi"
+            title="9,250 Residents"
+            value="Total Participation"
           />
 
           <hr />
 
           <div className="flex gap-3 flex-col">
             <h3 className="font-medium text-secondary-text-color text-14">
-              Tentang Pembangunan
+              About the Development
             </h3>
             <p className="text-16 text-black font-medium leading-6 lg:leading-[32px]">
-              Pembangunan Jalan Utama adalah langkah strategis untuk
-              meningkatkan aksesibilitas dan mobilitas masyarakat. Proyek ini
-              bertujuan untuk memperbaiki konektivitas antarwilayah, mendukung
-              kegiatan ekonomi lokal, serta menciptakan infrastruktur yang lebih
-              aman dan nyaman bagi pengguna jalan.
+              The Main Road Development is a strategic step to improve accessibility and mobility for the community. This project aims to enhance inter-regional connectivity, support local economic activities, and create safer and more comfortable infrastructure for road users.
             </p>
           </div>
         </WrapperElement>
 
         <WrapperElement customClass="md:col-span-5 lg:col-span-4">
-          <Title subTitle="Detail Pengajuan" subTitleSizeVariant="small" />
+          <Title subTitle="Submission Details" subTitleSizeVariant="small" />
           <DetailsList
             titleColor="text-dark-green"
             icon="/icons/timer-bg-green.svg"
-            title="192 Hari"
-            value="Waktu Diperlukan"
+            title="192 Days"
+            value="Time Required"
           />
           <hr />
           <DetailsList
             titleColor="text-dark-green"
             icon="/icons/calendar-tick-bg.svg"
             title="Wed, 3 Sep 2025"
-            value="Perkiraan Selesai"
+            value="Estimated Completion"
           />
           <hr />
           <DetailsList
             titleColor="text-dark-green"
             icon="/icons/dollar-square-bg.svg"
-            title="Pembayaran diatur di balai desa."
-            value="Bayaran Kerja"
+            title="Payment is arranged at the village hall."
+            value="Work Payment"
           />
           <hr />
 
@@ -273,8 +270,8 @@ export default function DetailsVillageDevelopmentSchedule() {
             <DetailsList
               titleColor="text-dark-green"
               icon="/icons/placeholder-upload-profile-circle.svg"
-              title="Pelamar Applicant"
-              value="Pilih Anggota Keluarga"
+              title="Applicant"
+              value="Select Family Member"
               right={
                 <img
                   data-open-modal="modal-choose-applicant"
@@ -300,7 +297,7 @@ export default function DetailsVillageDevelopmentSchedule() {
             />
           )}
           <hr />
-          <Button variant="green">Setuju & Ajukan Sekarang</Button>
+          <Button variant="green">Agree & Submit Now</Button>
         </WrapperElement>
       </div>
     </div>

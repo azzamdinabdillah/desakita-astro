@@ -8,7 +8,7 @@ import DashboardStatus from "../../../../components/DashboardStatus";
 export default function ApplicantSocialDonate() {
   return (
     <div className="flex flex-col gap-6">
-      <TitlePage title="Pengajuan Bantuan Sosial" />
+      <TitlePage title="Social Donate Application" />
 
       <div className="flex flex-col">
         <div className="top flex flex-wrap justify-between items-center gap-3">
@@ -17,7 +17,7 @@ export default function ApplicantSocialDonate() {
               type="text"
               isIconLeft={true}
               icons="/icons/user-search.svg"
-              placeholder="Cari nama Pengajuan bantuan social"
+              placeholder="Search for social donate application name"
               customClass="bg-white"
             />
           </div>
@@ -64,7 +64,7 @@ export default function ApplicantSocialDonate() {
                           <p>Tue, 09 Jan 2025 </p>
                         </div>
 
-                        <DashboardStatus title="Diterima" type="Diterima" />
+                        <DashboardStatus title="Accepted" type="Accepted" />
                       </div>
 
                       <hr />
@@ -72,7 +72,7 @@ export default function ApplicantSocialDonate() {
                         <CardItemGeneral
                           imgSize="w-[70px] lg:w-[100px] h-[60px] lg:h-[80px]"
                           image="/images/beras.png"
-                          title="Peduli Sesama: Penyaluran Beras untuk Warga Desa"
+                          title="Caring for Others: Rice Distribution for Village Residents"
                           subTitleMaxWidth="max-w-[100%]"
                           titleMaxWidth="max-w-[200px]"
                           subTitle={
@@ -83,7 +83,7 @@ export default function ApplicantSocialDonate() {
                                 className="w-3.5 lg:w-4.5"
                               />
                               <p className="text-secondary-text-color text-14 font-medium w-full flex-grow">
-                                PT Shaynakit Meningkatkan Bangsa
+                                PT Shaynakit Elevates the Nation
                               </p>
                             </div>
                           }
@@ -94,7 +94,7 @@ export default function ApplicantSocialDonate() {
                             "/head-family/social-donate/applicant-social-donate/details-applicant-social-donate"
                           }
                         >
-                          <Button variant="black">Lihat Detail</Button>
+                          <Button variant="black">View Details</Button>
                         </a>
                       </div>
 
@@ -105,8 +105,8 @@ export default function ApplicantSocialDonate() {
                           <DetailsList
                             titleColor="text-dark-green"
                             icon="/icons/bag-2.svg"
-                            title="Beras 20 Ton"
-                            value="Bahan Pokok"
+                            title="Rice 20 Tons"
+                            value="Staple Food"
                           />
                         </div>
 
@@ -114,8 +114,8 @@ export default function ApplicantSocialDonate() {
                           <DetailsList
                             titleColor="text-dark-green"
                             icon="/icons/send-square-2.svg"
-                            title="10 Ton"
-                            value="Bansos Tersisa"
+                            title="10 Tons"
+                            value="Remaining Social Donate"
                           />
                         </div>
 
@@ -123,8 +123,8 @@ export default function ApplicantSocialDonate() {
                           <DetailsList
                             titleColor="text-dark-green"
                             icon="/icons/receive-square-2.svg"
-                            title="2 Ton"
-                            value="Nominal Pengajuan"
+                            title="2 Tons"
+                            value="Application Amount"
                           />
                         </div>
                       </div>
