@@ -18,7 +18,7 @@ const headDetail = [
   },
   {
     title: "42 Years",
-    value: "Head of Household Age",
+    value: "Head House Age",
     icon: "/icons/detail-list-umur.svg",
   },
   {
@@ -52,17 +52,17 @@ export default function ManageHeadHouse() {
           </Button>
         }
         message="This action is permanent and cannot be undone!"
-        header="Delete Head of Household?"
+        header="Delete Head House?"
         isOpen={isOpenModal}
         setIsOpen={setIsOpenModal}
       />
       <TitlePage
-        title="Manage Head of Household"
+        title="Manage Head House"
         subTitle={
           <div className="flex items-center gap-1">
-            Head of Household
+            Head House
             <span className="text-dark-green font-medium">
-              / Manage Head of Household
+              / Manage Head House
             </span>
           </div>
         }
@@ -81,7 +81,7 @@ export default function ManageHeadHouse() {
       <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-5 items-start gap-3.5">
         <div className="flex flex-col gap-3.5 lg:flex-grow md:col-span-1 lg:col-span-3 w-full">
           <WrapperElement>
-            <Title subTitle="Head of Household" />
+            <Title subTitle="Head House" />
 
             <PeopleCard
               image="/images/user-2.png"
@@ -108,7 +108,7 @@ export default function ManageHeadHouse() {
 
           <WrapperElement>
             <Title
-              subTitle="Head of Household"
+              subTitle="Head House"
               title="3"
               icon="/icons/profile-bg.svg"
             />
@@ -188,22 +188,20 @@ export default function ManageHeadHouse() {
 
             <div className="" data-rttabs="true">
               <div className="flex flex-wrap gap-3 items-center" role="tablist">
-                {["Social Assistance", "Events", "Applicants"].map(
-                  (tab, index) => (
-                    <div
-                      role="tab"
-                      data-rttab="true"
-                      aria-selected={index === 0 ? "true" : "false"}
-                      tabIndex={index === 0 ? 0 : -1}
-                      key={index}
-                      className={`text-16 lg:flex-grow cursor-pointer hover:bg-black hover:text-white transition-all text-secondary-text-color font-medium py-2.5 px-5 flex justify-center items-center lg:py-2.5 lg:px-4.5 rounded-full border border-bg-color ${
-                        index === 0 ? "bg-black text-white" : ""
-                      }`}
-                    >
-                      {tab}
-                    </div>
-                  )
-                )}
+                {["Social Donate", "Events", "Applicants"].map((tab, index) => (
+                  <div
+                    role="tab"
+                    data-rttab="true"
+                    aria-selected={index === 0 ? "true" : "false"}
+                    tabIndex={index === 0 ? 0 : -1}
+                    key={index}
+                    className={`text-16 lg:flex-grow cursor-pointer hover:bg-black hover:text-white transition-all text-secondary-text-color font-medium py-2.5 px-5 flex justify-center items-center lg:py-2.5 lg:px-4.5 rounded-full border border-bg-color ${
+                      index === 0 ? "bg-black text-white" : ""
+                    }`}
+                  >
+                    {tab}
+                  </div>
+                ))}
               </div>
 
               <div

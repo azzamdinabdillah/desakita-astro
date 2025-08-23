@@ -12,12 +12,12 @@ export default function CreateSocialDonate() {
   return (
     <div className="flex-wrapper">
       <TitlePage
-        title="Add Social Assistance"
+        title="Add Social Donate"
         subTitle={
           <p>
-            Social Assistance &nbsp;
+            Social Donate &nbsp;
             <span className="text-dark-green font-medium">
-              /&nbsp; add social assistance
+              /&nbsp; add Social Donate
             </span>
           </p>
         }
@@ -27,7 +27,7 @@ export default function CreateSocialDonate() {
         <form className="flex-wrapper">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-name">
-              Social Assistance Thumbnail
+              Social Donate Thumbnail
             </Label>
             <div className="flex items-center justify-between w-full col-span-3">
               <img
@@ -65,12 +65,12 @@ export default function CreateSocialDonate() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-name">
-              Social Assistance Name
+              Social Donate Name
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="head-name"
-                placeholder="Determine social assistance name"
+                placeholder="Determine Social Donate name"
                 isIconLeft={true}
                 icons="/icons/edit-plain.svg"
                 type="text"
@@ -200,7 +200,7 @@ export default function CreateSocialDonate() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-location">
-              Social Assistance Description
+              Social Donate Description
             </Label>
             <div className="col-span-3">
               <Inputs

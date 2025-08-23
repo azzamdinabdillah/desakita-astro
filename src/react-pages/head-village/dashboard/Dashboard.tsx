@@ -20,7 +20,7 @@ const stats = [
     trendValue: "+12%",
   },
   {
-    title: "Head of Household",
+    title: "Head House",
     value: "9.250",
     icons: "/icons/stat-kepala-rumah.svg",
     trendUp: true,
@@ -191,17 +191,17 @@ export default function Dashboard() {
           <img src="/icons/picture.svg" alt="" className="w-fit" />
           <div className="flex flex-col gap-3">
             <p className="text-xs lg:text-sm text-yellow font-medium">
-              — Social Assistance
+              — Social Donate
             </p>
             <h1 className="text-lg lg:text-2xl text-white font-semibold">
               From Village to Residents ❤️
             </h1>
             <p className="text-sm lg:text-base text-white leading-6 font-normal">
-              Realize village welfare with targeted social assistance.
+              Realize village welfare with targeted Social Donate.
             </p>
           </div>
           <Button variant="white" customClass="w-full justify-between">
-            Create Social Assistance
+            Create Social Donate
             <img src="/icons/add-square-2.svg" alt="" />
           </Button>
         </div>
@@ -217,7 +217,7 @@ export default function Dashboard() {
         <div className="md:col-span-1 lg:col-span-3">
           <StatsDashboard
             stat={{
-              title: "Social Assistance",
+              title: "Social Donate",
               icons: "/icons/stat-bansos.svg",
               value: "192",
               trendUp: true,
@@ -226,7 +226,7 @@ export default function Dashboard() {
             bodyStat={
               <div className="gap-4 flex flex-col w-full">
                 <h1 className="text-black text-20 font-semibold">
-                  Latest Social Assistance
+                  Latest Social Donate
                 </h1>
 
                 <div className="gap-4 flex flex-col">
@@ -265,7 +265,7 @@ export default function Dashboard() {
                   ) : (
                     <EmptyData
                       images="/icons/bag-cross.svg"
-                      message="Oops, seems like there's no social assistance yet"
+                      message="Oops, seems like there's no Social Donate yet"
                     />
                   )}
                 </div>

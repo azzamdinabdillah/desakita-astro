@@ -27,17 +27,17 @@ export default function ManageSocialDonate() {
           </Button>
         }
         message="This action is permanent and cannot be undone!"
-        header="Delete Social Assistance?"
+        header="Delete Social Donate?"
         isOpen={isOpenModal}
         setIsOpen={setIsOpenModal}
       />
       <TitlePage
-        title="Manage Head of Household"
+        title="Manage Head House"
         subTitle={
           <div className="flex items-center gap-1">
-            Social assistance
+            Social Donate
             <span className="text-dark-green font-medium">
-              / Manage social assistance
+              / Manage Social Donate
             </span>
           </div>
         }
@@ -63,7 +63,7 @@ export default function ManageSocialDonate() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-4 items-start">
         <WrapperElement customClass="md:col-span-1 lg:col-span-5">
-          <Title subTitle="Social Assistance Information" />
+          <Title subTitle="Social Donate Information" />
 
           <div className="flex justify-between items-center">
             <img
@@ -111,7 +111,7 @@ export default function ManageSocialDonate() {
               About the Assistance
             </h3>
             <p className="text-16 text-black font-medium leading-6 lg:leading-[32px]">
-              This Social Assistance Program is here to provide real support for
+              This Social Donate Program is here to provide real support for
               people in need. We are committed to helping meet basic needs such
               as food, health, and education, to improve quality of life. With
               the spirit of mutual cooperation, we invite all parties to work
@@ -121,7 +121,7 @@ export default function ManageSocialDonate() {
         </WrapperElement>
 
         <WrapperElement customClass="md:col-span-1 lg:col-span-3">
-          <Title subTitle="Latest Social Assistance Recipients" />
+          <Title subTitle="Latest Social Donate Recipients" />
 
           {Array.from({ length: 3 }).map((_, index) => (
             <RecentActivity

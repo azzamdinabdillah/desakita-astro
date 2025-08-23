@@ -41,7 +41,7 @@ export default function Login() {
             htmlFor="home-leader"
             className="label-radio flex-grow justify-between cursor-pointer p-3 py-2.5 lg:p-5 gap-2 flex border items-center border-bg-color rounded-2xl text-secondary-text-color text-sm lg:text-base font-normal leading-normal"
           >
-            Head of Household
+            Head House
             <img
               src="/icons/profile-circle.svg"
               alt=""

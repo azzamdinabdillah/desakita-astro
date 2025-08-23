@@ -17,17 +17,17 @@ export default function Dashboard() {
             <img src="/icons/picture.svg" alt="" className="w-fit" />
             <div className="flex flex-col gap-3">
               <p className="text-xs lg:text-sm text-yellow font-medium">
-                — Social Assistance
+                — Social Donate
               </p>
               <h1 className="text-lg lg:text-2xl text-white font-semibold">
                 From Village to Residents ❤️
               </h1>
               <p className="text-sm lg:text-base text-white leading-6 font-normal">
-                Realize village welfare with targeted social assistance.
+                Realize village welfare with targeted Social Donate.
               </p>
             </div>
             <Button variant="white" customClass="w-full !justify-between">
-              Apply for Social Assistance
+              Apply for Social Donate
               <img src="/icons/add-square-2.svg" alt="" />
             </Button>
           </div>
@@ -237,7 +237,7 @@ export default function Dashboard() {
 
           <WrapperElement>
             <Title
-              subTitle="Social Assistance"
+              subTitle="Social Donate"
               title="12 Applications"
               icon="/icons/note-bg.svg"
             />
@@ -245,7 +245,7 @@ export default function Dashboard() {
             <hr />
 
             <div className="flex flex-col gap-3 lg:gap-4">
-              <Title subTitle="Latest Social Assistance" />
+              <Title subTitle="Latest Social Donate" />
 
               {Array.from({ length: 2 }).map((_, index) => (
                 <RecentActivity

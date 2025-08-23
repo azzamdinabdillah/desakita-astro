@@ -36,12 +36,12 @@ export default function CreateHeadHouse() {
   return (
     <div className="flex-wrapper">
       <TitlePage
-        title="Add New Head of Household"
+        title="Add New Head House"
         subTitle={
           <p>
-            Head of Household &nbsp;
+            Head House &nbsp;
             <span className="text-dark-green font-medium">
-              /&nbsp; Add Head of Household
+              /&nbsp; Add Head House
             </span>
           </p>
         }
@@ -51,7 +51,7 @@ export default function CreateHeadHouse() {
         <form className="flex-wrapper">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-name">
-              Head of Household Profile
+              Head House Profile
             </Label>
             <div className="flex items-center justify-between w-full col-span-3">
               <img
@@ -89,7 +89,7 @@ export default function CreateHeadHouse() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-name">
-              Head of Household Name
+              Head House Name
             </Label>
             <div className="col-span-3">
               <Inputs

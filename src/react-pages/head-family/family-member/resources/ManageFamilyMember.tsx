@@ -16,7 +16,7 @@ const headDetail = [
   },
   {
     title: "42 Years",
-    value: "Head of Household Age",
+    value: "Head House Age",
     icon: "/icons/detail-list-umur.svg",
   },
   {
@@ -79,7 +79,7 @@ export default function ManageFamilyMember() {
       <div className="flex flex-col md:flex-row items-start gap-3.5">
         <div className="flex flex-col gap-3.5 w-full md:flex-grow">
           <WrapperElement>
-            <Title subTitle="Head of Household (You)" />
+            <Title subTitle="Head House (You)" />
 
             <PeopleCard
               image="/images/user-2.png"

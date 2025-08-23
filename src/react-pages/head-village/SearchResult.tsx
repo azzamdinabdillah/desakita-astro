@@ -18,9 +18,9 @@ export default function SearchResult() {
             role="tablist"
           >
             {[
-              "Head of Household",
-              "Social Assistance List",
-              "Social Assistance Applications",
+              "Head House",
+              "Social Donate List",
+              "Social Donate Applications",
               "Development",
               "Village Events",
             ].map((tab, index) => (
@@ -192,7 +192,7 @@ export default function SearchResult() {
                               titleColor="text-soft-red"
                               icon="/icons/minus-square-bg.svg"
                               title="Not Available"
-                              value="Social Assistance Status"
+                              value="Social Donate Status"
                             />
                           </div>
                         </div>

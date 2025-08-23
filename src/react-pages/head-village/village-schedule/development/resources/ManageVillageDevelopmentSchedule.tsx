@@ -59,7 +59,7 @@ export default function ManageVillageDevelopmentSchedule() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 items-start">
         <WrapperElement>
-          <Title subTitle="Social Assistance Information" />
+          <Title subTitle="Social Donate Information" />
 
           <div className="flex justify-between items-center">
             <img
@@ -163,7 +163,7 @@ export default function ManageVillageDevelopmentSchedule() {
             <div className="flex flex-col lg:flex-row gap-4 justify-between items-start lg:items-center">
               <Title
                 customClass="flex-col gap-4 items-start lg:flex-row lg:items-center lg:justify-between"
-                subTitle="Latest Social Assistance Recipients"
+                subTitle="Latest Social Donate Recipients"
               />
 
               <div className="lg:flex-grow">

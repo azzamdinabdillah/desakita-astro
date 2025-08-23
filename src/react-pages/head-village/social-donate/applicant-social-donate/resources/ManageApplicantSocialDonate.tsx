@@ -14,12 +14,12 @@ export default function ManageApplicantSocialDonate() {
   return (
     <div className="flex flex-col gap-6">
       <TitlePage
-        title="Social Assistance Approval"
+        title="Social Donate Approval"
         subTitle={
           <div className="flex items-center gap-1 flex-wrap">
-            Social assistance applications
+            Social Donate applications
             <span className="text-dark-green font-medium">
-              / social assistance approval
+              / Social Donate approval
             </span>
           </div>
         }
@@ -27,7 +27,7 @@ export default function ManageApplicantSocialDonate() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-4 items-start">
         <WrapperElement customClass="md:col-span-1 lg:col-span-5">
-          <Title subTitle="Social Assistance Information" />
+          <Title subTitle="Social Donate Information" />
 
           <div className="flex justify-between items-center">
             <img
@@ -65,7 +65,7 @@ export default function ManageApplicantSocialDonate() {
             icon="/icons/minus-square-bg.svg"
             titleColor="text-dark-green"
             title="Rp92.000.000"
-            value="Remaining Social Assistance"
+            value="Remaining Social Donate"
           />
 
           <hr />
@@ -85,7 +85,7 @@ export default function ManageApplicantSocialDonate() {
               subTitleSizeVariant="small"
             />
             <p className="text-16 text-black font-medium leading-6 lg:leading-[32px]">
-              This Social Assistance Program is here to provide real support for
+              This Social Donate Program is here to provide real support for
               people in need. We are committed to helping meet basic needs such
               as food, health, and education, to improve quality of life. With
               the spirit of mutual cooperation, we invite all parties to work
@@ -172,7 +172,7 @@ export default function ManageApplicantSocialDonate() {
 
           <div className="flex gap-4 lg:gap-6 flex-col">
             <Title
-              subTitle="Head of Household Bank Account"
+              subTitle="Head House Bank Account"
               subTitleSizeVariant="small"
             />
             <div className="gap-3 flex items-center">
@@ -195,10 +195,7 @@ export default function ManageApplicantSocialDonate() {
           <hr />
 
           <div className="flex gap-4 lg:gap-6 flex-col">
-            <Title
-              subTitle="Social Assistance Proof"
-              subTitleSizeVariant="small"
-            />
+            <Title subTitle="Social Donate Proof" subTitleSizeVariant="small" />
 
             <div className="flex items-center justify-between w-full col-span-3">
               <img

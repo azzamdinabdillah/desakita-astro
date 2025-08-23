@@ -9,7 +9,7 @@ import DashboardStatus from "../../../../components/DashboardStatus";
 export default function ApplicantSocialDonate() {
   return (
     <div className="flex flex-col gap-6">
-      <TitlePage title="Social Assistance Applications" />
+      <TitlePage title="Social Donate Applications" />
 
       <div className="flex flex-col">
         <div className="top flex flex-wrap justify-between items-center gap-3">
@@ -18,7 +18,7 @@ export default function ApplicantSocialDonate() {
               type="text"
               isIconLeft={true}
               icons="/icons/user-search.svg"
-              placeholder="Search social assistance application name"
+              placeholder="Search Social Donate application name"
               customClass="bg-white"
             />
           </div>

@@ -8,7 +8,7 @@ export default function ListSocialDonate() {
   return (
     <div className="flex flex-col gap-6">
       <TitlePage
-        title="Social Assistance List"
+        title="Social Donate List"
         leftElement={
           <a
             href={
@@ -30,7 +30,7 @@ export default function ListSocialDonate() {
               type="text"
               isIconLeft={true}
               icons="/icons/receipt-search.svg"
-              placeholder="Search social assistance name"
+              placeholder="Search Social Donate name"
               customClass="bg-white"
             />
           </div>
@@ -126,7 +126,7 @@ export default function ListSocialDonate() {
                           titleColor="text-soft-red"
                           icon="/icons/minus-square-bg.svg"
                           title="Not Available"
-                          value="Social Assistance Status"
+                          value="Social Donate Status"
                         />
                       </div>
                     </div>

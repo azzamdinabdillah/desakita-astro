@@ -6,7 +6,7 @@ export default function HeadHouse() {
   return (
     <div className="flex flex-col gap-6">
       <TitlePage
-        title="Head of Household"
+        title="Head House"
         leftElement={
           <a href={"/head-village/head-house/create-head-house"}>
             <Button variant="green">
@@ -24,7 +24,7 @@ export default function HeadHouse() {
               type="text"
               isIconLeft={true}
               icons="/icons/user-search.svg"
-              placeholder="Search Head of Household name or NIK"
+              placeholder="Search Head House name or NIK"
               customClass="bg-white"
             />
           </div>
