@@ -33,7 +33,7 @@ export default function VillageEventSchedule() {
         </div>
         <div className="w-full">
           <div className="top flex flex-wrap justify-between items-center gap-3">
-            <div className="md:max-w-[370px] w-full">
+            <div className="md:max-w-[400px] w-full">
               <Inputs
                 type="text"
                 isIconLeft={true}
@@ -72,8 +72,10 @@ export default function VillageEventSchedule() {
             </div>
           </div>
           <div className="overflow-x-auto w-full">
-            <div role="tabpanel"
-              className="react-tabs__tab-panel--selected flex flex-col">
+            <div
+              role="tabpanel"
+              className="react-tabs__tab-panel--selected flex flex-col"
+            >
               <table className="border-separate border-spacing-y-[14px] table-auto w-full">
                 <tbody>
                   {Array.from({ length: 3 }).map((_, index) => (

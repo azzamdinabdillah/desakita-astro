@@ -11,7 +11,7 @@ export default function ListSocialDonate() {
 
       <div className="flex flex-col">
         <div className="top flex flex-wrap justify-between items-center gap-3">
-          <div className="md:max-w-[370px] w-full">
+          <div className="md:max-w-[400px] w-full">
             <Inputs
               type="text"
               isIconLeft={true}
