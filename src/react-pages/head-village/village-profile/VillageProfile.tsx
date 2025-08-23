@@ -16,27 +16,27 @@ export default function VillageProfile() {
 
   const VillageDetail = [
     {
-      title: "Jumlah Penduduk",
+      title: "Total Population",
       value: 243.0,
       icon: "/icons/jumlah-penduduk.svg",
     },
     {
-      title: "Luas Pertanian",
+      title: "Agricultural Area",
       value: "25.200m2",
       icon: "/icons/luas-pertanian.svg",
     },
     {
-      title: "Luas Area",
+      title: "Total Area",
       value: "25.200m2",
       icon: "/icons/luas-area.svg",
     },
     {
-      title: "Luas Area",
+      title: "Total Area",
       value: "9.222.500m2",
       icon: "/icons/luas-area.svg",
     },
     {
-      title: "Desa Dibangun",
+      title: "Village Established",
       value: "Mon, 24 Feb 2012",
       icon: "/icons/desa-dibangun.svg",
     },
@@ -49,7 +49,7 @@ export default function VillageProfile() {
   return (
     <div className="flex flex-col gap-6">
       <TitlePage
-        title="Profil Desa"
+        title="Village Profile"
         leftElement={
           <a href={"/head-village/village-profile/create-village-profile"}>
             <Button variant="black">
@@ -62,7 +62,7 @@ export default function VillageProfile() {
 
       <div className="grid grid-cols-1 md:grid-cols-8 gap-4 items-start">
         <WrapperElement customClass="md:col-span-5">
-          <Title subTitle="Nama Desa" icon="/icons/nama-desa.svg" />
+          <Title subTitle="Village Name" icon="/icons/nama-desa.svg" />
 
           <div className="flex flex-col gap-1.5">
             <h2 className="text-xl lg:text-[32px] text-black font-semibold">
@@ -71,7 +71,7 @@ export default function VillageProfile() {
             <div className="flex items-center gap-[1px]">
               <img src="/icons/location.svg" alt="" className="w-4 lg:w-6" />
               <h5 className="text-xs text-secondary-text-color lg:text-sm font-medium leading-none">
-                Jakarta, Indoneia
+                Jakarta, Indonesia
               </h5>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function VillageProfile() {
                 className="flex cursor-pointer gap-2 border border-white/50 rounded-full py-2 px-4 lg:py-3 lg:px-4 text-sm lg:text-base font-semibold leading-normal items-center text-white"
               >
                 <img src="/icons/close-circle.svg" alt="" />
-                Tutup
+                Close
               </button>
 
               <div className="images flex gap-2 lg:gap-4 grid-cols-3 overflow-auto">
@@ -169,20 +169,20 @@ export default function VillageProfile() {
 
           <div className="flex flex-col gap-2 lg:gap-3">
             <h6 className="text-secondary-text-color font-medium text-sm leading-normal">
-              Tentang Desa
+              About the Village
             </h6>
             <p className="text-black font-medium text-sm lg:text-base leading-[170%] lg:leading-[200%]">
-              Desa Angga Countryside terletak di kaki gunung 🏔️ dengan udara
-              sejuk dan pemandangan sawah yang hijau 🌿. Warganya ramah dan
-              masih menjaga tradisi gotong-royong. Penghasilan utama desa ini
-              adalah padi 🍚, kopi ☕, dan kerajinan anyaman bambu 🎋. Desa ini
-              juga memiliki wisata alam seperti air terjun kecil 💧 dan jalur
-              tracking.
+              Desa Angga Countryside is located at the foot of the mountain 🏔️
+              with cool air and green rice field views 🌿. The residents are
+              friendly and still maintain the tradition of mutual cooperation.
+              The main income of this village is rice 🍚, coffee ☕, and bamboo
+              weaving crafts 🎋. This village also has natural tourism such as
+              small waterfalls 💧 and tracking trails.
             </p>
           </div>
 
           <div className="flex flex-col gap-2 lg:gap-3 text-secondary-text-color font-medium text-sm leading-normal">
-            <h6 className="">Peta Desa</h6>
+            <h6 className="">Village Map</h6>
 
             <iframe
               className="w-full h-[250px] lg:h-[364px] rounded-xl"
@@ -198,7 +198,7 @@ export default function VillageProfile() {
         </WrapperElement>
 
         <WrapperElement customClass="md:col-span-3">
-          <Title subTitle="Detail Desa" />
+          <Title subTitle="Village Details" />
 
           <div className="flex flex-col gap-4">
             <div className="flex gap-3 items-center">
@@ -210,7 +210,7 @@ export default function VillageProfile() {
                   Bimore Wecaksono
                 </h5>
                 <p className="text-secondary-text-color font-semibold text-sm lg:text-sm leading-normal">
-                  Kepala Desa
+                  Village Head
                 </p>
               </div>
             </div>
@@ -245,7 +245,7 @@ export function VillageProfileEmpty() {
   return (
     <div className="h-full">
       <TitlePage
-        title="Profil Desa"
+        title="Village Profile"
         leftElement={
           <a href={"/head-village/village-profile/create-village-profile"}>
             <Button variant="green">
@@ -258,7 +258,7 @@ export function VillageProfileEmpty() {
       <div className="h-full gap-6 flex flex-col items-center mt-20 lg:mt-40">
         <img src="/icons/user-remove.svg" alt="" />
         <p className="text-secondary-text-color font-semibold text-base lg:text-lg leading-6 text-center">
-          Ops, Saat ini kamu belum membuat profile desa
+          Oops, You haven't created a village profile yet
         </p>
       </div>
     </div>

@@ -13,13 +13,16 @@ export default function SearchResult() {
       <div className="flex flex-col gap-6 lg:gap-7.5" data-rttabs="true">
         <div className="top flex flex-col gap-4 lg:gap-6">
           <Title title="Search Result: Malik" />
-          <div className="flex gap-1 p-1 items-center bg-white rounded-xl overflow-x-auto" role="tablist">
+          <div
+            className="flex gap-1 p-1 items-center bg-white rounded-xl overflow-x-auto"
+            role="tablist"
+          >
             {[
-              "Kepala Rumah",
-              "List Bansos",
-              "Pengajuan Bansos",
-              "Pembangunan",
-              "Event Desa",
+              "Head of Household",
+              "Social Assistance List",
+              "Social Assistance Applications",
+              "Development",
+              "Village Events",
             ].map((tab, index) => (
               <div
                 role="tab"
@@ -68,7 +71,7 @@ export default function SearchResult() {
                               className="w-3.5 lg:w-[18px]"
                             />
                             <span className="text-14 font-medium text-secondary-text-color">
-                              Mekanik Kendaraan
+                              Vehicle Mechanic
                             </span>
                           </div>
                         </div>
@@ -93,7 +96,7 @@ export default function SearchResult() {
                       <div className="rounded-full inline-flex w-auto gap-1 items-center py-2 px-3 pr-8.5 lg:py-3.5 lg:px-4 bg-[#005CAA]/[0.09]">
                         <img src="/icons/profile-2user-blue.svg" alt="" />
                         <span className="text-16 text-[#005CAA] font-medium">
-                          99 Anggota Keluarga
+                          99 Family Members
                         </span>
                       </div>
                     </td>
@@ -137,7 +140,7 @@ export default function SearchResult() {
                           <CardItemGeneral
                             imgSize="w-[70px] lg:w-[100px] h-[60px] lg:h-[80px]"
                             image="/images/bansos-1.png"
-                            title="Bantuan Untuk Rakyat Kurang Mampu"
+                            title="Assistance for the Underprivileged"
                             subTitleMaxWidth="max-w-[100%]"
                             titleMaxWidth="max-w-[100%]"
                             subTitle={
@@ -171,7 +174,7 @@ export default function SearchResult() {
                               titleColor="text-dark-green"
                               icon="/icons/money.svg"
                               title="Rp120.000.000"
-                              value="Uang Tunai"
+                              value="Cash"
                             />
                           </div>
 
@@ -179,8 +182,8 @@ export default function SearchResult() {
                             <DetailsList
                               titleColor="text-blue"
                               icon="/icons/profile-2user-blue-bg.svg"
-                              title="15.600 Warga"
-                              value="Total Pengajuan"
+                              title="15.600 Residents"
+                              value="Total Applications"
                             />
                           </div>
 
@@ -188,8 +191,8 @@ export default function SearchResult() {
                             <DetailsList
                               titleColor="text-soft-red"
                               icon="/icons/minus-square-bg.svg"
-                              title="Tidak Tersedia"
-                              value="Status Bansos"
+                              title="Not Available"
+                              value="Social Assistance Status"
                             />
                           </div>
                         </div>
@@ -231,7 +234,7 @@ export default function SearchResult() {
                             <p>Tue, 09 Jan 2025 </p>
                           </div>
 
-                          <DashboardStatus title="Menunggu" type="Menunggu" />
+                          <DashboardStatus title="Pending" type="Pending" />
                         </div>
 
                         <hr />
@@ -239,7 +242,7 @@ export default function SearchResult() {
                           <CardItemGeneral
                             imgSize="w-[70px] lg:w-[100px] h-[60px] lg:h-[80px]"
                             image="/images/bansos-1.png"
-                            title="Peduli Sesama: Penyaluran Beras untuk Warga Desa"
+                            title="Caring for Each Other: Rice Distribution for Village Residents"
                             subTitleMaxWidth="max-w-[100%]"
                             titleMaxWidth="max-w-[200px]"
                             subTitle={
@@ -260,7 +263,7 @@ export default function SearchResult() {
                             customClass="flex-row-reverse"
                             icon="/icons/money.svg"
                             title="Rp120.000.000"
-                            value="Uang Tunai"
+                            value="Cash"
                           />
                         </div>
 
@@ -285,7 +288,7 @@ export default function SearchResult() {
                                     className="w-[14px] lg:w-[18px]"
                                   />
                                   <p className="text-secondary-text-color text-14 font-medium w-full flex-grow">
-                                    Tukang Bangunan
+                                    Construction Worker
                                   </p>
                                 </div>
                               }
@@ -296,8 +299,8 @@ export default function SearchResult() {
                             <DetailsList
                               titleColor="text-dark-green"
                               icon="/icons/receive-square-2.svg"
-                              title="Beras 20 Ton"
-                              value="Nominal Pengajuan"
+                              title="Rice 20 Tons"
+                              value="Application Amount"
                             />
                           </div>
 
@@ -307,7 +310,7 @@ export default function SearchResult() {
                                 variant="grayTextRed"
                                 customClass="lg:w-[35%]"
                               >
-                                Tolak
+                                Reject
                               </Button>
                               <Link
                                 className="lg:w-[35%]"
@@ -316,7 +319,7 @@ export default function SearchResult() {
                                 }
                               >
                                 <Button variant="green" customClass="w-full">
-                                  Setuju
+                                  Approve
                                 </Button>
                               </Link>
                             </div>
@@ -358,7 +361,7 @@ export default function SearchResult() {
                           <CardItemGeneral
                             imgSize="w-[70px] lg:w-[100px] h-[60px] lg:h-[80px]"
                             image="/images/event-3.png"
-                            title="Pembangunan Jalanan Utama"
+                            title="Main Road Development"
                             subTitleMaxWidth="max-w-[100%]"
                             titleMaxWidth="max-w-[100%]"
                             subTitle={
@@ -369,7 +372,7 @@ export default function SearchResult() {
                                   className="w-3.5 lg:w-4.5"
                                 />
                                 <p className="text-secondary-text-color text-14 font-medium w-full flex-grow">
-                                  Penanggung Jawab :{" "}
+                                  Person in Charge :{" "}
                                   <span className="text-dark-green">
                                     Uciha Asep
                                   </span>
@@ -395,7 +398,7 @@ export default function SearchResult() {
                               titleColor="text-soft-red"
                               icon="/icons/wallet-3.svg"
                               title="Rp499.000"
-                              value="Dana Pembangunan"
+                              value="Development Fund"
                             />
                           </div>
 
@@ -403,8 +406,8 @@ export default function SearchResult() {
                             <DetailsList
                               titleColor="text-blue"
                               icon="/icons/profile-2user-blue-bg.svg"
-                              title="9.250 Warga"
-                              value="Total Pelamar"
+                              title="9.250 Residents"
+                              value="Total Applicants"
                             />
                           </div>
 
@@ -413,7 +416,7 @@ export default function SearchResult() {
                               titleColor="text-dark-green"
                               icon="/icons/calendar-2-bg-square.svg"
                               title="Mon, 24 Feb 2025"
-                              value="Tanggal Pelaksanaan"
+                              value="Implementation Date"
                             />
                           </div>
                         </div>
@@ -453,7 +456,7 @@ export default function SearchResult() {
                           <CardItemGeneral
                             imgSize="w-[70px] lg:w-[100px] h-[60px] lg:h-[80px]"
                             image="/images/event.png"
-                            title="Belajar HTML Dasar Bersama"
+                            title="Learn Basic HTML Together"
                             subTitleMaxWidth="max-w-[100%]"
                             titleMaxWidth="max-w-[100%]"
                             subTitle={
@@ -488,7 +491,7 @@ export default function SearchResult() {
                               titleColor="text-soft-red"
                               icon="/icons/ticket-bg.svg"
                               title="Rp499.000"
-                              value="Harga Event"
+                              value="Event Price"
                             />
                           </div>
 
@@ -496,8 +499,8 @@ export default function SearchResult() {
                             <DetailsList
                               titleColor="text-blue"
                               icon="/icons/profile-2user-blue-bg.svg"
-                              title="9.250 Warga"
-                              value="Total Partisipan"
+                              title="9.250 Residents"
+                              value="Total Participants"
                             />
                           </div>
 
@@ -506,7 +509,7 @@ export default function SearchResult() {
                               titleColor="text-dark-green"
                               icon="/icons/calendar-2-bg-square.svg"
                               title="Mon, 24 Feb 2025"
-                              value="Tanggal Pelaksanaan"
+                              value="Implementation Date"
                             />
                           </div>
                         </div>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "../../../../../components/Button";
 import Modal from "../../../../../components/Modal";
 import TitlePage from "../../../../../components/TitlePage";
-import WrapperElement from "@components/WrapperElement";
+import WrapperElement from "../../../../../components/WrapperElement";
 import Title from "../../../../../components/Title";
 import DashboardStatus from "../../../../../components/DashboardStatus";
 import DetailsList from "../../../../../components/DetailsList";
@@ -19,21 +19,21 @@ export default function ManageVillageDevelopmentSchedule() {
         confirmButtonElement={
           <Button variant="pink" customClass="flex-grow">
             <img src="/icons/trash.svg" alt="" />
-            Iya Hapus
+            Yes Delete
           </Button>
         }
-        message="Tindakan ini permanen dan tidak bisa dibatalkan!"
-        header="Hapus Jadwal Pembangunan?"
+        message="This action is permanent and cannot be undone!"
+        header="Delete Development Schedule?"
         isOpen={isOpenModal}
         setIsOpen={setIsOpenModal}
       />
       <TitlePage
-        title="Detail Pembangunan Desa"
+        title="Village Development Details"
         subTitle={
           <div className="flex items-center gap-1 flex-wrap">
-            Pembangunan Desa
+            Village Development
             <span className="text-dark-green font-medium">
-              / detail Pembangunan desa
+              / development details
             </span>
           </div>
         }
@@ -44,7 +44,7 @@ export default function ManageVillageDevelopmentSchedule() {
               onClick={() => setIsOpenModal(true)}
               variant="pink"
             >
-              Hapus Data
+              Delete Data
               <img className="w-5 lg:w-6" src="/icons/trash.svg" alt="" />
             </Button>
             <a href="/head-village/village-schedule/village-development-schedule/create-village-development-schedule">
@@ -59,7 +59,7 @@ export default function ManageVillageDevelopmentSchedule() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 items-start">
         <WrapperElement>
-          <Title subTitle="Informasi Bantuan Sosial" />
+          <Title subTitle="Social Assistance Information" />
 
           <div className="flex justify-between items-center">
             <img
@@ -67,17 +67,17 @@ export default function ManageVillageDevelopmentSchedule() {
               alt=""
               className="w-[100px] h-[80px] lg:w-[120px] lg:h-[100px] rounded-2xl object-cover"
             />
-            <DashboardStatus title="Belum Dimulai" type="aksen" />
+            <DashboardStatus title="Not Started" type="accent" />
           </div>
 
           <div className="flex flex-col gap-1.5">
             <h2 className="text-black font-semibold text-20 leading-6">
-              Pembangunan Jalanan Utama
+              Main Road Development
             </h2>
             <div className="gap-1 flex items-center">
               <img src="/icons/user-square.svg" alt="" />
               <p className="font-medium text-14 text-secondary-text-color">
-                Penanggung jawab : <span>Uzumaki Asep</span>
+                Person in charge : <span>Uzumaki Asep</span>
               </p>
             </div>
           </div>
@@ -89,10 +89,10 @@ export default function ManageVillageDevelopmentSchedule() {
               titleColor="text-soft-red"
               icon="/icons/wallet-3.svg"
               title="Rp499.000"
-              value="Dana Pembangunan"
+              value="Development Fund"
             />
 
-            <DashboardStatus title="Tersedia" type="softGreen" />
+            <DashboardStatus title="Available" type="softGreen" />
           </div>
 
           <hr />
@@ -102,7 +102,7 @@ export default function ManageVillageDevelopmentSchedule() {
               titleColor="text-dark-green"
               icon="/icons/calendar-2-bg-square.svg"
               title="Mon, 24 Feb 2025"
-              value="Tanggal Pelaksanaan"
+              value="Implementation Date"
             />
 
             <DetailsList
@@ -110,7 +110,7 @@ export default function ManageVillageDevelopmentSchedule() {
               titleColor="text-dark-green"
               icon="/icons/calendar-tick-bg.svg"
               title="Wed, 3 Sep 2025"
-              value="Perkiraan Selesai"
+              value="Estimated Completion"
             />
           </div>
 
@@ -121,15 +121,15 @@ export default function ManageVillageDevelopmentSchedule() {
               titleColor="text-aksen"
               icon="/icons/clock-bg.svg"
               title="12:30 WIB"
-              value="Jam Pelaksanaan"
+              value="Implementation Time"
             />
 
             <DetailsList
               customClass="md:flex-row-reverse"
               titleColor="text-aksen"
               icon="/icons/timer-bg.svg"
-              title="192 Hari"
-              value="Hari Diperlukan"
+              title="192 Days"
+              value="Days Required"
             />
           </div>
 
@@ -138,22 +138,22 @@ export default function ManageVillageDevelopmentSchedule() {
           <DetailsList
             titleColor="text-blue"
             icon="/icons/profile-2user-blue-bg.svg"
-            title="9.250 Warga"
-            value="Total Partisipasi"
+            title="9.250 Residents"
+            value="Total Participation"
           />
 
           <hr />
 
           <div className="flex gap-3 flex-col">
             <h3 className="font-medium text-secondary-text-color text-14">
-              Tentang Pembangunan
+              About the Development
             </h3>
             <p className="text-16 text-black font-medium leading-6 lg:leading-[32px]">
-              Pembangunan Jalan Utama adalah langkah strategis untuk
-              meningkatkan aksesibilitas dan mobilitas masyarakat. Proyek ini
-              bertujuan untuk memperbaiki konektivitas antarwilayah, mendukung
-              kegiatan ekonomi lokal, serta menciptakan infrastruktur yang lebih
-              aman dan nyaman bagi pengguna jalan.
+              Main Road Development is a strategic step to improve community
+              accessibility and mobility. This project aims to improve
+              connectivity between regions, support local economic activities,
+              and create infrastructure that is more safe and comfortable for
+              road users.
             </p>
           </div>
         </WrapperElement>
@@ -163,7 +163,7 @@ export default function ManageVillageDevelopmentSchedule() {
             <div className="flex flex-col lg:flex-row gap-4 justify-between items-start lg:items-center">
               <Title
                 customClass="flex-col gap-4 items-start lg:flex-row lg:items-center lg:justify-between"
-                subTitle="Penerima Bansos Terakhir"
+                subTitle="Latest Social Assistance Recipients"
               />
 
               <div className="lg:flex-grow">
@@ -171,7 +171,7 @@ export default function ManageVillageDevelopmentSchedule() {
                   className="flex flex-wrap gap-3 items-center lg:justify-end"
                   role="tablist"
                 >
-                  {["Semua", "Menunggu", "Diterima", "Ditolak"].map(
+                  {["All", "Pending", "Accepted", "Rejected"].map(
                     (tab, index) => (
                       <div
                         role="tab"
@@ -202,7 +202,7 @@ export default function ManageVillageDevelopmentSchedule() {
                     <p>Tue, 09 Jan 2025 </p>
                   </div>
 
-                  <DashboardStatus title="Menunggu" type="Menunggu" />
+                  <DashboardStatus title="Pending" type="Pending" />
                 </div>
 
                 <hr />
@@ -226,7 +226,7 @@ export default function ManageVillageDevelopmentSchedule() {
                             className="w-[14px] lg:w-[18px]"
                           />
                           <p className="text-secondary-text-color text-14 font-medium w-full flex-grow">
-                            Tukang Bangunan
+                            Construction Worker
                           </p>
                         </div>
                       }
@@ -254,10 +254,10 @@ export default function ManageVillageDevelopmentSchedule() {
                         variant="grayTextRed"
                         customClass="w-full lg:w-[35%]"
                       >
-                        Tolak
+                        Reject
                       </Button>
                       <Button variant="green" customClass="w-full lg:w-[35%]">
-                        Setuju
+                        Approve
                       </Button>
                     </div>
                   </div>
@@ -271,7 +271,7 @@ export default function ManageVillageDevelopmentSchedule() {
                     <p>Tue, 09 Jan 2025 </p>
                   </div>
 
-                  <DashboardStatus title="Diterima" type="Diterima" />
+                  <DashboardStatus title="Accepted" type="Accepted" />
                 </div>
 
                 <hr />
@@ -295,7 +295,7 @@ export default function ManageVillageDevelopmentSchedule() {
                             className="w-[14px] lg:w-[18px]"
                           />
                           <p className="text-secondary-text-color text-14 font-medium w-full flex-grow">
-                            Tukang Bangunan
+                            Construction Worker
                           </p>
                         </div>
                       }
@@ -335,7 +335,7 @@ export default function ManageVillageDevelopmentSchedule() {
                     <p>Tue, 09 Jan 2025 </p>
                   </div>
 
-                  <DashboardStatus title="Ditolak" type="Ditolak" />
+                  <DashboardStatus title="Rejected" type="Rejected" />
                 </div>
 
                 <hr />
@@ -359,7 +359,7 @@ export default function ManageVillageDevelopmentSchedule() {
                             className="w-[14px] lg:w-[18px]"
                           />
                           <p className="text-secondary-text-color text-14 font-medium w-full flex-grow">
-                            Tukang Bangunan
+                            Construction Worker
                           </p>
                         </div>
                       }
@@ -392,7 +392,7 @@ export default function ManageVillageDevelopmentSchedule() {
                 </div>
               </div>
 
-              <Button variant="green">Lihat Semua</Button>
+              <Button variant="green">View All</Button>
             </div>
 
             <div
@@ -410,7 +410,7 @@ export default function ManageVillageDevelopmentSchedule() {
                       <p>Tue, 09 Jan 2025 </p>
                     </div>
 
-                    <DashboardStatus title="Menunggu" type="Menunggu" />
+                    <DashboardStatus title="Pending" type="Pending" />
                   </div>
 
                   <hr />
@@ -434,7 +434,7 @@ export default function ManageVillageDevelopmentSchedule() {
                               className="w-[14px] lg:w-[18px]"
                             />
                             <p className="text-secondary-text-color text-14 font-medium w-full flex-grow">
-                              Tukang Bangunan
+                              Construction Worker
                             </p>
                           </div>
                         }
@@ -462,10 +462,10 @@ export default function ManageVillageDevelopmentSchedule() {
                           variant="grayTextRed"
                           customClass="w-full lg:w-[35%]"
                         >
-                          Tolak
+                          Reject
                         </Button>
                         <Button variant="green" customClass="w-full lg:w-[35%]">
-                          Setuju
+                          Approve
                         </Button>
                       </div>
                     </div>
@@ -473,7 +473,7 @@ export default function ManageVillageDevelopmentSchedule() {
                 </div>
               ))}
 
-              <Button variant="green">Lihat Semua</Button>
+              <Button variant="green">View All</Button>
             </div>
 
             <div
@@ -491,7 +491,7 @@ export default function ManageVillageDevelopmentSchedule() {
                       <p>Tue, 09 Jan 2025 </p>
                     </div>
 
-                    <DashboardStatus title="Diterima" type="Diterima" />
+                    <DashboardStatus title="Accepted" type="Accepted" />
                   </div>
 
                   <hr />
@@ -515,7 +515,7 @@ export default function ManageVillageDevelopmentSchedule() {
                               className="w-[14px] lg:w-[18px]"
                             />
                             <p className="text-secondary-text-color text-14 font-medium w-full flex-grow">
-                              Tukang Bangunan
+                              Construction Worker
                             </p>
                           </div>
                         }
@@ -549,7 +549,7 @@ export default function ManageVillageDevelopmentSchedule() {
                 </div>
               ))}
 
-              <Button variant="green">Lihat Semua</Button>
+              <Button variant="green">View All</Button>
             </div>
 
             <div
@@ -567,7 +567,7 @@ export default function ManageVillageDevelopmentSchedule() {
                       <p>Tue, 09 Jan 2025 </p>
                     </div>
 
-                    <DashboardStatus title="Ditolak" type="Ditolak" />
+                    <DashboardStatus title="Rejected" type="Rejected" />
                   </div>
 
                   <hr />
@@ -591,7 +591,7 @@ export default function ManageVillageDevelopmentSchedule() {
                               className="w-[14px] lg:w-[18px]"
                             />
                             <p className="text-secondary-text-color text-14 font-medium w-full flex-grow">
-                              Tukang Bangunan
+                              Construction Worker
                             </p>
                           </div>
                         }
@@ -625,7 +625,7 @@ export default function ManageVillageDevelopmentSchedule() {
                 </div>
               ))}
 
-              <Button variant="green">Lihat Semua</Button>
+              <Button variant="green">View All</Button>
             </div>
           </WrapperElement>
         </div>

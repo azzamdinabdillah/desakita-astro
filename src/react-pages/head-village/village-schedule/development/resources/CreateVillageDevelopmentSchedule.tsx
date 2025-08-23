@@ -26,7 +26,7 @@ export default function CreateVillageDevelopmentSchedule() {
       onClick={onClick}
       ref={ref && undefined}
       id="head-date-birth"
-      placeholder="Pilih tanggal pembangunan"
+      placeholder="Select development date"
       isIconLeft={true}
       isIconRight={true}
       iconsRight="/icons/arrow-right-plain-2.svg"
@@ -38,12 +38,12 @@ export default function CreateVillageDevelopmentSchedule() {
   return (
     <div className="flex-wrapper">
       <TitlePage
-        title="Tambah Pembangunan Desa"
+        title="Add Village Development"
         subTitle={
           <p>
-            Pembangunan Desa &nbsp;
+            Village Development &nbsp;
             <span className="text-dark-green font-medium">
-              /&nbsp; Tambah Pembangunan Desa
+              /&nbsp; Add Village Development
             </span>
           </p>
         }
@@ -53,12 +53,12 @@ export default function CreateVillageDevelopmentSchedule() {
         <form className="flex-wrapper">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-name">
-              Total Dana Pembangunan
+              Total Development Fund
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="head-name"
-                placeholder="Ketik dana yang dibutuhkan"
+                placeholder="Type required funding"
                 isIconLeft={true}
                 icons="/icons/wallet-3-plain.svg"
                 type="number"
@@ -70,7 +70,7 @@ export default function CreateVillageDevelopmentSchedule() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-name">
-              Thumbnail Event Terkait
+              Related Event Thumbnail
             </Label>
             <div className="flex items-center justify-between w-full col-span-3">
               <img
@@ -108,12 +108,12 @@ export default function CreateVillageDevelopmentSchedule() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-name">
-              Nama Projek Pembangunan
+              Development Project Name
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="head-name"
-                placeholder="Ketik nama project pembangunan"
+                placeholder="Type development project name"
                 isIconLeft={true}
                 icons="/icons/edit-plain.svg"
                 type="text"
@@ -125,12 +125,12 @@ export default function CreateVillageDevelopmentSchedule() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-name">
-              Penanggung Jawab
+              Person in Charge
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="head-name"
-                placeholder="Ketik penanggung jawab"
+                placeholder="Type person in charge"
                 isIconLeft={true}
                 icons="/icons/profile-circle.svg"
                 type="text"
@@ -142,7 +142,7 @@ export default function CreateVillageDevelopmentSchedule() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-total-citizen">
-              Pilih Opsi Kategori
+              Choose Category Option
             </Label>
             <div className="col-span-3">
               <div className="flex flex-wrap gap-3 md:gap-6 ">
@@ -192,7 +192,7 @@ export default function CreateVillageDevelopmentSchedule() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-date-birth">
-              Tanggal Pembangunan
+              Development Date
             </Label>
             <div className="col-span-3">
               <div className="react-datepicker-wrapper">
@@ -205,7 +205,7 @@ export default function CreateVillageDevelopmentSchedule() {
                       id="head-date-development"
                       type="date"
                       className="pl-11 lg:pl-12 w-full text-black appearance-none font-medium focus:border-1.5 focus:border-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal w-full w-full flex-grow"
-                      placeholder="Masukan tanggal lahir"
+                      placeholder="Enter date of birth"
                       defaultValue=""
                     />
                   </div>
@@ -218,17 +218,17 @@ export default function CreateVillageDevelopmentSchedule() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-pw">
-              Hari yang dibutuhkan
+              Days Required
             </Label>
             <div className="col-span-3">
               <Inputs
                 right={
                   <p className="text-secondary-text-color font-medium text-16">
-                    Hari
+                    Days
                   </p>
                 }
                 id="head-pw"
-                placeholder="Ketik hari yang dibutuhkan"
+                placeholder="Type required days"
                 isIconLeft={true}
                 icons="/icons/timer.svg"
                 type="number"
@@ -240,12 +240,12 @@ export default function CreateVillageDevelopmentSchedule() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-location">
-              Deskripsi Pembangunan
+              Development Description
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="village-location"
-                placeholder="Jelaskan lebih detail tentang pembangunan"
+                placeholder="Explain more details about the development"
                 type="textarea"
                 rows={5}
               />
@@ -255,7 +255,7 @@ export default function CreateVillageDevelopmentSchedule() {
           <hr />
 
           <div className="flex justify-end gap-3">
-            <Button variant="pink">Batal, Tidak jadi</Button>
+            <Button variant="pink">Cancel, Don't proceed</Button>
             <Button variant="green">Create Now</Button>
           </div>
         </form>

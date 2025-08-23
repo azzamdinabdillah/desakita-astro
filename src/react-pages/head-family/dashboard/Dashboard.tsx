@@ -1,7 +1,7 @@
 import Button from "../../../components/Button";
 import TitlePage from "../../../components/TitlePage";
 import DashboardStatus from "../../../components/DashboardStatus";
-import WrapperElement from "@components/WrapperElement";
+import WrapperElement from "../../../components/WrapperElement";
 import Title from "../../../components/Title";
 import RecentActivity from "../../../components/RecentActivity";
 import DetailsList from "../../../components/DetailsList";
@@ -10,32 +10,31 @@ import PeopleCard from "../../../components/PeopleCard";
 export default function Dashboard() {
   return (
     <div className="gap-3.5 flex flex-col">
-      <TitlePage title="Rumah Tangga Stats" />
+      <TitlePage title="Household Stats" />
       <div className="grid grid-cols-1 md:grid-cols-7 gap-3">
         <div className="flex flex-col gap-3.5 md:col-span-3">
           <div className="gap-6 flex flex-col color-gradient-green p-6 lg:p-6 rounded-2xl w-full">
             <img src="/icons/picture.svg" alt="" className="w-fit" />
             <div className="flex flex-col gap-3">
               <p className="text-xs lg:text-sm text-yellow font-medium">
-                — Bantuan Sosial
+                — Social Assistance
               </p>
               <h1 className="text-lg lg:text-2xl text-white font-semibold">
-                Dari Desa untuk Warga ❤️
+                From Village to Residents ❤️
               </h1>
               <p className="text-sm lg:text-base text-white leading-6 font-normal">
-                Wujudkan kesejahteraan desa dengan bantuan sosial yang tepat
-                sasaran.
+                Realize village welfare with targeted social assistance.
               </p>
             </div>
             <Button variant="white" customClass="w-full !justify-between">
-              Ajukan Bantuan Sosial
+              Apply for Social Assistance
               <img src="/icons/add-square-2.svg" alt="" />
             </Button>
           </div>
 
           <WrapperElement>
             <Title
-              subTitle="Event Diikuti"
+              subTitle="Events Joined"
               title="222 "
               icon="/icons/calendar-2-bg.svg"
             />
@@ -43,16 +42,16 @@ export default function Dashboard() {
             <hr />
 
             <div className="flex flex-col gap-3 lg:gap-4">
-              <Title subTitle="Event Terbaru" />
+              <Title subTitle="Latest Events" />
 
               {Array.from({ length: 2 }).map((_, index) => (
                 <RecentActivity
                   key={index}
-                  bottomLeft="Harga Event:"
+                  bottomLeft="Event Price:"
                   bottomRight="Rp49.000"
                   image="/images/event-2.png"
                   date="Wed, 1 Jan 2025"
-                  title="Belajar HTML Dasar Bersama"
+                  title="Learn Basic HTML Together"
                   subTitle={
                     <div className="gap-1 flex items-center">
                       <img
@@ -62,7 +61,7 @@ export default function Dashboard() {
                       />
                       <p className="text-[#FA7139] text-14 font-medium">
                         <span className="font-semibold">9210</span> total
-                        partisipasi
+                        participants
                       </p>
                     </div>
                   }
@@ -73,7 +72,7 @@ export default function Dashboard() {
 
           <WrapperElement>
             <Title
-              subTitle="Pembangunan"
+              subTitle="Development"
               title="5 Applicants"
               icon="/icons/calendar-2-bg.svg"
             />
@@ -81,7 +80,7 @@ export default function Dashboard() {
             <hr />
 
             <div className="flex flex-col gap-3 lg:gap-4">
-              <Title subTitle="Event Terbaru" />
+              <Title subTitle="Latest Events" />
 
               {Array.from({ length: 2 }).map((_, index) => (
                 <div
@@ -94,14 +93,14 @@ export default function Dashboard() {
                       alt="image applicant"
                       className="w-[80px] h-[60px] object-cover rounded-2xl"
                     />
-                    <DashboardStatus title="Menunggu" type="Menunggu" />
+                    <DashboardStatus title="Pending" type="Pending" />
                   </div>
                   <div>
                     <h2 className="text-16 font-semibold text-black">
-                      Pembangunan Jalanan Utama
+                      Main Road Development
                     </h2>
                     <p className="text-16 font-medium text-secondary-text-color">
-                      Penanggung jawab:{" "}
+                      Person in charge:{" "}
                       <span className="font-semibold text-dark-green">
                         Uzumaki Asep
                       </span>
@@ -114,7 +113,7 @@ export default function Dashboard() {
                     titleColor="text-dark-green"
                     icon="/icons/calendar-2-bg.svg"
                     title="3 Jan 2025"
-                    value="Tanggal Pelaksanaan"
+                    value="Implementation Date"
                   />
 
                   <hr />
@@ -122,8 +121,8 @@ export default function Dashboard() {
                   <DetailsList
                     titleColor="text-dark-green"
                     icon="/icons/calendar-2-bg.svg"
-                    title="24 Hari"
-                    value="Waktu Pelaksanaan"
+                    title="24 Days"
+                    value="Implementation Duration"
                   />
                 </div>
               ))}
@@ -134,7 +133,7 @@ export default function Dashboard() {
         <div className="flex flex-col gap-3.5 md:col-span-4">
           <WrapperElement>
             <Title
-              subTitle="Anggota Keluarga"
+              subTitle="Family Members"
               title="3"
               icon="/icons/profile-bg.svg"
             />
@@ -143,15 +142,15 @@ export default function Dashboard() {
 
             <div className="gap-5 lg:gap-6 flex flex-col">
               <div className="gap-3.5 flex flex-col">
-                <Title subTitle="Istri (1)" />
+                <Title subTitle="Wife (1)" />
 
                 <div className="border border-bg-color rounded-2xl flex flex-col gap-4 lg:gap-6 p-3 lg:p-4">
                   <PeopleCard
                     image="/images/user-2.png"
                     name="Andi Alif Baro"
-                    job="Mekanik Kendaraan"
+                    job="Vehicle Mechanic"
                     right={
-                      <p className="text-16 font-medium text-black">32 th</p>
+                      <p className="text-16 font-medium text-black">32 yrs</p>
                     }
                   />
 
@@ -161,7 +160,7 @@ export default function Dashboard() {
                     <div className="flex gap-1 items-center">
                       <img src="/icons/keyboard.svg" alt="" />
                       <p className="text-14 font-medium text-secondary-text-color">
-                        Nomor Induk Kependudukan :
+                        National Identification Number:
                       </p>
                     </div>
                     <p className="text-16 text-black font-medium">
@@ -171,7 +170,7 @@ export default function Dashboard() {
                 </div>
 
                 {/* <RecentActivity
-                  bottomLeft="Harga Event:"
+                  bottomLeft="Event Price:"
                   bottomRight={
                     <p className="text-16 text-black font-medium">
                       27192018210818291
@@ -180,9 +179,9 @@ export default function Dashboard() {
                   image="/images/user-2.png"
                   date="Wed, 1 Jan 2025"
                   right={
-                    <p className="text-16 font-medium text-black">32 th</p>
+                    <p className="text-16 font-medium text-black">32 yrs</p>
                   }
-                  title="Belajar HTML Dasar Bersama"
+                  title="Learn Basic HTML Together"
                   subTitle={
                     <div className="gap-1 flex items-center">
                       <img
@@ -191,7 +190,7 @@ export default function Dashboard() {
                         className="w-3.5 lg:w-4.5"
                       />
                       <p className="text-secondary-text-color text-14 font-medium">
-                        Mekanik Kendaraan
+                        Vehicle Mechanic
                       </p>
                     </div>
                   }
@@ -199,7 +198,7 @@ export default function Dashboard() {
               </div>
 
               <div className="gap-3.5 flex flex-col">
-                <Title subTitle="Anak (2)" />
+                <Title subTitle="Children (2)" />
 
                 {Array.from({ length: 2 }).map((_, index) => (
                   <div
@@ -209,9 +208,9 @@ export default function Dashboard() {
                     <PeopleCard
                       image="/images/user-3.png"
                       name="Karin Icshan"
-                      job="Mahasiswi"
+                      job="Student"
                       right={
-                        <p className="text-16 font-medium text-black">24 th</p>
+                        <p className="text-16 font-medium text-black">24 yrs</p>
                       }
                     />
 
@@ -221,7 +220,7 @@ export default function Dashboard() {
                       <div className="flex gap-1 items-center">
                         <img src="/icons/keyboard.svg" alt="" />
                         <p className="text-14 font-medium text-secondary-text-color">
-                          Nomor Induk Kependudukan :
+                          National Identification Number:
                         </p>
                       </div>
                       <p className="text-16 text-black font-medium">
@@ -232,35 +231,33 @@ export default function Dashboard() {
                 ))}
               </div>
 
-              <Button variant="green">Lihat Semua</Button>
+              <Button variant="green">See All</Button>
             </div>
           </WrapperElement>
 
           <WrapperElement>
             <Title
-              subTitle="Bantuan Sosial"
-              title="12 Pengajuan"
+              subTitle="Social Assistance"
+              title="12 Applications"
               icon="/icons/note-bg.svg"
             />
 
             <hr />
 
             <div className="flex flex-col gap-3 lg:gap-4">
-              <Title subTitle="Bansos Terbaru" />
+              <Title subTitle="Latest Social Assistance" />
 
               {Array.from({ length: 2 }).map((_, index) => (
                 <RecentActivity
                   key={index}
-                  bottomLeft="Nominal Pengajuan:"
+                  bottomLeft="Application Amount:"
                   bottomRight="Rp2.500.000"
                   image="/icons/money.svg"
                   date="Tue, 25 Dec 2024"
-                  mainTitle="Bantuan Untuk Rakyat Kurang Mampu"
+                  mainTitle="Assistance for the Underprivileged"
                   title="Rp120.000.000"
-                  subTitle="Nominal Pengajuan"
-                  right={
-                    <DashboardStatus type={"Menunggu"} title={"Menunggu"} />
-                  }
+                  subTitle="Application Amount"
+                  right={<DashboardStatus type={"Pending"} title={"Pending"} />}
                 />
               ))}
             </div>
@@ -271,15 +268,15 @@ export default function Dashboard() {
               <img src="/icons/statistik-bg.svg" alt="" className="w-fit" />
               <div className="flex flex-col gap-1">
                 <p className="text-xs lg:text-sm text-yellow font-medium">
-                  — Unduh Rumah Tangga Stat
+                  — Download Household Stats
                 </p>
                 <h1 className="text-lg lg:text-2xl text-white font-semibold">
-                  Statistik Rumah Tangga
+                  Household Statistics
                 </h1>
               </div>
             </div>
             <Button variant="white" customClass="w-full !justify-between">
-              Download Laporan
+              Download Report
               <img src="/icons/receive-square.svg" alt="" />
             </Button>
           </div>

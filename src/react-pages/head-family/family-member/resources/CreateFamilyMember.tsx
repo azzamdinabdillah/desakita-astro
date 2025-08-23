@@ -26,7 +26,7 @@ export default function CreateFamilyMember() {
       onClick={onClick}
       ref={ref && undefined}
       id="head-date-birth"
-      placeholder="Masukan tanggal lahir"
+      placeholder="Enter date of birth"
       isIconLeft={true}
       icons="/icons/calendar-2-2.svg"
       type="text"
@@ -36,12 +36,12 @@ export default function CreateFamilyMember() {
   return (
     <div className="flex-wrapper">
       <TitlePage
-        title="Tambah Anggota Keluarga Baru"
+        title="Add New Family Member"
         subTitle={
           <p>
-            Anggota Keluarga &nbsp;
+            Family Members &nbsp;
             <span className="text-dark-green font-medium">
-              /&nbsp; Tambah Anggota Keluarga
+              /&nbsp; Add Family Member
             </span>
           </p>
         }
@@ -51,7 +51,7 @@ export default function CreateFamilyMember() {
         <form className="flex-wrapper">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-name">
-              Foto Profile
+              Profile Photo
             </Label>
             <div className="flex items-center justify-between w-full col-span-3">
               <img
@@ -89,7 +89,7 @@ export default function CreateFamilyMember() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-total-citizen">
-              Jenis Kelamin
+              Gender
             </Label>
             <div className="col-span-3">
               <div className="grid grid-cols-2 gap-3 md:gap-6 ">
@@ -104,7 +104,7 @@ export default function CreateFamilyMember() {
                       name="head-gender"
                       className="input-radio-choose-gender"
                     />
-                    Pria
+                    Male
                   </div>
                   <img src="/icons/man.svg" alt="" className="w-5 md:w-6" />
                 </label>
@@ -119,7 +119,7 @@ export default function CreateFamilyMember() {
                       name="head-gender"
                       className="input-radio-choose-gender"
                     />
-                    Wanita
+                    Female
                   </div>
                   <img src="/icons/woman.svg" alt="" className="w-5 md:w-6" />
                 </label>
@@ -131,12 +131,12 @@ export default function CreateFamilyMember() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-name">
-              Nama
+              Name
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="head-name"
-                placeholder="Masukan nama lengkap"
+                placeholder="Enter full name"
                 isIconLeft={true}
                 icons="/icons/user-gray.svg"
                 type="text"
@@ -148,12 +148,12 @@ export default function CreateFamilyMember() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-nik">
-              Nomor Induk Kependudukan
+              National Identification Number
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="head-nik"
-                placeholder="Ketik NIK"
+                placeholder="Type NIK"
                 isIconLeft={true}
                 icons="/icons/keyboard-2.svg"
                 type="number"
@@ -165,12 +165,12 @@ export default function CreateFamilyMember() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-phone-number">
-              Pekerjaan
+              Occupation
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="head-phone-number"
-                placeholder="Masukan nama pekerjaan"
+                placeholder="Enter job title"
                 isIconLeft={true}
                 icons="/icons/briefcase-2.svg"
                 type="number"
@@ -182,12 +182,12 @@ export default function CreateFamilyMember() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-phone-number">
-              Nomor Handphone
+              Phone Number
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="head-phone-number"
-                placeholder="Masukan No. HP yang aktif"
+                placeholder="Enter active phone number"
                 isIconLeft={true}
                 icons="/icons/call.svg"
                 type="number"
@@ -199,7 +199,7 @@ export default function CreateFamilyMember() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-date-birth">
-              Tanggal Lahir
+              Date of Birth
             </Label>
             <div className="col-span-3">
               <div className="flex flex-col md:flex-row gap-4 md:gap-6">
@@ -213,15 +213,15 @@ export default function CreateFamilyMember() {
                         id="date-birth-family-member"
                         type="date"
                         className="pl-11 lg:pl-12 w-full text-black appearance-none font-medium focus:border-1.5 focus:border-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal w-full w-full flex-grow"
-                        placeholder="Masukan tanggal lahir"
+                        placeholder="Enter date of birth"
                         defaultValue=""
                       />
                     </div>
                   </div>
                 </div>
                 <div className="md:max-w-[180px] w-full p-3 md:p-4 flex justify-center items-center text-16 font-medium text-dark-green rounded-2xl border border-foreshadow bg-foreshadow">
-                  Umur:&nbsp;
-                  <span data-age-display="">0</span>&nbsp;tahun
+                  Age:&nbsp;
+                  <span data-age-display="">0</span>&nbsp;years
                 </div>
               </div>
             </div>
@@ -246,7 +246,7 @@ export default function CreateFamilyMember() {
                       name="head-status"
                       className="input-radio-choose-gender"
                     />
-                    Belum Menikah
+                    Single
                   </div>
                   <img
                     src="/icons/nonmerried.svg"
@@ -265,7 +265,7 @@ export default function CreateFamilyMember() {
                       name="head-status"
                       className="input-radio-choose-gender"
                     />
-                    Menikah
+                    Married
                   </div>
                   <img src="/icons/merried.svg" alt="" className="w-5 md:w-6" />
                 </label>
@@ -277,7 +277,7 @@ export default function CreateFamilyMember() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-total-citizen">
-              Kategori Keluarga
+              Family Category
             </Label>
             <div className="col-span-3">
               <div className="grid grid-cols-1 gap-3 md:gap-6 md:grid-cols-3">
@@ -292,7 +292,7 @@ export default function CreateFamilyMember() {
                       name="category"
                       className="input-radio-choose-gender"
                     />
-                    Istri
+                    Wife
                   </div>
                 </label>
                 <label
@@ -306,7 +306,7 @@ export default function CreateFamilyMember() {
                       name="category"
                       className="input-radio-choose-gender"
                     />
-                    Anak
+                    Child
                   </div>
                 </label>
                 <label
@@ -320,7 +320,7 @@ export default function CreateFamilyMember() {
                       name="category"
                       className="input-radio-choose-gender"
                     />
-                    Suami
+                    Husband
                   </div>
                 </label>
               </div>
@@ -336,7 +336,7 @@ export default function CreateFamilyMember() {
             <div className="col-span-3">
               <Inputs
                 id="head-email"
-                placeholder="Masukan Email"
+                placeholder="Enter Email"
                 isIconLeft={true}
                 icons="/icons/sms.svg"
                 type="email"
@@ -347,7 +347,7 @@ export default function CreateFamilyMember() {
           <hr />
 
           <div className="flex justify-end gap-3">
-            <Button variant="pink">Batal, Tidak jadi</Button>
+            <Button variant="pink">Cancel, Don't proceed</Button>
             <Button variant="green">Create Now</Button>
           </div>
         </form>

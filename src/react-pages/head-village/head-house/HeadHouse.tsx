@@ -6,7 +6,7 @@ export default function HeadHouse() {
   return (
     <div className="flex flex-col gap-6">
       <TitlePage
-        title="Kepala Rumah"
+        title="Head of Household"
         leftElement={
           <a href={"/head-village/head-house/create-head-house"}>
             <Button variant="green">
@@ -24,7 +24,7 @@ export default function HeadHouse() {
               type="text"
               isIconLeft={true}
               icons="/icons/user-search.svg"
-              placeholder="Cari nama Kepala Rumah atau NIK"
+              placeholder="Search Head of Household name or NIK"
               customClass="bg-white"
             />
           </div>
@@ -83,7 +83,7 @@ export default function HeadHouse() {
                           className="w-3.5 lg:w-[18px]"
                         />
                         <span className="text-14 font-medium text-secondary-text-color">
-                          Mekanik Kendaraan
+                          Vehicle Mechanic
                         </span>
                       </div>
                     </div>
@@ -108,7 +108,7 @@ export default function HeadHouse() {
                   <div className="rounded-full inline-flex w-auto gap-1 items-center py-2 px-3 pr-8.5 lg:py-3.5 lg:px-4 bg-[#005CAA]/[0.09]">
                     <img src="/icons/profile-2user-blue.svg" alt="" />
                     <span className="text-16 text-[#005CAA] font-medium">
-                      99 Anggota Keluarga
+                      99 Family Members
                     </span>
                   </div>
                 </td>

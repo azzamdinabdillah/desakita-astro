@@ -1,6 +1,6 @@
 import TitlePage from "../../../components/TitlePage";
 import Button from "../../../components/Button";
-import WrapperElement from "@components/WrapperElement";
+import WrapperElement from "../../../components/WrapperElement";
 import Title from "../../../components/Title";
 import { PeopleCardComplete } from "../../../components/PeopleCard";
 
@@ -8,7 +8,7 @@ export default function FamilyMember() {
   return (
     <div className="flex flex-col gap-6">
       <TitlePage
-        title="Anggota Keluarga"
+        title="Family Members"
         leftElement={
           <a href={"/head-family/family-member/create-family-member.html"}>
             <Button variant="green">
@@ -20,7 +20,7 @@ export default function FamilyMember() {
       />
 
       <WrapperElement>
-        <Title subTitle="Kepala (You)" />
+        <Title subTitle="Head of Household (You)" />
 
         <div className="flex-col-4-6">
           <PeopleCardComplete
@@ -44,7 +44,7 @@ export default function FamilyMember() {
       </WrapperElement>
 
       <WrapperElement>
-        <Title subTitle="Istri (1)" />
+        <Title subTitle="Wife (1)" />
 
         <div className="flex-col-4-6">
           <PeopleCardComplete
@@ -60,7 +60,7 @@ export default function FamilyMember() {
             }
             image="/images/user-3.png"
             name="Rosita Luna R"
-            job="Ibu Rumah Tangga"
+            job="Housewife"
             nik="2005100592201005"
             age={42}
           />
@@ -68,7 +68,7 @@ export default function FamilyMember() {
       </WrapperElement>
 
       <WrapperElement>
-        <Title subTitle="Anak (1)" />
+        <Title subTitle="Children (1)" />
 
         <div className="flex-col-4-6">
           {Array.from({ length: 3 }).map((_, index) => (
@@ -86,7 +86,7 @@ export default function FamilyMember() {
               }
               image="/images/user-1.png"
               name="Andi Alif R"
-              job="Mahasiswa"
+              job="Student"
               nik="2005100592201005"
               age={42}
             />

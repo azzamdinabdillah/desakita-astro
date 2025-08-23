@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Label from "../../../../../components/Label";
 import TitlePage from "../../../../../components/TitlePage";
-import WrapperElement from "@components/WrapperElement";
+import WrapperElement from "../../../../../components/WrapperElement";
 import Button from "../../../../../components/Button";
 import Inputs from "../../../../../components/Inputs";
 
@@ -12,12 +12,12 @@ export default function CreateSocialDonate() {
   return (
     <div className="flex-wrapper">
       <TitlePage
-        title="Tambah Bantuan Sosial"
+        title="Add Social Assistance"
         subTitle={
           <p>
-            Bantuan Sosial &nbsp;
+            Social Assistance &nbsp;
             <span className="text-dark-green font-medium">
-              /&nbsp; tambah bantuan sosial
+              /&nbsp; add social assistance
             </span>
           </p>
         }
@@ -27,7 +27,7 @@ export default function CreateSocialDonate() {
         <form className="flex-wrapper">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-name">
-              Thumbnail Bantuan Sosial
+              Social Assistance Thumbnail
             </Label>
             <div className="flex items-center justify-between w-full col-span-3">
               <img
@@ -65,12 +65,12 @@ export default function CreateSocialDonate() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-name">
-              Nama Bantuan Sosial
+              Social Assistance Name
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="head-name"
-                placeholder="Tentukan nama bantuan sosial"
+                placeholder="Determine social assistance name"
                 isIconLeft={true}
                 icons="/icons/edit-plain.svg"
                 type="text"
@@ -82,7 +82,7 @@ export default function CreateSocialDonate() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-total-citizen">
-              Pilih Opsi Kategori
+              Choose Category Option
             </Label>
             <div className="col-span-3">
               <div className="flex flex-wrap gap-3 md:gap-6 ">
@@ -97,7 +97,7 @@ export default function CreateSocialDonate() {
                       name="head-gender"
                       className="input-radio-choose-gender"
                     />
-                    Bahan Pokok
+                    Basic Necessities
                   </div>
                   <img
                     src="/icons/bag-2-plain.svg"
@@ -116,7 +116,7 @@ export default function CreateSocialDonate() {
                       name="head-gender"
                       className="input-radio-choose-gender"
                     />
-                    Uang Tunai
+                    Cash
                   </div>
                   <img
                     src="/icons/money-plain.svg"
@@ -135,7 +135,7 @@ export default function CreateSocialDonate() {
                       name="head-gender"
                       className="input-radio-choose-gender"
                     />
-                    BBM Subsidi
+                    Subsidized Fuel
                   </div>
                   <img
                     src="/icons/gas-station.svg"
@@ -154,7 +154,7 @@ export default function CreateSocialDonate() {
                       name="head-gender"
                       className="input-radio-choose-gender"
                     />
-                    Kesehatan
+                    Healthcare
                   </div>
                   <img src="/icons/health.svg" alt="" className="w-5 md:w-6" />
                 </label>
@@ -166,12 +166,12 @@ export default function CreateSocialDonate() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-email">
-              Nominal Bantuan
+              Assistance Amount
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="head-email"
-                placeholder="Ketik nominal bantuan"
+                placeholder="Type assistance amount"
                 isIconLeft={true}
                 icons="/icons/dollar-square.svg"
                 type="number"
@@ -183,12 +183,12 @@ export default function CreateSocialDonate() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-pw">
-              Nama Pemberi Bantuan
+              Assistance Provider Name
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="head-pw"
-                placeholder="Ketik nama orang atau organisasi"
+                placeholder="Type person or organization name"
                 isIconLeft={true}
                 icons="/icons/user-square.svg"
                 type="text"
@@ -200,12 +200,12 @@ export default function CreateSocialDonate() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-location">
-              Deskripsi Bantuan Sosial
+              Social Assistance Description
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="village-location"
-                placeholder="Jelaskan lebih detail tentang bantuan"
+                placeholder="Explain more details about the assistance"
                 type="textarea"
                 rows={5}
               />
@@ -216,7 +216,7 @@ export default function CreateSocialDonate() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="choose-is-available">
-              Pilih Opsi Kategori
+              Choose Category Option
             </Label>
             <div className="col-span-3">
               <div className="flex flex-wrap gap-3 md:gap-6 ">
@@ -231,7 +231,7 @@ export default function CreateSocialDonate() {
                       name="is-available"
                       className="input-radio-choose-gender"
                     />
-                    Tersedia
+                    Available
                   </div>
                   <img
                     src="/icons/tick-circle.svg"
@@ -250,7 +250,7 @@ export default function CreateSocialDonate() {
                       name="is-available"
                       className="input-radio-choose-gender"
                     />
-                    Tidak Tersedia
+                    Not Available
                   </div>
                   <img
                     src="/icons/close-circle-2.svg"
@@ -265,7 +265,7 @@ export default function CreateSocialDonate() {
           <hr />
 
           <div className="flex justify-end gap-3">
-            <Button variant="pink">Batal, Tidak jadi</Button>
+            <Button variant="pink">Cancel, Don't proceed</Button>
             <Button variant="green">Create Now</Button>
           </div>
         </form>

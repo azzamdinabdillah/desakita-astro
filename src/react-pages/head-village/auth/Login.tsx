@@ -14,10 +14,10 @@ export default function Login() {
 
         <div className="flex flex-col gap-1 lg:gap-2 items-center justify-center w-full">
           <h1 className="text-black text-center text-lg lg:text-2xl font-semibold capitalize">
-            Halo🙌🏻, Selamat datang!
+            Hello🙌🏻, Welcome!
           </h1>
           <p className="text-secondary-text-color text-center font-semibold text-sm lg:text-base leading-normal">
-            Silahkan masuk untuk melanjutkan
+            Please sign in to continue
           </p>
         </div>
 
@@ -26,7 +26,7 @@ export default function Login() {
             htmlFor="village-leader"
             className="label-radio flex-grow justify-between cursor-pointer p-3 py-2.5 lg:p-5 gap-2 flex border items-center border-bg-color rounded-2xl text-secondary-text-color text-sm lg:text-base font-normal leading-normal"
           >
-            Kepala Desa
+            Village Head
             <img src="/icons/crown.svg" alt="" className="w-5 lg:w-6 " />
             <input
               checked={true}
@@ -41,7 +41,7 @@ export default function Login() {
             htmlFor="home-leader"
             className="label-radio flex-grow justify-between cursor-pointer p-3 py-2.5 lg:p-5 gap-2 flex border items-center border-bg-color rounded-2xl text-secondary-text-color text-sm lg:text-base font-normal leading-normal"
           >
-            Kepala Rumah
+            Head of Household
             <img
               src="/icons/profile-circle.svg"
               alt=""
@@ -62,7 +62,7 @@ export default function Login() {
             <Label labelFor="email">Email Address</Label>
             <Inputs
               id="email"
-              placeholder="Masukan email"
+              placeholder="Enter email"
               isIconLeft={true}
               icons="/icons/user.svg"
               type="email"
@@ -72,7 +72,7 @@ export default function Login() {
             <Label labelFor="password">Password</Label>
             <Inputs
               id="password"
-              placeholder="Masukan password"
+              placeholder="Enter password"
               isIconLeft={true}
               icons="/icons/key.svg"
               type="password"
@@ -83,7 +83,7 @@ export default function Login() {
         <div className="w-full">
           <a href="/head-village/dashboard/dashboard.html">
             <Button variant="green" customClass="w-full justify-center">
-              Masuk
+              Sign In
             </Button>
           </a>
         </div>

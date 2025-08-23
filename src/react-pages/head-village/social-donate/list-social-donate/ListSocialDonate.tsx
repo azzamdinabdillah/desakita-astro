@@ -8,9 +8,13 @@ export default function ListSocialDonate() {
   return (
     <div className="flex flex-col gap-6">
       <TitlePage
-        title="List Bantuan Sosial"
+        title="Social Assistance List"
         leftElement={
-          <a href={"/head-village/social-donate/list-social-donate/create-social-donate"}>
+          <a
+            href={
+              "/head-village/social-donate/list-social-donate/create-social-donate"
+            }
+          >
             <Button variant="green">
               <img className="w-5 lg:w-6" src="/icons/add-square.svg" alt="" />
               Add New
@@ -26,7 +30,7 @@ export default function ListSocialDonate() {
               type="text"
               isIconLeft={true}
               icons="/icons/receipt-search.svg"
-              placeholder="Cari nama bantuan social"
+              placeholder="Search social assistance name"
               customClass="bg-white"
             />
           </div>
@@ -70,7 +74,7 @@ export default function ListSocialDonate() {
                       <CardItemGeneral
                         imgSize="w-[70px] lg:w-[100px] h-[60px] lg:h-[80px]"
                         image="/images/bansos-1.png"
-                        title="Bantuan Untuk Rakyat Kurang Mampu"
+                        title="Assistance for the Underprivileged"
                         subTitleMaxWidth="max-w-[100%]"
                         titleMaxWidth="max-w-[100%]"
                         subTitle={
@@ -104,7 +108,7 @@ export default function ListSocialDonate() {
                           titleColor="text-dark-green"
                           icon="/icons/money.svg"
                           title="Rp120.000.000"
-                          value="Uang Tunai"
+                          value="Cash"
                         />
                       </div>
 
@@ -112,8 +116,8 @@ export default function ListSocialDonate() {
                         <DetailsList
                           titleColor="text-blue"
                           icon="/icons/profile-2user-blue-bg.svg"
-                          title="15.600 Warga"
-                          value="Total Pengajuan"
+                          title="15.600 Residents"
+                          value="Total Applications"
                         />
                       </div>
 
@@ -121,8 +125,8 @@ export default function ListSocialDonate() {
                         <DetailsList
                           titleColor="text-soft-red"
                           icon="/icons/minus-square-bg.svg"
-                          title="Tidak Tersedia"
-                          value="Status Bansos"
+                          title="Not Available"
+                          value="Social Assistance Status"
                         />
                       </div>
                     </div>

@@ -13,17 +13,17 @@ import RecentActivity from "../../../../components/RecentActivity";
 const headDetail = [
   {
     title: "20051005922001005",
-    value: "Nomor Induk Kependudukan",
+    value: "National Identification Number",
     icon: "/icons/detail-list-nik.svg",
   },
   {
-    title: "42 Tahun",
-    value: "Umur Kepala Rumah",
+    title: "42 Years",
+    value: "Head of Household Age",
     icon: "/icons/detail-list-umur.svg",
   },
   {
-    title: "Pria",
-    value: "Jenis Kelamin",
+    title: "Male",
+    value: "Gender",
     icon: "/icons/detail-list-gender.svg",
   },
   {
@@ -33,7 +33,7 @@ const headDetail = [
   },
   {
     title: "083212349000",
-    value: "Nomor Hp",
+    value: "Phone Number",
     icon: "/icons/detail-list-nomorhp.svg",
   },
 ];
@@ -48,21 +48,21 @@ export default function ManageHeadHouse() {
         confirmButtonElement={
           <Button variant="pink" customClass="flex-grow">
             <img src="/icons/trash.svg" alt="" />
-            Iya Hapus
+            Yes Delete
           </Button>
         }
-        message="Tindakan ini permanen dan tidak bisa dibatalkan!"
-        header="Hapus Kepala Keluarga?"
+        message="This action is permanent and cannot be undone!"
+        header="Delete Head of Household?"
         isOpen={isOpenModal}
         setIsOpen={setIsOpenModal}
       />
       <TitlePage
-        title="Manage Kepala Rumah"
+        title="Manage Head of Household"
         subTitle={
           <div className="flex items-center gap-1">
-            Kepala Rumah
+            Head of Household
             <span className="text-dark-green font-medium">
-              / Manage Kepala Rumah
+              / Manage Head of Household
             </span>
           </div>
         }
@@ -72,7 +72,7 @@ export default function ManageHeadHouse() {
             onClick={() => setIsOpenModal(true)}
             variant="pink"
           >
-            Hapus Data
+            Delete Data
             <img className="w-5 lg:w-6" src="/icons/trash.svg" alt="" />
           </Button>
         }
@@ -81,13 +81,13 @@ export default function ManageHeadHouse() {
       <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-5 items-start gap-3.5">
         <div className="flex flex-col gap-3.5 lg:flex-grow md:col-span-1 lg:col-span-3 w-full">
           <WrapperElement>
-            <Title subTitle="Kepala Rumah" />
+            <Title subTitle="Head of Household" />
 
             <PeopleCard
               image="/images/user-2.png"
               name="Andi Alif Baro"
-              job="Mekanik Kendaraan"
-              right={<DashboardStatus title="Menikah" type="softGreen" />}
+              job="Vehicle Mechanic"
+              right={<DashboardStatus title="Married" type="softGreen" />}
             />
 
             <hr />
@@ -108,7 +108,7 @@ export default function ManageHeadHouse() {
 
           <WrapperElement>
             <Title
-              subTitle="Kepala Rumah"
+              subTitle="Head of Household"
               title="3"
               icon="/icons/profile-bg.svg"
             />
@@ -117,15 +117,15 @@ export default function ManageHeadHouse() {
 
             <div className="gap-5 lg:gap-6 flex flex-col">
               <div className="gap-3.5 flex flex-col">
-                <Title subTitle="Istri (1)" />
+                <Title subTitle="Wife (1)" />
 
                 <div className="border border-bg-color rounded-2xl flex flex-col gap-4 lg:gap-6 p-3 lg:p-4">
                   <PeopleCard
                     image="/images/user-2.png"
                     name="Andi Alif Baro"
-                    job="Mekanik Kendaraan"
+                    job="Vehicle Mechanic"
                     right={
-                      <p className="text-16 font-medium text-black">32 th</p>
+                      <p className="text-16 font-medium text-black">32 yrs</p>
                     }
                   />
 
@@ -135,7 +135,7 @@ export default function ManageHeadHouse() {
                     <div className="flex gap-1 items-center">
                       <img src="/icons/keyboard.svg" alt="" />
                       <p className="text-14 font-medium text-secondary-text-color">
-                        Nomor Induk Kependudukan :
+                        National Identification Number :
                       </p>
                     </div>
                     <p className="text-16 text-black font-medium">
@@ -146,7 +146,7 @@ export default function ManageHeadHouse() {
               </div>
 
               <div className="gap-3.5 flex flex-col">
-                <Title subTitle="Anak (2)" />
+                <Title subTitle="Children (2)" />
 
                 {Array.from({ length: 2 }).map((_, index) => (
                   <div
@@ -156,9 +156,9 @@ export default function ManageHeadHouse() {
                     <PeopleCard
                       image="/images/user-3.png"
                       name="Karin Icshan"
-                      job="Mahasiswi"
+                      job="Student"
                       right={
-                        <p className="text-16 font-medium text-black">24 th</p>
+                        <p className="text-16 font-medium text-black">24 yrs</p>
                       }
                     />
 
@@ -168,7 +168,7 @@ export default function ManageHeadHouse() {
                       <div className="flex gap-1 items-center">
                         <img src="/icons/keyboard.svg" alt="" />
                         <p className="text-14 font-medium text-secondary-text-color">
-                          Nomor Induk Kependudukan :
+                          National Identification Number :
                         </p>
                       </div>
                       <p className="text-16 text-black font-medium">
@@ -184,24 +184,26 @@ export default function ManageHeadHouse() {
 
         <div className="flex flex-col gap-3.5 md:col-span-1 lg:col-span-2 w-full">
           <WrapperElement>
-            <Title subTitle="Aktivitas Terbaru" />
+            <Title subTitle="Recent Activities" />
 
             <div className="" data-rttabs="true">
               <div className="flex flex-wrap gap-3 items-center" role="tablist">
-                {["Bansos", "Events", "Applicants"].map((tab, index) => (
-                  <div
-                    role="tab"
-                    data-rttab="true"
-                    aria-selected={index === 0 ? "true" : "false"}
-                    tabIndex={index === 0 ? 0 : -1}
-                    key={index}
-                    className={`text-16 lg:flex-grow cursor-pointer hover:bg-black hover:text-white transition-all text-secondary-text-color font-medium py-2.5 px-5 flex justify-center items-center lg:py-2.5 lg:px-4.5 rounded-full border border-bg-color ${
-                      index === 0 ? "bg-black text-white" : ""
-                    }`}
-                  >
-                    {tab}
-                  </div>
-                ))}
+                {["Social Assistance", "Events", "Applicants"].map(
+                  (tab, index) => (
+                    <div
+                      role="tab"
+                      data-rttab="true"
+                      aria-selected={index === 0 ? "true" : "false"}
+                      tabIndex={index === 0 ? 0 : -1}
+                      key={index}
+                      className={`text-16 lg:flex-grow cursor-pointer hover:bg-black hover:text-white transition-all text-secondary-text-color font-medium py-2.5 px-5 flex justify-center items-center lg:py-2.5 lg:px-4.5 rounded-full border border-bg-color ${
+                        index === 0 ? "bg-black text-white" : ""
+                      }`}
+                    >
+                      {tab}
+                    </div>
+                  )
+                )}
               </div>
 
               <div
@@ -209,38 +211,38 @@ export default function ManageHeadHouse() {
                 className="gap-4 flex flex-col lg:gap-6 mt-4 lg:mt-6 react-tabs__tab-panel--selected"
               >
                 <RecentActivity
-                  bottomLeft="Nominal Pengajuan:"
+                  bottomLeft="Application Amount:"
                   bottomRight="Rp2.500.000"
                   image="/icons/money.svg"
                   date="Tue, 25 Dec 2024"
-                  mainTitle="Bantuan Untuk Rakyat Kurang Mampu"
+                  mainTitle="Assistance for the Underprivileged"
                   title="Rp120.000.000"
-                  subTitle="Nominal Pengajuan"
-                  right={
-                    <DashboardStatus type={"Menunggu"} title={"Menunggu"} />
-                  }
+                  subTitle="Application Amount"
+                  right={<DashboardStatus type={"Pending"} title={"Pending"} />}
                 />
                 <RecentActivity
-                  bottomLeft="Nominal Pengajuan:"
-                  bottomRight="Beras 2kg"
+                  bottomLeft="Application Amount:"
+                  bottomRight="Rice 2kg"
                   image="/icons/bag-2.svg"
                   date="Tue, 31 Dec 2024"
-                  mainTitle="Bantuan Pangan Sehari-hari"
-                  title="Beras 200 Ton"
-                  subTitle="Bahan Pokok"
+                  mainTitle="Daily Food Assistance"
+                  title="Rice 200 Tons"
+                  subTitle="Basic Necessities"
                   right={
-                    <DashboardStatus type={"Diterima"} title={"Diterima"} />
+                    <DashboardStatus type={"Accepted"} title={"Accepted"} />
                   }
                 />
                 <RecentActivity
-                  bottomLeft="Nominal Pengajuan:"
-                  bottomRight="Susu 200ml"
+                  bottomLeft="Application Amount:"
+                  bottomRight="Milk 200ml"
                   image="/icons/bag-2.svg"
                   date="Tue, 12 Dec 2024"
-                  mainTitle="Bantuan Untuk anak kurang gizi"
-                  title="Susu 200 Liter"
-                  subTitle="Bahan Pokok"
-                  right={<DashboardStatus type={"Ditolak"} title={"Ditolak"} />}
+                  mainTitle="Assistance for malnourished children"
+                  title="Milk 200 Liters"
+                  subTitle="Basic Necessities"
+                  right={
+                    <DashboardStatus type={"Rejected"} title={"Rejected"} />
+                  }
                 />
               </div>
               <div
@@ -248,11 +250,11 @@ export default function ManageHeadHouse() {
                 className="gap-4 flex-col lg:gap-6 hidden mt-4 lg:mt-6"
               >
                 <RecentActivity
-                  bottomLeft="Harga Event:"
+                  bottomLeft="Event Price:"
                   bottomRight="Rp49.000"
                   image="/images/event-2.png"
                   date="Wed, 1 Jan 2025"
-                  title="Belajar HTML Dasar Bersama"
+                  title="Learn Basic HTML Together"
                   subTitle={
                     <div className="gap-1 flex items-center">
                       <img
@@ -262,17 +264,17 @@ export default function ManageHeadHouse() {
                       />
                       <p className="text-[#FA7139] text-14 font-medium">
                         <span className="font-semibold">9210</span> total
-                        partisipasi
+                        participants
                       </p>
                     </div>
                   }
                 />
                 <RecentActivity
-                  bottomLeft="Harga Event:"
+                  bottomLeft="Event Price:"
                   bottomRight="Rp49.000"
                   image="/images/event-2.png"
                   date="Fri, 3 Jan 2025"
-                  title="Dari Desa ke dunia digital: workshop"
+                  title="From Village to Digital World: Workshop"
                   subTitle={
                     <div className="gap-1 flex items-center">
                       <img
@@ -282,17 +284,17 @@ export default function ManageHeadHouse() {
                       />
                       <p className="text-[#FA7139] text-14 font-medium">
                         <span className="font-semibold">9210</span> total
-                        partisipasi
+                        participants
                       </p>
                     </div>
                   }
                 />
                 <RecentActivity
-                  bottomLeft="Harga Event:"
+                  bottomLeft="Event Price:"
                   bottomRight="Rp49.000"
                   image="/images/event-2.png"
                   date="Sun, 21 Dec 2024"
-                  title="Mengenal AI: Menjelajah dunia Kecerdasan"
+                  title="Understanding AI: Exploring the World of Intelligence"
                   subTitle={
                     <div className="gap-1 flex items-center">
                       <img
@@ -302,7 +304,7 @@ export default function ManageHeadHouse() {
                       />
                       <p className="text-[#FA7139] text-14 font-medium">
                         <span className="font-semibold">9210</span> total
-                        partisipasi
+                        participants
                       </p>
                     </div>
                   }
@@ -317,14 +319,14 @@ export default function ManageHeadHouse() {
                         alt="image applicant"
                         className="w-[80px] h-[60px] object-cover rounded-2xl"
                       />
-                      <DashboardStatus title="Menunggu" type="Menunggu" />
+                      <DashboardStatus title="Pending" type="Pending" />
                     </div>
                     <div>
                       <h2 className="text-16 font-semibold text-black">
-                        Pembangunan Jalanan Utama
+                        Main Road Development
                       </h2>
                       <p className="text-16 font-medium text-secondary-text-color">
-                        Penanggung jawab:{" "}
+                        Person in charge:{" "}
                         <span className="font-semibold text-dark-green">
                           Uzumaki Asep
                         </span>
@@ -337,7 +339,7 @@ export default function ManageHeadHouse() {
                       titleColor="text-dark-green"
                       icon="/icons/calendar-2-bg.svg"
                       title="3 Jan 2025"
-                      value="Tanggal Pelaksanaan"
+                      value="Implementation Date"
                     />
 
                     <hr />
@@ -345,8 +347,8 @@ export default function ManageHeadHouse() {
                     <DetailsList
                       titleColor="text-dark-green"
                       icon="/icons/calendar-2-bg.svg"
-                      title="24 Hari"
-                      value="Waktu Pelaksanaan"
+                      title="24 Days"
+                      value="Implementation Duration"
                     />
                   </div>
 
@@ -357,14 +359,14 @@ export default function ManageHeadHouse() {
                         alt="image applicant"
                         className="w-[80px] h-[60px] object-cover rounded-2xl"
                       />
-                      <DashboardStatus title="Ditolak" type="Ditolak" />
+                      <DashboardStatus title="Rejected" type="Rejected" />
                     </div>
                     <div>
                       <h2 className="text-16 font-semibold text-black">
-                        Pembangunan Jalanan Utama
+                        Main Road Development
                       </h2>
                       <p className="text-16 font-medium text-secondary-text-color">
-                        Penanggung jawab:{" "}
+                        Person in charge:{" "}
                         <span className="font-semibold text-dark-green">
                           Uzumaki Asep
                         </span>
@@ -377,7 +379,7 @@ export default function ManageHeadHouse() {
                       titleColor="text-dark-green"
                       icon="/icons/calendar-2-bg.svg"
                       title="3 Jan 2025"
-                      value="Tanggal Pelaksanaan"
+                      value="Implementation Date"
                     />
 
                     <hr />
@@ -385,8 +387,8 @@ export default function ManageHeadHouse() {
                     <DetailsList
                       titleColor="text-dark-green"
                       icon="/icons/calendar-2-bg.svg"
-                      title="24 Hari"
-                      value="Waktu Pelaksanaan"
+                      title="24 Days"
+                      value="Implementation Duration"
                     />
                   </div>
                 </div>

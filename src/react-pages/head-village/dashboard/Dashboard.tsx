@@ -6,21 +6,21 @@ import CardItemGeneral from "../../../components/CardItemGeneral";
 
 const stats = [
   {
-    title: "Jumlah Penduduk",
+    title: "Total Population",
     value: "243.000",
     icons: "/icons/stat-jumlah-penduduk.svg",
     trendUp: true,
     trendValue: "+12%",
   },
   {
-    title: "Pembangunan",
+    title: "Development",
     value: "42.000",
     icons: "/icons/stat-pembangunan.svg",
     trendUp: true,
     trendValue: "+12%",
   },
   {
-    title: "Kepala Rumah",
+    title: "Head of Household",
     value: "9.250",
     icons: "/icons/stat-kepala-rumah.svg",
     trendUp: true,
@@ -39,36 +39,36 @@ const lastBansos: {
   type: "money" | "goods" | "other";
   value: string;
   sender: string;
-  status: "Diterima" | "Ditolak" | "Menunggu";
+  status: "Accepted" | "Rejected" | "Pending";
 }[] = [
   {
     type: "money",
     value: "Rp362.500.000",
     sender: "Azam Din Abdillah",
-    status: "Menunggu",
+    status: "Pending",
   },
   {
     type: "goods",
-    value: "Beras 10kg",
+    value: "Rice 10kg",
     sender: "Azam Din Abdillah",
-    status: "Diterima",
+    status: "Accepted",
   },
   {
     type: "money",
     value: "Rp52.500.000",
     sender: "Azam Din Abdillah",
-    status: "Ditolak",
+    status: "Rejected",
   },
   {
     type: "money",
     value: "Rp52.500.000",
     sender: "Azam Din Abdillah",
-    status: "Diterima",
+    status: "Accepted",
   },
 ];
 
 const applicants: {
-  status: "Diterima" | "Ditolak" | "Menunggu";
+  status: "Accepted" | "Rejected" | "Pending";
   images: string;
   name: string;
   userImage: string;
@@ -78,22 +78,22 @@ const applicants: {
     images: "/images/applicant.png",
     name: "Azam Din Abdillah",
     userImage: "/images/user-applicant.png",
-    job: "Melamar pembangunan Jalanan Utama Desa",
-    status: "Menunggu",
+    job: "Applied for Main Road Development Project",
+    status: "Pending",
   },
   {
     images: "/images/applicant-2.png",
     name: "Surti Jasmine",
     userImage: "/images/user-applicant.png",
-    job: "Melamar pembangunan Balai Desa",
-    status: "Diterima",
+    job: "Applied for Village Hall Development",
+    status: "Accepted",
   },
   {
     images: "/images/applicant-3.png",
     name: "Masayoshi",
     userImage: "/images/user-applicant.png",
-    job: "Melamar pembangunan Puskemas Desa",
-    status: "Ditolak",
+    job: "Applied for Village Health Center Development",
+    status: "Rejected",
   },
 ];
 
@@ -107,25 +107,25 @@ const citizens: {
     color: "#34613A",
     ageRange: "32-36",
     total: 114.21,
-    gender: "Pria",
+    gender: "Male",
   },
   {
     color: "#8ebd55",
     ageRange: "26-31",
     total: 97.2,
-    gender: "Wanita",
+    gender: "Female",
   },
   {
     color: "#FA7139",
     ageRange: "6-12",
     total: 24.3,
-    gender: "Anak-anak",
+    gender: "Children",
   },
   {
     color: "#FBAD48",
     ageRange: "0-5",
     total: 7.29,
-    gender: "Balita",
+    gender: "Toddlers",
   },
 ];
 
@@ -160,7 +160,7 @@ function StatsDashboard({
               />
               {stat.trendValue}
             </span>
-            dari bulan sebelumnya
+            from previous month
           </p>
         </div>
       </div>
@@ -184,25 +184,24 @@ function EmptyData({ images, message }: { images: string; message: string }) {
 export default function Dashboard() {
   return (
     <div className="gap-3.5 flex flex-col">
-      <TitlePage title="Desa Statistics" />
+      <TitlePage title="Village Statistics" />
 
       <div className="flex flex-col gap-3.5 lg:flex-row items-start">
         <div className="gap-6 flex flex-col color-gradient-green p-6 lg:p-6 rounded-2xl lg:max-w-[380px] w-full">
           <img src="/icons/picture.svg" alt="" className="w-fit" />
           <div className="flex flex-col gap-3">
             <p className="text-xs lg:text-sm text-yellow font-medium">
-              — Bantuan Sosial
+              — Social Assistance
             </p>
             <h1 className="text-lg lg:text-2xl text-white font-semibold">
-              Dari Desa untuk Warga ❤️
+              From Village to Residents ❤️
             </h1>
             <p className="text-sm lg:text-base text-white leading-6 font-normal">
-              Wujudkan kesejahteraan desa dengan bantuan sosial yang tepat
-              sasaran.
+              Realize village welfare with targeted social assistance.
             </p>
           </div>
           <Button variant="white" customClass="w-full justify-between">
-            Bikin Bantuan Sosial
+            Create Social Assistance
             <img src="/icons/add-square-2.svg" alt="" />
           </Button>
         </div>
@@ -218,7 +217,7 @@ export default function Dashboard() {
         <div className="md:col-span-1 lg:col-span-3">
           <StatsDashboard
             stat={{
-              title: "Bantuan Sosial",
+              title: "Social Assistance",
               icons: "/icons/stat-bansos.svg",
               value: "192",
               trendUp: true,
@@ -227,7 +226,7 @@ export default function Dashboard() {
             bodyStat={
               <div className="gap-4 flex flex-col w-full">
                 <h1 className="text-black text-20 font-semibold">
-                  Bansos Terakhir
+                  Latest Social Assistance
                 </h1>
 
                 <div className="gap-4 flex flex-col">
@@ -244,7 +243,7 @@ export default function Dashboard() {
                               : ""
                           }
                           title={bansos.value}
-                          subTitle={`Diberikan Oleh ${bansos.sender}`}
+                          subTitle={`Provided By ${bansos.sender}`}
                           subTitleLeft={
                             <img
                               src="/icons/profile.svg"
@@ -266,7 +265,7 @@ export default function Dashboard() {
                   ) : (
                     <EmptyData
                       images="/icons/bag-cross.svg"
-                      message="Ups, nampaknya belum bansos"
+                      message="Oops, seems like there's no social assistance yet"
                     />
                   )}
                 </div>
@@ -330,7 +329,7 @@ export default function Dashboard() {
               >
                 <div className="text-center">
                   <p className="text-gray-500 text-16 font-medium">
-                    Tidak ada event pada tanggal ini
+                    No events on this date
                   </p>
                 </div>
               </div>
@@ -378,7 +377,7 @@ export default function Dashboard() {
               bodyStat={
                 <div className="gap-4 flex flex-col">
                   <h1 className="text-black text-20 font-semibold">
-                    Applicant Terakhir
+                    Latest Applicants
                   </h1>
 
                   <div className="gap-4 flex flex-col">
@@ -447,7 +446,7 @@ export default function Dashboard() {
                     ) : (
                       <EmptyData
                         images="/icons/note-remove.svg"
-                        message="Ups, nampaknya belum applicant"
+                        message="Oops, seems like there are no applicants yet"
                       />
                     )}
                   </div>
@@ -459,10 +458,10 @@ export default function Dashboard() {
           <div className="gap-6 flex justify-between flex-wrap color-gradient-green p-6 lg:p-6 rounded-2xl w-full">
             <div className="flex flex-col gap-1 lg:gap-3">
               <p className="text-xs lg:text-sm text-yellow font-medium">
-                — Unduh Data Desa
+                — Download Village Data
               </p>
               <h1 className="text-lg lg:text-2xl text-white font-semibold">
-                Data Desa Terkini
+                Current Village Data
               </h1>
             </div>
             <div className="">
@@ -470,7 +469,7 @@ export default function Dashboard() {
                 variant="white"
                 customClass="w-full justify-between flex-1"
               >
-                Download Laporan
+                Download Report
                 <img src="/icons/receive-square.svg" alt="" />
               </Button>
             </div>
@@ -482,7 +481,7 @@ export default function Dashboard() {
             <div className="flex flex-col flex-grow gap-3">
               <div className="top flex justify-between items-center gap-3">
                 <h5 className="text-16 font-medium text-secondary-text-color">
-                  Statistics Penduduk
+                  Population Statistics
                 </h5>
                 <img src="/icons/stat-citizen.svg" alt="" />
               </div>
@@ -511,7 +510,7 @@ export default function Dashboard() {
                         </span>
                       </div>
                       <p className="text-14 text-secondary-text-color font-medium">
-                        Rentang usia: {citizen.ageRange} tahun
+                        Age range: {citizen.ageRange} years
                       </p>
                     </div>
 

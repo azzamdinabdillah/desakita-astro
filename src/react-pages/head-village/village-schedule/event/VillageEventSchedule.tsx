@@ -8,7 +8,7 @@ export default function VillageEventSchedule() {
   return (
     <div className="flex flex-col gap-6">
       <TitlePage
-        title="Events Desa"
+        title="Village Events"
         leftElement={
           <a
             href={
@@ -30,7 +30,7 @@ export default function VillageEventSchedule() {
               type="text"
               isIconLeft={true}
               icons="/icons/box-search.svg"
-              placeholder="Cari nama event desa"
+              placeholder="Search village event name"
               customClass="bg-white"
             />
           </div>
@@ -74,7 +74,7 @@ export default function VillageEventSchedule() {
                       <CardItemGeneral
                         imgSize="w-[70px] lg:w-[100px] h-[60px] lg:h-[80px]"
                         image="/images/event.png"
-                        title="Belajar HTML Dasar Bersama"
+                        title="Learn Basic HTML Together"
                         subTitleMaxWidth="max-w-[100%]"
                         titleMaxWidth="max-w-[100%]"
                         subTitle={
@@ -109,7 +109,7 @@ export default function VillageEventSchedule() {
                           titleColor="text-soft-red"
                           icon="/icons/ticket-bg.svg"
                           title="Rp499.000"
-                          value="Harga Event"
+                          value="Event Price"
                         />
                       </div>
 
@@ -117,8 +117,8 @@ export default function VillageEventSchedule() {
                         <DetailsList
                           titleColor="text-blue"
                           icon="/icons/profile-2user-blue-bg.svg"
-                          title="9.250 Warga"
-                          value="Total Partisipan"
+                          title="9.250 Residents"
+                          value="Total Participants"
                         />
                       </div>
 
@@ -127,7 +127,7 @@ export default function VillageEventSchedule() {
                           titleColor="text-dark-green"
                           icon="/icons/calendar-2-bg-square.svg"
                           title="Mon, 24 Feb 2025"
-                          value="Tanggal Pelaksanaan"
+                          value="Implementation Date"
                         />
                       </div>
                     </div>

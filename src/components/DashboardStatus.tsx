@@ -3,16 +3,17 @@ export default function DashboardStatus({
   type,
 }: {
   title: string;
-  type: "Diterima" | "Ditolak" | "Menunggu" | "softGreen" | "aksen" | "green";
+  // type: "Accepted" | "Rejected" | "Pending" | "softGreen" | "accent" | "green";
+  type: "Accepted" | "Rejected" | "Pending" | "softGreen" | "accent" | "green";
 }) {
   const variantClasses: { [key: string]: string } = {
-    Menunggu: "bg-[#FBAD4A] text-white",
-    Diterima: "bg-[#34613A] text-white",
+    Pending: "bg-[#FBAD4A] text-white",
+    Accepted: "bg-[#34613A] text-white",
     green: "bg-[#34613A] text-white",
-    // Ditolak: "bg-[#FA7139] text-white",
-    Ditolak: "bg-[#FF5070] text-white",
+    // Rejected: "bg-[#FA7139] text-white",
+    Rejected: "bg-[#FF5070] text-white",
     softGreen: "bg-[#8EBD55] text-white",
-    aksen: "bg-aksen text-white",
+    accent: "bg-aksen text-white",
   };
   return (
     <div

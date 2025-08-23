@@ -26,7 +26,7 @@ export default function CreateHeadHouse() {
       onClick={onClick}
       ref={ref && undefined}
       id="head-date-birth"
-      placeholder="Masukan tanggal lahir"
+      placeholder="Enter date of birth"
       isIconLeft={true}
       icons="/icons/calendar-2-2.svg"
       type="text"
@@ -36,12 +36,12 @@ export default function CreateHeadHouse() {
   return (
     <div className="flex-wrapper">
       <TitlePage
-        title="Tambah Kepala Rumah Baru"
+        title="Add New Head of Household"
         subTitle={
           <p>
-            Kepala Rumah &nbsp;
+            Head of Household &nbsp;
             <span className="text-dark-green font-medium">
-              /&nbsp; Tambah Kepala Rumah
+              /&nbsp; Add Head of Household
             </span>
           </p>
         }
@@ -51,7 +51,7 @@ export default function CreateHeadHouse() {
         <form className="flex-wrapper">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-name">
-              Profile Kepala Rumah
+              Head of Household Profile
             </Label>
             <div className="flex items-center justify-between w-full col-span-3">
               <img
@@ -89,12 +89,12 @@ export default function CreateHeadHouse() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-name">
-              Nama Kepala Rumah
+              Head of Household Name
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="head-name"
-                placeholder="Masukan nama lengkap"
+                placeholder="Enter full name"
                 isIconLeft={true}
                 icons="/icons/user-gray.svg"
                 type="text"
@@ -106,12 +106,12 @@ export default function CreateHeadHouse() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-nik">
-              Nomor Induk Kependudukan
+              National Identification Number
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="head-nik"
-                placeholder="Ketik NIK"
+                placeholder="Type NIK"
                 isIconLeft={true}
                 icons="/icons/keyboard-2.svg"
                 type="number"
@@ -123,12 +123,12 @@ export default function CreateHeadHouse() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-phone-number">
-              Nomor Handphone
+              Phone Number
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="head-phone-number"
-                placeholder="Masukan No. HP yang aktif"
+                placeholder="Enter active phone number"
                 isIconLeft={true}
                 icons="/icons/call.svg"
                 type="number"
@@ -140,12 +140,12 @@ export default function CreateHeadHouse() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-job">
-              Pekerjaan
+              Occupation
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="head-job"
-                placeholder="Masukan nama pekerjaan"
+                placeholder="Enter job title"
                 isIconLeft={true}
                 icons="/icons/briefcase-2.svg"
                 type="text"
@@ -160,7 +160,7 @@ export default function CreateHeadHouse() {
               htmlFor="head-date-birth"
               className="text-secondary-text-color font-semibold text-sm lg:text-base leading-normal col-span-2"
             >
-              Tanggal Lahir
+              Date of Birth
             </label>
             <div className="col-span-3">
               <div className="flex flex-col md:flex-row gap-4 md:gap-6">
@@ -174,15 +174,15 @@ export default function CreateHeadHouse() {
                         id="head-date-birth"
                         type="date"
                         className="pl-11 lg:pl-12 w-full text-black appearance-none font-medium focus:border-1.5 focus:border-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal w-full w-full flex-grow"
-                        placeholder="Masukan tanggal lahir"
+                        placeholder="Enter date of birth"
                         defaultValue=""
                       />
                     </div>
                   </div>
                 </div>
                 <div className="md:max-w-[180px] w-full p-3 md:p-4 flex justify-center items-center text-16 font-medium text-dark-green rounded-2xl border border-foreshadow bg-foreshadow">
-                  Umur:&nbsp;
-                  <span data-age-display="">0</span>&nbsp;tahun
+                  Age:&nbsp;
+                  <span data-age-display="">0</span>&nbsp;years
                 </div>
               </div>
             </div>
@@ -192,7 +192,7 @@ export default function CreateHeadHouse() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-total-citizen">
-              Jenis Kelamin
+              Gender
             </Label>
             <div className="col-span-3">
               <div className="grid grid-cols-2 gap-3 md:gap-6 ">
@@ -207,7 +207,7 @@ export default function CreateHeadHouse() {
                       name="head-gender"
                       className="input-radio-choose-gender"
                     />
-                    Pria
+                    Male
                   </div>
                   <img src="/icons/man.svg" alt="" className="w-5 md:w-6" />
                 </label>
@@ -222,7 +222,7 @@ export default function CreateHeadHouse() {
                       name="head-gender"
                       className="input-radio-choose-gender"
                     />
-                    Wanita
+                    Female
                   </div>
                   <img src="/icons/woman.svg" alt="" className="w-5 md:w-6" />
                 </label>
@@ -249,7 +249,7 @@ export default function CreateHeadHouse() {
                       name="head-status"
                       className="input-radio-choose-gender"
                     />
-                    Belum Menikah
+                    Single
                   </div>
                   <img
                     src="/icons/nonmerried.svg"
@@ -268,7 +268,7 @@ export default function CreateHeadHouse() {
                       name="head-status"
                       className="input-radio-choose-gender"
                     />
-                    Menikah
+                    Married
                   </div>
                   <img src="/icons/merried.svg" alt="" className="w-5 md:w-6" />
                 </label>
@@ -278,7 +278,7 @@ export default function CreateHeadHouse() {
 
           <hr />
 
-          <h3 className="text-16 font-medium text-black">Akun Dashboard</h3>
+          <h3 className="text-16 font-medium text-black">Dashboard Account</h3>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-email">
@@ -287,7 +287,7 @@ export default function CreateHeadHouse() {
             <div className="col-span-3">
               <Inputs
                 id="head-email"
-                placeholder="Masukan Email"
+                placeholder="Enter Email"
                 isIconLeft={true}
                 icons="/icons/sms.svg"
                 type="email"
@@ -299,12 +299,12 @@ export default function CreateHeadHouse() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-pw">
-              Passwords
+              Password
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="head-pw"
-                placeholder="Masukan Password"
+                placeholder="Enter Password"
                 isIconLeft={true}
                 icons="/icons/key.svg"
                 type="password"
@@ -315,7 +315,7 @@ export default function CreateHeadHouse() {
           <hr />
 
           <div className="flex justify-end gap-3">
-            <Button variant="pink">Batal, Tidak jadi</Button>
+            <Button variant="pink">Cancel, Don't proceed</Button>
             <Button variant="green">Create Now</Button>
           </div>
         </form>

@@ -26,7 +26,7 @@ export default function CreateVillageEventSchedule() {
       onClick={onClick}
       ref={ref && undefined}
       id="head-date-birth"
-      placeholder="Pilih tanggal event"
+      placeholder="Select event date"
       isIconLeft={true}
       isIconRight={true}
       iconsRight="/icons/arrow-right-plain-2.svg"
@@ -38,12 +38,12 @@ export default function CreateVillageEventSchedule() {
   return (
     <div className="flex-wrapper">
       <TitlePage
-        title="Tambah Event Desa"
+        title="Add Village Event"
         subTitle={
           <p>
-            Events Desa &nbsp;
+            Village Events &nbsp;
             <span className="text-dark-green font-medium">
-              /&nbsp; Tambah Event Desa
+              /&nbsp; Add Village Event
             </span>
           </p>
         }
@@ -53,7 +53,7 @@ export default function CreateVillageEventSchedule() {
         <form className="flex-wrapper">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-name">
-              Thumbnail Event Terkait
+              Related Event Thumbnail
             </Label>
             <div className="flex items-center justify-between w-full col-span-3">
               <img
@@ -91,12 +91,12 @@ export default function CreateVillageEventSchedule() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-name">
-              Nama Event
+              Event Name
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="head-name"
-                placeholder="Ketik nama event terkait"
+                placeholder="Type related event name"
                 isIconLeft={true}
                 icons="/icons/edit-plain.svg"
                 type="text"
@@ -108,7 +108,7 @@ export default function CreateVillageEventSchedule() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-total-citizen">
-              Pilih status event
+              Choose event status
             </Label>
             <div className="col-span-3">
               <div className="flex flex-wrap gap-3 md:gap-6 ">
@@ -158,12 +158,12 @@ export default function CreateVillageEventSchedule() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-name">
-              Harga Event
+              Event Price
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="head-name"
-                placeholder="Ketik nama event terkait"
+                placeholder="Type event price"
                 isIconLeft={true}
                 icons="/icons/dollar-square.svg"
                 type="text"
@@ -175,7 +175,7 @@ export default function CreateVillageEventSchedule() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-date-birth">
-              Tanggal event dilakukan
+              Event date
             </Label>
             <div className="col-span-3">
               <div className="react-datepicker-wrapper">
@@ -188,7 +188,7 @@ export default function CreateVillageEventSchedule() {
                       id="head-time-event"
                       type="date"
                       className="pl-11 lg:pl-12 w-full text-black appearance-none font-medium focus:border-1.5 focus:border-dark-green outline-none transition-all rounded-2xl border border-bg-color p-3 lg:p-4 text-sm lg:text-base placeholder:text-secondary-text-color placeholder:font-medium placeholder:text-sm lg:placeholder:text-base placeholder:leading-normal w-full w-full flex-grow"
-                      placeholder="Masukan tanggal lahir"
+                      placeholder="Enter date of birth"
                       defaultValue=""
                     />
                   </div>
@@ -201,7 +201,7 @@ export default function CreateVillageEventSchedule() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="head-pw">
-              Waktu event dilakukan
+              Event time
             </Label>
             <div className="col-span-3">
               <Inputs
@@ -211,7 +211,7 @@ export default function CreateVillageEventSchedule() {
                   </p>
                 }
                 id="head-pw"
-                placeholder="Ketik waktu event"
+                placeholder="Type event time"
                 isIconLeft={true}
                 icons="/icons/timer.svg"
                 type="number"
@@ -223,12 +223,12 @@ export default function CreateVillageEventSchedule() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-2 md:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-location">
-              Deskripsi event terkait
+              Related event description
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="village-location"
-                placeholder="Jelaskan lebih detail tentang event"
+                placeholder="Explain more details about the event"
                 type="textarea"
                 rows={5}
               />
@@ -238,7 +238,7 @@ export default function CreateVillageEventSchedule() {
           <hr />
 
           <div className="flex justify-end gap-3">
-            <Button variant="pink">Batal, Tidak jadi</Button>
+            <Button variant="pink">Cancel, Don't proceed</Button>
             <Button variant="green">Create Now</Button>
           </div>
         </form>

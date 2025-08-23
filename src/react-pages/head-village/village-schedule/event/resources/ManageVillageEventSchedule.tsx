@@ -1,6 +1,6 @@
 import Button from "../../../../../components/Button";
 import TitlePage from "../../../../../components/TitlePage";
-import WrapperElement from "@components/WrapperElement";
+import WrapperElement from "../../../../../components/WrapperElement";
 import Title from "../../../../../components/Title";
 import DetailsList from "../../../../../components/DetailsList";
 import UserImage from "../../../../../components/UserImage";
@@ -18,12 +18,12 @@ export default function ManageApplicantSocialDonate() {
             </Button>
           </a>
         }
-        title="Detail Event Desa"
+        title="Village Event Details"
         subTitle={
           <div className="flex items-center gap-1 flex-wrap">
-            Events desa
+            Village events
             <span className="text-dark-green font-medium">
-              / detail event desa
+              / village event details
             </span>
           </div>
         }
@@ -31,12 +31,12 @@ export default function ManageApplicantSocialDonate() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-4 items-start">
         <WrapperElement customClass="lg:col-span-5 md:col-span-1">
-          <Title subTitle="Informasi Event" />
+          <Title subTitle="Event Information" />
 
           <CardItemGeneral
             imgSize="w-[70px] lg:w-[100px] h-[60px] lg:h-[80px]"
             image="/images/event.png"
-            title="Belajar HTML Dasar Bersama"
+            title="Learn Basic HTML Together"
             subTitleMaxWidth="max-w-[100%]"
             titleMaxWidth="max-w-[100%]"
             subTitle={
@@ -59,7 +59,7 @@ export default function ManageApplicantSocialDonate() {
             titleColor="text-soft-red"
             icon="/icons/ticket-bg.svg"
             title="Rp499.000"
-            value="Harga Event"
+            value="Event Price"
           />
 
           <hr />
@@ -67,8 +67,8 @@ export default function ManageApplicantSocialDonate() {
           <DetailsList
             titleColor="text-blue"
             icon="/icons/profile-2user-blue-bg.svg"
-            title="9.250 Warga"
-            value="Total Partisipan"
+            title="9.250 Residents"
+            value="Total Participants"
           />
 
           <hr />
@@ -77,7 +77,7 @@ export default function ManageApplicantSocialDonate() {
             titleColor="text-dark-green"
             icon="/icons/calendar-2-bg-square.svg"
             title="Mon, 24 Feb 2025"
-            value="Tanggal Pelaksanaan"
+            value="Implementation Date"
           />
 
           <hr />
@@ -86,24 +86,24 @@ export default function ManageApplicantSocialDonate() {
             titleColor="text-aksen"
             icon="/icons/clock-bg.svg"
             title="12:30 WIB"
-            value="Jam Pelaksanaan"
+            value="Implementation Time"
           />
 
           <hr />
 
           <div className="flex gap-3 flex-col">
-            <Title subTitle="Tentang Event" subTitleSizeVariant="small" />
+            <Title subTitle="About the Event" subTitleSizeVariant="small" />
             <p className="text-16 text-black font-medium leading-6 lg:leading-[32px]">
-              Belajar Teknologi untuk Masa Depan!Kepala desa mengundang seluruh
-              warga untuk mengikuti acara Belajar HTML Dasar Bersama. Dalam
-              acara ini, kita akan: <br /> - Mengenal dasar-dasar HTML sebagai
-              langkah awal membuat website.
+              Learning Technology for the Future! The village head invites all
+              residents to participate in the Learn Basic HTML Together event.
+              In this event, we will: <br /> - Learn the basics of HTML as a
+              first step in creating websites.
               <br />
-              - Belajar struktur sederhana halaman web. <br /> - Mencoba
-              langsung membuat halaman web bersama Mulailah perjalanan Anda
-              untuk memahami elemen-elemen penting HTML, praktik langsung, dan
-              temukan bagaimana teknologi ini membuka peluang baru. Jangan lupa
-              untuk terus berlatih agar semakin mahir!
+              - Learn simple web page structure. <br /> - Try making web pages
+              together. Start your journey to understand the important elements
+              of HTML, hands-on practice, and discover how this technology opens
+              new opportunities. Don't forget to keep practicing to become more
+              skilled!
             </p>
           </div>
         </WrapperElement>
@@ -131,7 +131,7 @@ export default function ManageApplicantSocialDonate() {
                         className="w-[14px] lg:w-[18px]"
                       />
                       <p className="text-secondary-text-color text-14 font-medium w-full flex-grow">
-                        Tukang Bangunan
+                        Construction Worker
                       </p>
                     </div>
                   }
@@ -141,7 +141,7 @@ export default function ManageApplicantSocialDonate() {
               </>
             ))}
           </div>
-          <Button variant="green">Lihat Semua</Button>
+          <Button variant="green">View All</Button>
         </WrapperElement>
       </div>
     </div>

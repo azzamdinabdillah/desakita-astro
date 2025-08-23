@@ -1,10 +1,10 @@
-import Button from "@components/Button";
-import TitlePage from "@components/TitlePage";
-import WrapperElement from "@components/WrapperElement";
-import Title from "@components/Title";
-import DashboardStatus from "@components/DashboardStatus";
-import DetailsList from "@components/DetailsList";
-import UserImage from "@components/UserImage";
+import Button from "../../../../../components/Button";
+import TitlePage from "../../../../../components/TitlePage";
+import WrapperElement from "../../../../../components/WrapperElement";
+import Title from "../../../../../components/Title";
+import DashboardStatus from "../../../../../components/DashboardStatus";
+import DetailsList from "../../../../../components/DetailsList";
+import UserImage from "../../../../../components/UserImage";
 import { useState } from "react";
 
 export default function ManageApplicantSocialDonate() {
@@ -14,12 +14,12 @@ export default function ManageApplicantSocialDonate() {
   return (
     <div className="flex flex-col gap-6">
       <TitlePage
-        title="Penyetujuan Bansos"
+        title="Social Assistance Approval"
         subTitle={
           <div className="flex items-center gap-1 flex-wrap">
-            Pengajuan Bantuan sosial
+            Social assistance applications
             <span className="text-dark-green font-medium">
-              / penyetujuan bansos
+              / social assistance approval
             </span>
           </div>
         }
@@ -27,7 +27,7 @@ export default function ManageApplicantSocialDonate() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-4 items-start">
         <WrapperElement customClass="md:col-span-1 lg:col-span-5">
-          <Title subTitle="Informasi Bantuan Sosial" />
+          <Title subTitle="Social Assistance Information" />
 
           <div className="flex justify-between items-center">
             <img
@@ -35,12 +35,12 @@ export default function ManageApplicantSocialDonate() {
               alt=""
               className="w-[100px] h-[80px] lg:w-[120px] lg:h-[100px] rounded-2xl object-cover"
             />
-            <DashboardStatus title="Menunggu" type="Menunggu" />
+            <DashboardStatus title="Pending" type="Pending" />
           </div>
 
           <div className="flex flex-col gap-1.5">
             <h2 className="text-black font-semibold text-20 leading-6">
-              Bantuan Untuk Rakyat Kurang Mampu
+              Assistance for the Underprivileged
             </h2>
             <div className="gap-1 flex items-center">
               <img src="/icons/profile.svg" alt="" />
@@ -56,7 +56,7 @@ export default function ManageApplicantSocialDonate() {
             icon="/icons/money.svg"
             titleColor="text-dark-green"
             title="Rp120.000.000"
-            value="Uang Tunai"
+            value="Cash"
           />
 
           <hr />
@@ -65,7 +65,7 @@ export default function ManageApplicantSocialDonate() {
             icon="/icons/minus-square-bg.svg"
             titleColor="text-dark-green"
             title="Rp92.000.000"
-            value="Sisa Bansos"
+            value="Remaining Social Assistance"
           />
 
           <hr />
@@ -73,27 +73,29 @@ export default function ManageApplicantSocialDonate() {
           <DetailsList
             icon="/icons/profile-2user-blue-bg.svg"
             titleColor="text-blue"
-            title="15.600 Warga"
-            value="Total Pengajuan"
+            title="15.600 Residents"
+            value="Total Applications"
           />
 
           <hr />
 
           <div className="flex gap-3 flex-col">
-            <Title subTitle="Tentang Bantuan" subTitleSizeVariant="small" />
+            <Title
+              subTitle="About the Assistance"
+              subTitleSizeVariant="small"
+            />
             <p className="text-16 text-black font-medium leading-6 lg:leading-[32px]">
-              Program Bantuan Sosial ini hadir untuk memberikan dukungan nyata
-              bagi masyarakat yang membutuhkan. Kami berkomitmen membantu
-              memenuhi kebutuhan dasar seperti pangan, kesehatan, dan
-              pendidikan, demi meningkatkan kualitas hidup. Dengan semangat
-              gotong royong, kami mengajak semua pihak untuk bersama-sama
-              menciptakan perubahan positif.
+              This Social Assistance Program is here to provide real support for
+              people in need. We are committed to helping meet basic needs such
+              as food, health, and education, to improve quality of life. With
+              the spirit of mutual cooperation, we invite all parties to work
+              together to create positive change.
             </p>
           </div>
         </WrapperElement>
 
         <WrapperElement customClass="md:col-span-1 lg:col-span-3">
-          <Title subTitle="Detail Pengajuan" />
+          <Title subTitle="Application Details" />
 
           <hr />
 
@@ -114,7 +116,7 @@ export default function ManageApplicantSocialDonate() {
                   className="w-[14px] lg:w-[18px]"
                 />
                 <p className="text-secondary-text-color text-14 font-medium w-full flex-grow">
-                  Tukang Bangunan
+                  Construction Worker
                 </p>
               </div>
             }
@@ -125,8 +127,8 @@ export default function ManageApplicantSocialDonate() {
           <DetailsList
             titleColor="text-black"
             icon="/icons/profile-2user-bg.svg"
-            title="6 Anggota"
-            value="Total Keluarga"
+            title="6 Members"
+            value="Total Family"
           />
 
           <hr />
@@ -144,7 +146,7 @@ export default function ManageApplicantSocialDonate() {
             titleColor="text-black"
             icon="/icons/calendar-2-bg-square.svg"
             title="Tue, 09 Jan 2025"
-            value="Tanggal Pengajuan"
+            value="Application Date"
           />
 
           <hr />
@@ -153,17 +155,16 @@ export default function ManageApplicantSocialDonate() {
             titleColor="text-black"
             icon="/icons/receive-square-2.svg"
             title="Rp5.120.000"
-            value="Nominal Pengajuan"
+            value="Application Amount"
           />
 
           <hr />
 
           <div className="flex gap-3 flex-col">
-            <Title subTitle="Pesan Pengajuan" subTitleSizeVariant="small" />
+            <Title subTitle="Application Message" subTitleSizeVariant="small" />
             <p className="text-16 text-black font-medium leading-6 lg:leading-[32px]">
-              “Saya akan menggunakan dana tersebut untuk kebutuhan membeli beras
-              dan bahan pokok lainnya yang akan dikonsumsi oleh saya dan
-              keluarga saya.”
+              "I will use the funds for purchasing rice and other basic
+              necessities that will be consumed by me and my family."
             </p>
           </div>
 
@@ -171,7 +172,7 @@ export default function ManageApplicantSocialDonate() {
 
           <div className="flex gap-4 lg:gap-6 flex-col">
             <Title
-              subTitle="Rekening Kepala Rumah"
+              subTitle="Head of Household Bank Account"
               subTitleSizeVariant="small"
             />
             <div className="gap-3 flex items-center">
@@ -195,7 +196,7 @@ export default function ManageApplicantSocialDonate() {
 
           <div className="flex gap-4 lg:gap-6 flex-col">
             <Title
-              subTitle="Bukti Pemberian Bansos"
+              subTitle="Social Assistance Proof"
               subTitleSizeVariant="small"
             />
 
@@ -235,11 +236,11 @@ export default function ManageApplicantSocialDonate() {
 
           <div className="grid grid-cols-2 gap-3">
             <Button variant="grayTextRed" customClass="">
-              Tolak
+              Reject
             </Button>
 
             <Button variant="green" customClass="w-full">
-              Setuju
+              Approve
             </Button>
           </div>
         </WrapperElement>

@@ -25,12 +25,12 @@ export default function CreateVillageProfile() {
   return (
     <div className="flex-wrapper">
       <TitlePage
-        title="Create Profil Desa"
+        title="Create Village Profile"
         subTitle={
           <p>
-            Profile Desa{" "}
+            Village Profile{" "}
             <span className="text-dark-green font-medium">
-              / Create Profile Desa
+              / Create Village Profile
             </span>
           </p>
         }
@@ -40,7 +40,7 @@ export default function CreateVillageProfile() {
         <form className="flex-wrapper">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-2 lg:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-name">
-              Thumbnail Profile Desa
+              Village Profile Thumbnail
             </Label>
             <div className="col-span-3 flex-wrapper">
               <div
@@ -78,7 +78,7 @@ export default function CreateVillageProfile() {
                 className="px-4 lg:px-6 py-3 lg:py-4 rounded-2xl bg-foreshadow flex items-center gap-3 w-full justify-center cursor-pointer"
               >
                 <p className="text-dark-green text-center font-semibold text-sm lg:text-base cursor-pointer">
-                  Tambah Gambar Desa
+                  Add Village Image
                 </p>
                 <input
                   onChange={handleThumbnail}
@@ -95,12 +95,12 @@ export default function CreateVillageProfile() {
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-2 lg:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-name">
-              Nama Desa
+              Village Name
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="village-name"
-                placeholder="Ketik nama desa"
+                placeholder="Type village name"
                 isIconLeft={true}
                 icons="/icons/building-4.svg"
                 type="text"
@@ -112,12 +112,12 @@ export default function CreateVillageProfile() {
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-2 lg:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-location">
-              Lokasi Desa
+              Village Location
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="village-location"
-                placeholder="Ketik alamat desa"
+                placeholder="Type village address"
                 type="textarea"
                 rows={4}
               />
@@ -128,12 +128,12 @@ export default function CreateVillageProfile() {
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-2 lg:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-leader">
-              Nama Kepala Desa
+              Village Head Name
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="village-leader"
-                placeholder="Pilih Kepala Desa"
+                placeholder="Select Village Head"
                 isIconLeft={true}
                 icons="/icons/user-square.svg"
                 type="text"
@@ -148,12 +148,12 @@ export default function CreateVillageProfile() {
               customClass="col-span-2"
               labelFor="village-agriculture-width"
             >
-              Luas Pertanian Desa
+              Village Agricultural Area
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="village-agriculture-width"
-                placeholder="Masukan total luas pertanian"
+                placeholder="Enter total agricultural area"
                 isIconLeft={true}
                 icons="/icons/tree.svg"
                 type="text"
@@ -165,12 +165,12 @@ export default function CreateVillageProfile() {
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-2 lg:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-area-width">
-              Luas Area Desa
+              Village Total Area
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="village-area-width"
-                placeholder="Masukan total luas area"
+                placeholder="Enter total area"
                 isIconLeft={true}
                 icons="/icons/grid-5.svg"
                 type="text"
@@ -182,12 +182,12 @@ export default function CreateVillageProfile() {
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-2 lg:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-total-citizen">
-              Jumlah Penduduk Desa
+              Village Population
             </Label>
             <div className="col-span-3">
               <Inputs
                 id="village-total-citizen"
-                placeholder="Masukan total penduduk desa"
+                placeholder="Enter total village population"
                 isIconLeft={true}
                 icons="/icons/profile-2user.svg"
                 type="text"
@@ -199,13 +199,13 @@ export default function CreateVillageProfile() {
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-2 lg:justify-between items-center">
             <Label customClass="col-span-2" labelFor="village-description">
-              Deskripsi Tentang Desa
+              Village Description
             </Label>
             <div className="col-span-3">
               <Inputs
                 rows={6}
                 id="village-description"
-                placeholder="Jelaskan lebih detail tentang desa terkait"
+                placeholder="Explain more details about the village"
                 type="textarea"
               />
             </div>
@@ -214,7 +214,7 @@ export default function CreateVillageProfile() {
           <hr />
 
           <div className="flex justify-end gap-3">
-            <Button variant="pink">Batal, Tidak jadi</Button>
+            <Button variant="pink">Cancel, Don't proceed</Button>
             <Button variant="green">Create Now</Button>
           </div>
         </form>

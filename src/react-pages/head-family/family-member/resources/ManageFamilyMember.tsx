@@ -1,6 +1,6 @@
 import TitlePage from "../../../../components/TitlePage";
 import Button from "../../../../components/Button";
-import WrapperElement from "@components/WrapperElement";
+import WrapperElement from "../../../../components/WrapperElement";
 import DashboardStatus from "../../../../components/DashboardStatus";
 import DetailsList from "../../../../components/DetailsList";
 import Title from "../../../../components/Title";
@@ -11,17 +11,17 @@ import Modal from "../../../../components/Modal";
 const headDetail = [
   {
     title: "20051005922001005",
-    value: "Nomor Induk Kependudukan",
+    value: "National Identification Number",
     icon: "/icons/detail-list-nik.svg",
   },
   {
-    title: "42 Tahun",
-    value: "Umur Kepala Rumah",
+    title: "42 Years",
+    value: "Head of Household Age",
     icon: "/icons/detail-list-umur.svg",
   },
   {
-    title: "Pria",
-    value: "Jenis Kelamin",
+    title: "Male",
+    value: "Gender",
     icon: "/icons/detail-list-gender.svg",
   },
   {
@@ -31,7 +31,7 @@ const headDetail = [
   },
   {
     title: "083212349000",
-    value: "Nomor Hp",
+    value: "Phone Number",
     icon: "/icons/detail-list-nomorhp.svg",
   },
 ];
@@ -46,21 +46,21 @@ export default function ManageFamilyMember() {
         confirmButtonElement={
           <Button variant="pink" customClass="flex-grow">
             <img src="/icons/trash.svg" alt="" />
-            Iya Hapus
+            Yes Delete
           </Button>
         }
-        message="Tindakan ini permanen dan tidak bisa dibatalkan!"
-        header="Hapus Anggota Keluarga?"
+        message="This action is permanent and cannot be undone!"
+        header="Delete Family Member?"
         isOpen={isOpenModal}
         setIsOpen={setIsOpenModal}
       />
       <TitlePage
-        title="Manage Anggota Keluarga"
+        title="Manage Family Member"
         subTitle={
           <div className="flex items-center gap-1 flex-wrap">
-            Anggota Keluarga
+            Family Members
             <span className="text-dark-green font-medium">
-              / Manage Anggota Keluarga
+              / Manage Family Member
             </span>
           </div>
         }
@@ -70,7 +70,7 @@ export default function ManageFamilyMember() {
             onClick={() => setIsOpenModal(true)}
             variant="pink"
           >
-            Hapus Data
+            Delete Data
             <img className="w-5 lg:w-6" src="/icons/trash.svg" alt="" />
           </Button>
         }
@@ -79,13 +79,13 @@ export default function ManageFamilyMember() {
       <div className="flex flex-col md:flex-row items-start gap-3.5">
         <div className="flex flex-col gap-3.5 w-full md:flex-grow">
           <WrapperElement>
-            <Title subTitle="Kepala Rumah (You)" />
+            <Title subTitle="Head of Household (You)" />
 
             <PeopleCard
               image="/images/user-2.png"
               name="Azam Din Abdillah"
               job="Programmer"
-              right={<DashboardStatus title="Menikah" type="softGreen" />}
+              right={<DashboardStatus title="Married" type="softGreen" />}
             />
 
             <hr />
@@ -107,7 +107,7 @@ export default function ManageFamilyMember() {
 
         <div className="flex flex-col gap-3.5 lg:max-w-[438px] w-full">
           <WrapperElement>
-            <Title subTitle="Aktivitas Terbaru" />
+            <Title subTitle="Recent Activities" />
 
             <div className="flex flex-col gap-4 lg:gap-6">
               <div className="gap-4 flex-col flex rounded-2xl border border-bg-color p-3 lg:p-4">
@@ -117,14 +117,14 @@ export default function ManageFamilyMember() {
                     alt="image applicant"
                     className="w-[80px] h-[60px] object-cover rounded-2xl"
                   />
-                  <DashboardStatus title="Menunggu" type="Menunggu" />
+                  <DashboardStatus title="Pending" type="Pending" />
                 </div>
                 <div>
                   <h2 className="text-16 font-semibold text-black">
-                    Pembangunan Jalanan Utama
+                    Main Road Development
                   </h2>
                   <p className="text-16 font-medium text-secondary-text-color">
-                    Penanggung jawab:{" "}
+                    Person in charge:{" "}
                     <span className="font-semibold text-dark-green">
                       Uzumaki Asep
                     </span>
@@ -137,7 +137,7 @@ export default function ManageFamilyMember() {
                   titleColor="text-dark-green"
                   icon="/icons/calendar-2-bg.svg"
                   title="3 Jan 2025"
-                  value="Tanggal Pelaksanaan"
+                  value="Implementation Date"
                 />
 
                 <hr />
@@ -145,13 +145,13 @@ export default function ManageFamilyMember() {
                 <DetailsList
                   titleColor="text-dark-green"
                   icon="/icons/calendar-2-bg.svg"
-                  title="24 Hari"
-                  value="Waktu Pelaksanaan"
+                  title="24 Days"
+                  value="Implementation Duration"
                 />
 
                 <hr />
 
-                <Button variant="green">Lihat Detail</Button>
+                <Button variant="green">View Details</Button>
               </div>
 
               <div className="gap-4 flex-col flex rounded-2xl border border-bg-color p-3 lg:p-4">
@@ -161,14 +161,14 @@ export default function ManageFamilyMember() {
                     alt="image applicant"
                     className="w-[80px] h-[60px] object-cover rounded-2xl"
                   />
-                  <DashboardStatus title="Ditolak" type="Ditolak" />
+                  <DashboardStatus title="Rejected" type="Rejected" />
                 </div>
                 <div>
                   <h2 className="text-16 font-semibold text-black">
-                    Pembangunan Jalanan Utama
+                    Main Road Development
                   </h2>
                   <p className="text-16 font-medium text-secondary-text-color">
-                    Penanggung jawab:{" "}
+                    Person in charge:{" "}
                     <span className="font-semibold text-dark-green">
                       Uzumaki Asep
                     </span>
@@ -181,7 +181,7 @@ export default function ManageFamilyMember() {
                   titleColor="text-dark-green"
                   icon="/icons/calendar-2-bg.svg"
                   title="3 Jan 2025"
-                  value="Tanggal Pelaksanaan"
+                  value="Implementation Date"
                 />
 
                 <hr />
@@ -189,13 +189,13 @@ export default function ManageFamilyMember() {
                 <DetailsList
                   titleColor="text-dark-green"
                   icon="/icons/calendar-2-bg.svg"
-                  title="24 Hari"
-                  value="Waktu Pelaksanaan"
+                  title="24 Days"
+                  value="Implementation Duration"
                 />
 
                 <hr />
 
-                <Button variant="green">Lihat Detail</Button>
+                <Button variant="green">View Details</Button>
               </div>
             </div>
           </WrapperElement>

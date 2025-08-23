@@ -9,7 +9,7 @@ import DashboardStatus from "../../../../components/DashboardStatus";
 export default function ApplicantSocialDonate() {
   return (
     <div className="flex flex-col gap-6">
-      <TitlePage title="Pengajuan Bantuan Sosial" />
+      <TitlePage title="Social Assistance Applications" />
 
       <div className="flex flex-col">
         <div className="top flex flex-wrap justify-between items-center gap-3">
@@ -18,7 +18,7 @@ export default function ApplicantSocialDonate() {
               type="text"
               isIconLeft={true}
               icons="/icons/user-search.svg"
-              placeholder="Cari nama Pengajuan bantuan social"
+              placeholder="Search social assistance application name"
               customClass="bg-white"
             />
           </div>
@@ -64,7 +64,7 @@ export default function ApplicantSocialDonate() {
                         <p>Tue, 09 Jan 2025 </p>
                       </div>
 
-                      <DashboardStatus title="Menunggu" type="Menunggu" />
+                      <DashboardStatus title="Pending" type="Pending" />
                     </div>
 
                     <hr />
@@ -72,7 +72,7 @@ export default function ApplicantSocialDonate() {
                       <CardItemGeneral
                         imgSize="w-[70px] lg:w-[100px] h-[60px] lg:h-[80px]"
                         image="/images/bansos-1.png"
-                        title="Peduli Sesama: Penyaluran Beras untuk Warga Desa"
+                        title="Caring for Each Other: Rice Distribution for Village Residents"
                         subTitleMaxWidth="max-w-[100%]"
                         titleMaxWidth="max-w-[200px]"
                         subTitle={
@@ -93,7 +93,7 @@ export default function ApplicantSocialDonate() {
                         customClass="flex-row-reverse"
                         icon="/icons/money.svg"
                         title="Rp120.000.000"
-                        value="Uang Tunai"
+                        value="Cash"
                       />
                     </div>
 
@@ -118,7 +118,7 @@ export default function ApplicantSocialDonate() {
                                 className="w-[14px] lg:w-[18px]"
                               />
                               <p className="text-secondary-text-color text-14 font-medium w-full flex-grow">
-                                Tukang Bangunan
+                                Construction Worker
                               </p>
                             </div>
                           }
@@ -129,8 +129,8 @@ export default function ApplicantSocialDonate() {
                         <DetailsList
                           titleColor="text-dark-green"
                           icon="/icons/receive-square-2.svg"
-                          title="Beras 20 Ton"
-                          value="Nominal Pengajuan"
+                          title="Rice 20 Tons"
+                          value="Application Amount"
                         />
                       </div>
 
@@ -140,7 +140,7 @@ export default function ApplicantSocialDonate() {
                             variant="grayTextRed"
                             customClass="lg:w-[35%]"
                           >
-                            Tolak
+                            Reject
                           </Button>
                           <a
                             className="lg:w-[35%]"
@@ -149,7 +149,7 @@ export default function ApplicantSocialDonate() {
                             }
                           >
                             <Button variant="green" customClass="w-full">
-                              Setuju
+                              Approve
                             </Button>
                           </a>
                         </div>
