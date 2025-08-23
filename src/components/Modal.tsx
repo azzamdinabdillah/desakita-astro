@@ -66,7 +66,7 @@ export default function Modal({
                   variant="borderTextBlack"
                   onClick={() => setIsOpen(false)}
                 >
-                  Batal
+                  Cancel
                 </Button>
                 {confirmButtonElement}
               </div>

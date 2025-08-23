@@ -32,7 +32,7 @@ export default function ManageSocialDonate() {
         setIsOpen={setIsOpenModal}
       />
       <TitlePage
-        title="Manage Head House"
+        title="Manage Social Donate"
         subTitle={
           <div className="flex items-center gap-1">
             Social Donate

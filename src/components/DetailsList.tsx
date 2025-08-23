@@ -28,13 +28,13 @@ export default function DetailsList({
           >
             {title}
           </h5>
-          <p
+          <div
             className={`text-secondary-text-color font-semibold text-16 leading-normal ${
               customClass === "flex-row-reverse" ? "text-end" : ""
             }`}
           >
             {value}
-          </p>
+          </div>
         </div>
       </div>
 
